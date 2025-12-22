@@ -809,6 +809,219 @@ footer a:hover {
 }
 
 /* ============================================
+   BREADCRUMBS PERSONALIZADOS
+   ============================================ */
+.breadcrumb {
+    background-color: var(--bg-secondary);
+    border-radius: var(--border-radius-sm);
+    padding: 0.75rem 1rem;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "›";
+    color: var(--text-secondary);
+    font-weight: bold;
+}
+
+.breadcrumb-item a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.breadcrumb-item a:hover {
+    color: var(--color-primary-dark);
+    text-decoration: underline;
+}
+
+.breadcrumb-item.active {
+    color: var(--text-secondary);
+}
+
+/* ============================================
+   MODALS PERSONALIZADOS
+   ============================================ */
+.modal-content {
+    border: none;
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-xl);
+}
+
+.modal-header {
+    border-bottom: 2px solid var(--bg-secondary);
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+}
+
+.modal-footer {
+    border-top: 2px solid var(--bg-secondary);
+    background-color: var(--bg-secondary);
+}
+
+.modal-body img {
+    transition: transform var(--transition-normal);
+}
+
+.modal-body img:hover {
+    transform: scale(1.02);
+}
+
+/* ============================================
+   PAGINATION PERSONALIZADA
+   ============================================ */
+.pagination {
+    margin-top: var(--spacing-md);
+}
+
+.page-link {
+    color: var(--color-primary);
+    border-color: #dee2e6;
+    transition: all var(--transition-fast);
+}
+
+.page-link:hover {
+    color: var(--color-primary-dark);
+    background-color: var(--bg-secondary);
+    border-color: var(--color-primary);
+    transform: translateY(-2px);
+}
+
+.page-item.active .page-link {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-sm);
+}
+
+.page-item.disabled .page-link {
+    color: var(--text-muted);
+    cursor: not-allowed;
+}
+
+/* ============================================
+   ALERTS PERSONALIZADOS
+   ============================================ */
+.alert {
+    border: none;
+    border-radius: var(--border-radius-md);
+    border-left: 4px solid;
+    box-shadow: var(--shadow-sm);
+}
+
+.alert-info {
+    background-color: rgba(17, 162, 184, 0.1);
+    border-left-color: var(--color-info);
+    color: #0c5460;
+}
+
+.alert-success {
+    background-color: rgba(40, 167, 69, 0.1);
+    border-left-color: var(--color-success);
+    color: #155724;
+}
+
+.alert-danger {
+    background-color: rgba(220, 53, 69, 0.1);
+    border-left-color: var(--color-danger);
+    color: #721c24;
+}
+
+.alert-dismissible .btn-close {
+    padding: 0.75rem 1rem;
+}
+
+/* ============================================
+   TOOLTIPS PERSONALIZADOS
+   ============================================ */
+.tooltip {
+    font-size: 0.875rem;
+}
+
+.tooltip-inner {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    border-radius: var(--border-radius-sm);
+    padding: 0.5rem 0.75rem;
+}
+
+.bs-tooltip-top .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^="top"] .tooltip-arrow::before {
+    border-top-color: var(--bg-dark);
+}
+
+.bs-tooltip-bottom .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^="bottom"] .tooltip-arrow::before {
+    border-bottom-color: var(--bg-dark);
+}
+
+.bs-tooltip-start .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^="left"] .tooltip-arrow::before {
+    border-left-color: var(--bg-dark);
+}
+
+.bs-tooltip-end .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^="right"] .tooltip-arrow::before {
+    border-right-color: var(--bg-dark);
+}
+
+/* ============================================
+   VALIDACIÓN DE FORMULARIOS
+   ============================================ */
+.form-control:valid {
+    border-color: var(--color-success);
+}
+
+.form-control:invalid:not(:placeholder-shown) {
+    border-color: var(--color-danger);
+}
+
+.form-control:focus:invalid {
+    border-color: var(--color-danger);
+    box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+.was-validated .form-control:invalid {
+    border-color: var(--color-danger);
+}
+
+.was-validated .form-control:valid {
+    border-color: var(--color-success);
+}
+
+.form-text {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+}
+
+.form-text .text-danger {
+    color: var(--color-danger) !important;
+    font-weight: 600;
+}
+
+/* ============================================
+   DROPDOWN PERSONALIZADO
+   ============================================ */
+.dropdown-menu {
+    border: none;
+    box-shadow: var(--shadow-lg);
+    border-radius: var(--border-radius-sm);
+    padding: 0.5rem 0;
+}
+
+.dropdown-item {
+    padding: 0.5rem 1rem;
+    transition: all var(--transition-fast);
+}
+
+.dropdown-item:hover {
+    background-color: var(--bg-secondary);
+    color: var(--color-primary);
+    transform: translateX(5px);
+}
+
+.dropdown-item i {
+    width: 20px;
+}
+
+/* ============================================
    RESPONSIVE DESIGN - Mobile First
    ============================================ */
 @media (max-width: 992px) {
