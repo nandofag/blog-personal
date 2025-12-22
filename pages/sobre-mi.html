@@ -86,77 +86,315 @@
                         </div>
                     </article>
 
-                    <!-- Educación y Experiencia en Grid -->
-                    <div class="row g-4 mb-5">
-                        <!-- Educación -->
-                        <div class="col-lg-6">
-                            <section class="card h-100 shadow-sm animate-slide-up">
-                                <div class="card-body p-4">
-                                    <h2 class="card-title mb-4">
-                                        <i class="bi bi-mortarboard-fill text-success me-2"></i>Educación
-                                    </h2>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="list-group-item d-flex align-items-start">
-                                            <i class="bi bi-check-circle-fill text-success me-3 mt-1"></i>
-                                            <div>
-                                                <h6 class="fw-bold mb-1">Curso de Desarrollo Web</h6>
-                                                <small class="text-muted">Coderhouse - 2024</small>
-                                                <p class="mb-0 small">Formación completa en HTML, CSS, JavaScript y frameworks modernos.</p>
-                                            </div>
-                                        </li>
-                                        <li class="list-group-item d-flex align-items-start">
-                                            <i class="bi bi-check-circle-fill text-success me-3 mt-1"></i>
-                                            <div>
-                                                <h6 class="fw-bold mb-1">Certificación en HTML y CSS</h6>
-                                                <small class="text-muted">Plataforma Online - 2023</small>
-                                                <p class="mb-0 small">Especialización en maquetado web y diseño responsive.</p>
-                                            </div>
-                                        </li>
-                                        <li class="list-group-item d-flex align-items-start">
-                                            <i class="bi bi-check-circle-fill text-success me-3 mt-1"></i>
-                                            <div>
-                                                <h6 class="fw-bold mb-1">Estudios en Diseño Gráfico</h6>
-                                                <small class="text-muted">Instituto de Diseño - 2020-2022</small>
-                                                <p class="mb-0 small">Fundamentos de diseño visual y experiencia de usuario.</p>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </section>
-                        </div>
+                    <!-- ============================================
+                        SECCIÓN: TABS PARA EDUCACIÓN, EXPERIENCIA Y HABILIDADES
+                    ============================================= -->
+                    <div class="card shadow-sm mb-5 animate-slide-up">
+                        <div class="card-body p-4">
+                            <h2 class="card-title text-center mb-4">
+                                <i class="bi bi-person-workspace text-primary me-2"></i>Mi Trayectoria
+                            </h2>
+                            
+                            <!-- Nav Pills -->
+                            <ul class="nav nav-pills nav-fill mb-4" id="trayectoriaTabs" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="educacion-tab" data-bs-toggle="pill" data-bs-target="#educacion" type="button" role="tab" aria-controls="educacion" aria-selected="true">
+                                        <i class="bi bi-mortarboard-fill me-2"></i>Educación
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="experiencia-tab" data-bs-toggle="pill" data-bs-target="#experiencia" type="button" role="tab" aria-controls="experiencia" aria-selected="false">
+                                        <i class="bi bi-briefcase-fill me-2"></i>Experiencia
+                                    </button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="habilidades-tab" data-bs-toggle="pill" data-bs-target="#habilidades" type="button" role="tab" aria-controls="habilidades" aria-selected="false">
+                                        <i class="bi bi-tools me-2"></i>Habilidades
+                                    </button>
+                                </li>
+                            </ul>
 
-                        <!-- Experiencia -->
-                        <div class="col-lg-6">
-                            <section class="card h-100 shadow-sm animate-slide-up">
-                                <div class="card-body p-4">
-                                    <h2 class="card-title mb-4">
-                                        <i class="bi bi-briefcase-fill text-info me-2"></i>Experiencia
-                                    </h2>
-                                    <ol class="list-group list-group-numbered">
-                                        <li class="list-group-item d-flex align-items-start">
-                                            <div class="ms-2 me-auto">
-                                                <h6 class="fw-bold mb-1">Desarrollador Frontend</h6>
-                                                <small class="text-muted">2022 - 2023</small>
-                                                <p class="mb-0 small">Desarrollo de interfaces de usuario responsivas y optimizadas. Trabajo con React y Vue.js.</p>
+                            <!-- Tab Content -->
+                            <div class="tab-content" id="trayectoriaTabContent">
+                                <!-- Tab Educación -->
+                                <div class="tab-pane fade show active" id="educacion" role="tabpanel" aria-labelledby="educacion-tab">
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <div class="card border-primary h-100">
+                                                <div class="card-body">
+                                                    <div class="d-flex align-items-center mb-3">
+                                                        <i class="bi bi-mortarboard-fill text-primary me-3" style="font-size: 2rem;"></i>
+                                                        <div>
+                                                            <h5 class="card-title mb-0">Curso de Desarrollo Web</h5>
+                                                            <small class="text-muted">Coderhouse - 2024</small>
+                                                        </div>
+                                                    </div>
+                                                    <p class="card-text">Formación completa en HTML, CSS, JavaScript y frameworks modernos. Aprendizaje de las mejores prácticas en desarrollo web.</p>
+                                                    <div class="d-flex flex-wrap gap-2">
+                                                        <span class="badge bg-primary">HTML5</span>
+                                                        <span class="badge bg-info">CSS3</span>
+                                                        <span class="badge bg-success">JavaScript</span>
+                                                        <span class="badge bg-warning text-dark">Bootstrap</span>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </li>
-                                        <li class="list-group-item d-flex align-items-start">
-                                            <div class="ms-2 me-auto">
-                                                <h6 class="fw-bold mb-1">Diseñador Web Freelance</h6>
-                                                <small class="text-muted">2021 - 2022</small>
-                                                <p class="mb-0 small">Diseño y desarrollo de sitios web para clientes diversos. Gestión de proyectos independientes.</p>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="card border-success h-100">
+                                                <div class="card-body">
+                                                    <div class="d-flex align-items-center mb-3">
+                                                        <i class="bi bi-award-fill text-success me-3" style="font-size: 2rem;"></i>
+                                                        <div>
+                                                            <h5 class="card-title mb-0">Certificación HTML y CSS</h5>
+                                                            <small class="text-muted">Plataforma Online - 2023</small>
+                                                        </div>
+                                                    </div>
+                                                    <p class="card-text">Especialización en maquetado web y diseño responsive. Dominio de técnicas avanzadas de CSS y layouts modernos.</p>
+                                                    <div class="d-flex flex-wrap gap-2">
+                                                        <span class="badge bg-success">Responsive Design</span>
+                                                        <span class="badge bg-info">Flexbox</span>
+                                                        <span class="badge bg-primary">Grid Layout</span>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </li>
-                                        <li class="list-group-item d-flex align-items-start">
-                                            <div class="ms-2 me-auto">
-                                                <h6 class="fw-bold mb-1">Practicante en Agencia Digital</h6>
-                                                <small class="text-muted">2020 - 2021</small>
-                                                <p class="mb-0 small">Primeros pasos profesionales. Aprendizaje de metodologías ágiles y trabajo en equipo.</p>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="card border-info">
+                                                <div class="card-body">
+                                                    <div class="d-flex align-items-center mb-3">
+                                                        <i class="bi bi-palette-fill text-info me-3" style="font-size: 2rem;"></i>
+                                                        <div>
+                                                            <h5 class="card-title mb-0">Estudios en Diseño Gráfico</h5>
+                                                            <small class="text-muted">Instituto de Diseño - 2020-2022</small>
+                                                        </div>
+                                                    </div>
+                                                    <p class="card-text mb-0">Fundamentos de diseño visual y experiencia de usuario. Aprendizaje de principios de diseño, tipografía, color y composición aplicados al diseño web.</p>
+                                                </div>
                                             </div>
-                                        </li>
-                                    </ol>
+                                        </div>
+                                    </div>
                                 </div>
-                            </section>
+
+                                <!-- Tab Experiencia -->
+                                <div class="tab-pane fade" id="experiencia" role="tabpanel" aria-labelledby="experiencia-tab">
+                                    <!-- Timeline Visual -->
+                                    <div class="timeline">
+                                        <div class="timeline-item mb-4">
+                                            <div class="d-flex">
+                                                <div class="timeline-marker me-4">
+                                                    <div class="timeline-icon bg-primary">
+                                                        <i class="bi bi-code-slash text-white"></i>
+                                                    </div>
+                                                    <div class="timeline-line"></div>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <div class="card border-primary">
+                                                        <div class="card-body">
+                                                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                                                <h5 class="card-title mb-0">Desarrollador Frontend</h5>
+                                                                <span class="badge bg-primary">2022 - 2023</span>
+                                                            </div>
+                                                            <p class="card-text mb-2">Desarrollo de interfaces de usuario responsivas y optimizadas. Trabajo con frameworks modernos como React y Vue.js.</p>
+                                                            <div class="d-flex flex-wrap gap-2">
+                                                                <span class="badge bg-primary">React</span>
+                                                                <span class="badge bg-success">Vue.js</span>
+                                                                <span class="badge bg-info">TypeScript</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="timeline-item mb-4">
+                                            <div class="d-flex">
+                                                <div class="timeline-marker me-4">
+                                                    <div class="timeline-icon bg-success">
+                                                        <i class="bi bi-pencil-square text-white"></i>
+                                                    </div>
+                                                    <div class="timeline-line"></div>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <div class="card border-success">
+                                                        <div class="card-body">
+                                                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                                                <h5 class="card-title mb-0">Diseñador Web Freelance</h5>
+                                                                <span class="badge bg-success">2021 - 2022</span>
+                                                            </div>
+                                                            <p class="card-text mb-2">Diseño y desarrollo de sitios web para clientes diversos. Gestión de proyectos independientes desde la concepción hasta el lanzamiento.</p>
+                                                            <div class="d-flex flex-wrap gap-2">
+                                                                <span class="badge bg-success">Freelance</span>
+                                                                <span class="badge bg-info">UI/UX Design</span>
+                                                                <span class="badge bg-warning text-dark">Project Management</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="timeline-item">
+                                            <div class="d-flex">
+                                                <div class="timeline-marker me-4">
+                                                    <div class="timeline-icon bg-info">
+                                                        <i class="bi bi-lightbulb text-white"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <div class="card border-info">
+                                                        <div class="card-body">
+                                                            <div class="d-flex justify-content-between align-items-start mb-2">
+                                                                <h5 class="card-title mb-0">Practicante en Agencia Digital</h5>
+                                                                <span class="badge bg-info">2020 - 2021</span>
+                                                            </div>
+                                                            <p class="card-text mb-2">Primeros pasos profesionales. Aprendizaje de metodologías ágiles, trabajo en equipo y mejores prácticas de la industria.</p>
+                                                            <div class="d-flex flex-wrap gap-2">
+                                                                <span class="badge bg-info">Agile</span>
+                                                                <span class="badge bg-primary">Team Work</span>
+                                                                <span class="badge bg-success">Best Practices</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Tab Habilidades -->
+                                <div class="tab-pane fade" id="habilidades" role="tabpanel" aria-labelledby="habilidades-tab">
+                                    <div class="row g-4">
+                                        <!-- Habilidades Técnicas -->
+                                        <div class="col-lg-6">
+                                            <h4 class="mb-4">
+                                                <i class="bi bi-code-square text-primary me-2"></i>Habilidades Técnicas
+                                            </h4>
+                                            
+                                            <div class="mb-4">
+                                                <div class="d-flex justify-content-between mb-2">
+                                                    <span class="fw-bold">HTML5</span>
+                                                    <span class="text-muted">95%</span>
+                                                </div>
+                                                <div class="progress" style="height: 25px;">
+                                                    <div class="progress-bar bg-primary progress-bar-striped progress-bar-animated" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-4">
+                                                <div class="d-flex justify-content-between mb-2">
+                                                    <span class="fw-bold">CSS3</span>
+                                                    <span class="text-muted">90%</span>
+                                                </div>
+                                                <div class="progress" style="height: 25px;">
+                                                    <div class="progress-bar bg-info progress-bar-striped progress-bar-animated" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">90%</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-4">
+                                                <div class="d-flex justify-content-between mb-2">
+                                                    <span class="fw-bold">JavaScript</span>
+                                                    <span class="text-muted">85%</span>
+                                                </div>
+                                                <div class="progress" style="height: 25px;">
+                                                    <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-4">
+                                                <div class="d-flex justify-content-between mb-2">
+                                                    <span class="fw-bold">Bootstrap 5</span>
+                                                    <span class="text-muted">92%</span>
+                                                </div>
+                                                <div class="progress" style="height: 25px;">
+                                                    <div class="progress-bar bg-warning text-dark progress-bar-striped progress-bar-animated" role="progressbar" style="width: 92%" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100">92%</div>
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-4">
+                                                <div class="d-flex justify-content-between mb-2">
+                                                    <span class="fw-bold">Git & GitHub</span>
+                                                    <span class="text-muted">80%</span>
+                                                </div>
+                                                <div class="progress" style="height: 25px;">
+                                                    <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Habilidades Blandas -->
+                                        <div class="col-lg-6">
+                                            <h4 class="mb-4">
+                                                <i class="bi bi-people-fill text-success me-2"></i>Habilidades Blandas
+                                            </h4>
+                                            
+                                            <div class="mb-3">
+                                                <div class="d-flex align-items-center mb-2">
+                                                    <i class="bi bi-chat-dots-fill text-primary me-2"></i>
+                                                    <span class="fw-bold">Comunicación Efectiva</span>
+                                                </div>
+                                                <div class="progress" style="height: 20px;">
+                                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 88%" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <div class="d-flex align-items-center mb-2">
+                                                    <i class="bi bi-people-fill text-success me-2"></i>
+                                                    <span class="fw-bold">Trabajo en Equipo</span>
+                                                </div>
+                                                <div class="progress" style="height: 20px;">
+                                                    <div class="progress-bar bg-success" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <div class="d-flex align-items-center mb-2">
+                                                    <i class="bi bi-lightbulb-fill text-warning me-2"></i>
+                                                    <span class="fw-bold">Resolución de Problemas</span>
+                                                </div>
+                                                <div class="progress" style="height: 20px;">
+                                                    <div class="progress-bar bg-warning text-dark" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <div class="d-flex align-items-center mb-2">
+                                                    <i class="bi bi-clock-fill text-info me-2"></i>
+                                                    <span class="fw-bold">Gestión del Tiempo</span>
+                                                </div>
+                                                <div class="progress" style="height: 20px;">
+                                                    <div class="progress-bar bg-info" role="progressbar" style="width: 82%" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+
+                                            <div class="mb-3">
+                                                <div class="d-flex align-items-center mb-2">
+                                                    <i class="bi bi-book-fill text-danger me-2"></i>
+                                                    <span class="fw-bold">Aprendizaje Continuo</span>
+                                                </div>
+                                                <div class="progress" style="height: 20px;">
+                                                    <div class="progress-bar bg-danger" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                                                </div>
+                                            </div>
+
+                                            <!-- Tecnologías Adicionales -->
+                                            <div class="mt-4">
+                                                <h5 class="mb-3">
+                                                    <i class="bi bi-stack text-primary me-2"></i>Otras Tecnologías
+                                                </h5>
+                                                <div class="d-flex flex-wrap gap-2">
+                                                    <span class="badge bg-secondary">React</span>
+                                                    <span class="badge bg-secondary">Vue.js</span>
+                                                    <span class="badge bg-secondary">SASS</span>
+                                                    <span class="badge bg-secondary">Figma</span>
+                                                    <span class="badge bg-secondary">Photoshop</span>
+                                                    <span class="badge bg-secondary">VS Code</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
