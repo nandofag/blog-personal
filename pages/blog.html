@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Artículos y tutoriales sobre desarrollo web, diseño y tecnología">
+    <title>Blog - Mi Blog Personal</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- ============================================
+        HEADER Y NAVEGACIÓN
+    ============================================= -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="../index.html">
+                    <i class="bi bi-code-slash me-2"></i>Mi Blog
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobre-mi.html">Sobre Mí</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="proyectos.html">Proyectos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ============================================
+        CONTENIDO PRINCIPAL
+    ============================================= -->
+    <main class="mt-5 pt-4">
+        <div class="container">
+            <!-- Título Principal -->
+            <div class="text-center mb-5 animate-fade-in">
+                <h1 class="display-4 fw-bold mb-3">Mi Blog</h1>
+                <p class="lead text-muted">Artículos y tutoriales sobre desarrollo web</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Columna Principal - Artículos -->
+                <div class="col-lg-8">
+                    <!-- Artículo 1 -->
+                    <article class="card shadow-sm mb-4 animate-slide-up">
+                        <img src="../img/articulo1.jpg" alt="Imagen del artículo sobre primeros pasos en desarrollo web" class="card-img-top">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <span class="badge bg-primary me-2">Desarrollo Web</span>
+                                <small class="text-muted">
+                                    <i class="bi bi-calendar3 me-1"></i>Publicado el 15 de Noviembre, 2024
+                                </small>
+                            </div>
+                            <h2 class="card-title mb-3">Primeros Pasos en Desarrollo Web</h2>
+                            <p class="card-text text-justify">
+                                Comenzar en el mundo del desarrollo web puede parecer abrumador al principio, pero con la guía 
+                                correcta y dedicación, es un camino increíblemente gratificante. En este artículo comparto mis 
+                                experiencias aprendiendo HTML y CSS desde cero.
+                            </p>
+                            <p class="card-text text-justify">
+                                Descubre los recursos que me ayudaron en mi camino de aprendizaje, desde cursos online hasta 
+                                comunidades de desarrolladores. También comparto los errores más comunes que cometen los principiantes 
+                                y cómo evitarlos para acelerar tu progreso.
+                            </p>
+                            <p class="card-text text-justify">
+                                Aprenderás sobre las herramientas esenciales, los conceptos fundamentales que debes dominar primero, 
+                                y cómo estructurar tu aprendizaje para obtener los mejores resultados. El desarrollo web es un campo 
+                                en constante evolución, pero los fundamentos siempre serán tu base sólida.
+                            </p>
+                            <a href="#" class="btn btn-primary mt-3">Leer más <i class="bi bi-arrow-right ms-1"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Artículo 2 -->
+                    <article class="card shadow-sm mb-4 animate-slide-up">
+                        <img src="../img/articulo2.jpg" alt="Imagen del artículo sobre diseño responsive y mejores prácticas" class="card-img-top">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <span class="badge bg-success me-2">Diseño Responsive</span>
+                                <small class="text-muted">
+                                    <i class="bi bi-calendar3 me-1"></i>Publicado el 10 de Noviembre, 2024
+                                </small>
+                            </div>
+                            <h2 class="card-title mb-3">Diseño Responsive: Mejores Prácticas</h2>
+                            <p class="card-text text-justify">
+                                En la era actual, donde los usuarios acceden a sitios web desde una variedad de dispositivos, el diseño 
+                                responsive ya no es opcional, es esencial. Aprende cómo crear sitios web que se vean perfectos en todos 
+                                los dispositivos, desde smartphones hasta monitores de escritorio.
+                            </p>
+                            <p class="card-text text-justify">
+                                En este artículo exploramos las mejores prácticas de diseño responsive, incluyendo el enfoque mobile-first, 
+                                el uso de media queries, sistemas de grillas flexibles y técnicas de optimización de imágenes. También 
+                                veremos ejemplos prácticos y herramientas que facilitan el proceso de desarrollo.
+                            </p>
+                            <p class="card-text text-justify">
+                                Descubre cómo estructurar tu CSS para que sea mantenible, cómo usar frameworks como Bootstrap de manera 
+                                eficiente, y cómo probar tu sitio en diferentes dispositivos. El diseño responsive es tanto un arte como 
+                                una ciencia, y dominarlo te convertirá en un desarrollador más completo.
+                            </p>
+                            <a href="#" class="btn btn-success mt-3">Leer más <i class="bi bi-arrow-right ms-1"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="col-lg-4">
+                    <!-- Video Tutorial -->
+                    <aside class="card shadow-sm mb-4 animate-slide-up">
+                        <div class="card-body p-4">
+                            <h3 class="card-title mb-3">
+                                <i class="bi bi-play-circle-fill text-danger me-2"></i>Video Tutorial
+                            </h3>
+                            <p class="card-text mb-3">Aquí puedes ver un video tutorial sobre desarrollo web:</p>
+                            <div class="ratio ratio-16x9">
+                                <iframe src="https://www.youtube.com/embed/mJgBOIoGihA?si=8Tb2geisC_9F04zA" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                        referrerpolicy="strict-origin-when-cross-origin" 
+                                        allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </aside>
+
+                    <!-- Categorías -->
+                    <aside class="card shadow-sm mb-4 animate-slide-up">
+                        <div class="card-body p-4">
+                            <h3 class="card-title mb-3">
+                                <i class="bi bi-tags-fill text-info me-2"></i>Categorías
+                            </h3>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Desarrollo Web
+                                    <span class="badge bg-primary rounded-pill">5</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Diseño Responsive
+                                    <span class="badge bg-success rounded-pill">3</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    JavaScript
+                                    <span class="badge bg-warning text-dark rounded-pill">2</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Frameworks
+                                    <span class="badge bg-info rounded-pill">4</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </aside>
+
+                    <!-- Newsletter -->
+                    <aside class="card shadow-sm bg-primary text-white animate-slide-up">
+                        <div class="card-body p-4">
+                            <h3 class="card-title mb-3">
+                                <i class="bi bi-envelope-fill me-2"></i>Newsletter
+                            </h3>
+                            <p class="card-text">Suscríbete para recibir los últimos artículos y tutoriales.</p>
+                            <form>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" placeholder="Tu email" required>
+                                </div>
+                                <button type="submit" class="btn btn-light w-100">Suscribirse</button>
+                            </form>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ============================================
+        FOOTER
+    ============================================= -->
+    <footer class="bg-dark text-light py-5 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5 class="mb-3">
+                        <i class="bi bi-code-slash me-2"></i>Mi Blog Personal
+                    </h5>
+                    <p class="text-muted">Compartiendo conocimiento y experiencias en desarrollo web.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="mb-3">Enlaces Rápidos</h5>
+                    <nav class="footer-nav">
+                        <ul class="list-unstyled">
+                            <li><a href="../index.html" class="text-light text-decoration-none">Inicio</a></li>
+                            <li><a href="sobre-mi.html" class="text-light text-decoration-none">Sobre Mí</a></li>
+                            <li><a href="proyectos.html" class="text-light text-decoration-none">Proyectos</a></li>
+                            <li><a href="blog.html" class="text-light text-decoration-none">Blog</a></li>
+                            <li><a href="contacto.html" class="text-light text-decoration-none">Contacto</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="mb-3">Redes Sociales</h5>
+                    <div class="redes-sociales">
+                        <a href="#" class="btn btn-outline-light btn-sm me-2 mb-2" aria-label="Facebook">
+                            <i class="bi bi-facebook me-1"></i>Facebook
+                        </a>
+                        <a href="#" class="btn btn-outline-light btn-sm me-2 mb-2" aria-label="Twitter">
+                            <i class="bi bi-twitter me-1"></i>Twitter
+                        </a>
+                        <a href="#" class="btn btn-outline-light btn-sm mb-2" aria-label="Instagram">
+                            <i class="bi bi-instagram me-1"></i>Instagram
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0 text-muted">&copy; 2024 Mi Blog Personal. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

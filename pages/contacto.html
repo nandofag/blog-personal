@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulario de contacto y información para ponerte en contacto conmigo">
+    <title>Contacto - Mi Blog Personal</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- ============================================
+        HEADER Y NAVEGACIÓN
+    ============================================= -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="../index.html">
+                    <i class="bi bi-code-slash me-2"></i>Mi Blog
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobre-mi.html">Sobre Mí</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="proyectos.html">Proyectos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- ============================================
+        CONTENIDO PRINCIPAL
+    ============================================= -->
+    <main class="mt-5 pt-4">
+        <div class="container">
+            <!-- Título Principal -->
+            <div class="text-center mb-5 animate-fade-in">
+                <h1 class="display-4 fw-bold mb-3">Contacto</h1>
+                <p class="lead text-muted">¿Tienes alguna pregunta o quieres trabajar conmigo? ¡Contáctame!</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Formulario de Contacto -->
+                <div class="col-lg-8">
+                    <div class="card shadow-sm animate-slide-up">
+                        <div class="card-body p-4">
+                            <h2 class="card-title mb-4">
+                                <i class="bi bi-envelope-paper-fill text-primary me-2"></i>Envíame un Mensaje
+                            </h2>
+                            <form class="formulario-contacto" action="#" method="post">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label for="nombre" class="form-label fw-bold">Nombre completo <span class="text-danger">*</span></label>
+                                            <input type="text" 
+                                                   class="form-control" 
+                                                   id="nombre" 
+                                                   name="nombre" 
+                                                   required 
+                                                   aria-label="Campo para ingresar tu nombre completo"
+                                                   placeholder="Tu nombre completo">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-3">
+                                            <label for="email" class="form-label fw-bold">Email <span class="text-danger">*</span></label>
+                                            <input type="email" 
+                                                   class="form-control" 
+                                                   id="email" 
+                                                   name="email" 
+                                                   required 
+                                                   aria-label="Campo para ingresar tu dirección de email"
+                                                   placeholder="tu@email.com">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="asunto" class="form-label fw-bold">Asunto <span class="text-danger">*</span></label>
+                                    <input type="text" 
+                                           class="form-control" 
+                                           id="asunto" 
+                                           name="asunto" 
+                                           required 
+                                           aria-label="Campo para ingresar el asunto del mensaje"
+                                           placeholder="¿Sobre qué quieres hablar?">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="mensaje" class="form-label fw-bold">Mensaje <span class="text-danger">*</span></label>
+                                    <textarea class="form-control" 
+                                              id="mensaje" 
+                                              name="mensaje" 
+                                              rows="6" 
+                                              required 
+                                              aria-label="Campo para escribir tu mensaje"
+                                              placeholder="Escribe tu mensaje aquí..."></textarea>
+                                </div>
+
+                                <div class="mb-3">
+                                    <fieldset class="border p-3 rounded">
+                                        <legend class="fw-bold mb-2">¿Cómo prefieres que te contacte?</legend>
+                                        <div class="form-check">
+                                            <input class="form-check-input" 
+                                                   type="radio" 
+                                                   name="metodo-contacto" 
+                                                   id="contacto-email" 
+                                                   value="email" 
+                                                   checked>
+                                            <label class="form-check-label" for="contacto-email">
+                                                <i class="bi bi-envelope me-1"></i>Email
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" 
+                                                   type="radio" 
+                                                   name="metodo-contacto" 
+                                                   id="contacto-telefono" 
+                                                   value="telefono">
+                                            <label class="form-check-label" for="contacto-telefono">
+                                                <i class="bi bi-telephone me-1"></i>Teléfono
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" 
+                                                   type="radio" 
+                                                   name="metodo-contacto" 
+                                                   id="contacto-cualquiera" 
+                                                   value="cualquiera">
+                                            <label class="form-check-label" for="contacto-cualquiera">
+                                                <i class="bi bi-check-all me-1"></i>Cualquiera
+                                            </label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+
+                                <div class="mb-4">
+                                    <fieldset class="border p-3 rounded">
+                                        <legend class="fw-bold mb-2">Intereses (puedes seleccionar varios):</legend>
+                                        <div class="form-check">
+                                            <input class="form-check-input" 
+                                                   type="checkbox" 
+                                                   id="interes-proyecto" 
+                                                   name="intereses" 
+                                                   value="proyecto">
+                                            <label class="form-check-label" for="interes-proyecto">
+                                                Trabajar en un proyecto
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" 
+                                                   type="checkbox" 
+                                                   id="interes-colaboracion" 
+                                                   name="intereses" 
+                                                   value="colaboracion">
+                                            <label class="form-check-label" for="interes-colaboracion">
+                                                Colaboración
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" 
+                                                   type="checkbox" 
+                                                   id="interes-consulta" 
+                                                   name="intereses" 
+                                                   value="consulta">
+                                            <label class="form-check-label" for="interes-consulta">
+                                                Consulta general
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" 
+                                                   type="checkbox" 
+                                                   id="interes-otro" 
+                                                   name="intereses" 
+                                                   value="otro">
+                                            <label class="form-check-label" for="interes-otro">
+                                                Otro
+                                            </label>
+                                        </div>
+                                    </fieldset>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary btn-lg w-100">
+                                    <i class="bi bi-send-fill me-2"></i>Enviar Mensaje
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Información de Contacto -->
+                <div class="col-lg-4">
+                    <aside class="card shadow-sm mb-4 animate-slide-up">
+                        <div class="card-body p-4">
+                            <h3 class="card-title mb-4">
+                                <i class="bi bi-info-circle-fill text-info me-2"></i>Información de Contacto
+                            </h3>
+                            <div class="mb-4">
+                                <p class="mb-2">
+                                    <i class="bi bi-envelope-fill text-primary me-2"></i>
+                                    <strong>Email:</strong><br>
+                                    <a href="mailto:contacto@miblog.com" class="text-decoration-none">contacto@miblog.com</a>
+                                </p>
+                                <p class="mb-2">
+                                    <i class="bi bi-telephone-fill text-success me-2"></i>
+                                    <strong>Teléfono:</strong><br>
+                                    <a href="tel:+59899123456" class="text-decoration-none">+598 99 123 456</a>
+                                </p>
+                                <p class="mb-0">
+                                    <i class="bi bi-geo-alt-fill text-danger me-2"></i>
+                                    <strong>Ubicación:</strong><br>
+                                    Montevideo, Uruguay
+                                </p>
+                            </div>
+                        </div>
+                    </aside>
+
+                    <!-- Mapa -->
+                    <aside class="card shadow-sm animate-slide-up">
+                        <div class="card-body p-4">
+                            <h3 class="card-title mb-3">
+                                <i class="bi bi-map-fill text-danger me-2"></i>Encuéntrame aquí
+                            </h3>
+                            <div class="ratio ratio-16x9">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5400.350300733546!2d-56.197151537724594!3d-34.905679019245305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f8032b3458fe7%3A0x1a0820227b53578b!2sPlaza%20Cagancha!5e1!3m2!1ses!2suy!4v1764032955155!5m2!1ses!2suy" 
+                                        style="border:0;" 
+                                        allowfullscreen="" 
+                                        loading="lazy" 
+                                        referrerpolicy="no-referrer-when-downgrade"
+                                        title="Mapa de ubicación en Montevideo, Uruguay"></iframe>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ============================================
+        FOOTER
+    ============================================= -->
+    <footer class="bg-dark text-light py-5 mt-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5 class="mb-3">
+                        <i class="bi bi-code-slash me-2"></i>Mi Blog Personal
+                    </h5>
+                    <p class="text-muted">Compartiendo conocimiento y experiencias en desarrollo web.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="mb-3">Enlaces Rápidos</h5>
+                    <nav class="footer-nav">
+                        <ul class="list-unstyled">
+                            <li><a href="../index.html" class="text-light text-decoration-none">Inicio</a></li>
+                            <li><a href="sobre-mi.html" class="text-light text-decoration-none">Sobre Mí</a></li>
+                            <li><a href="proyectos.html" class="text-light text-decoration-none">Proyectos</a></li>
+                            <li><a href="blog.html" class="text-light text-decoration-none">Blog</a></li>
+                            <li><a href="contacto.html" class="text-light text-decoration-none">Contacto</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="mb-3">Redes Sociales</h5>
+                    <div class="redes-sociales">
+                        <a href="#" class="btn btn-outline-light btn-sm me-2 mb-2" aria-label="Facebook">
+                            <i class="bi bi-facebook me-1"></i>Facebook
+                        </a>
+                        <a href="#" class="btn btn-outline-light btn-sm me-2 mb-2" aria-label="Twitter">
+                            <i class="bi bi-twitter me-1"></i>Twitter
+                        </a>
+                        <a href="#" class="btn btn-outline-light btn-sm mb-2" aria-label="Instagram">
+                            <i class="bi bi-instagram me-1"></i>Instagram
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0 text-muted">&copy; 2024 Mi Blog Personal. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
