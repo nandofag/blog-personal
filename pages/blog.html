@@ -57,66 +57,16 @@
     <main class="mt-5 pt-4">
         <div class="container">
             <!-- Título Principal -->
-            <div class="text-center mb-4 animate-fade-in">
+            <div class="text-center mb-5 animate-fade-in">
                 <h1 class="display-4 fw-bold mb-3">Mi Blog</h1>
                 <p class="lead text-muted">Artículos y tutoriales sobre desarrollo web</p>
-            </div>
-
-            <!-- Filtros y Ordenamiento -->
-            <div class="card shadow-sm mb-4">
-                <div class="card-body">
-                    <div class="row align-items-center">
-                        <div class="col-md-6 mb-3 mb-md-0">
-                            <h6 class="mb-2">
-                                <i class="bi bi-funnel-fill text-primary me-2"></i>Filtrar por categoría:
-                            </h6>
-                            <ul class="nav nav-pills" id="blogTabs" role="tablist">
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link active" id="todos-blog-tab" data-bs-toggle="pill" data-bs-target="#todos-blog" type="button" role="tab">
-                                        Todos
-                                    </button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="desarrollo-tab" data-bs-toggle="pill" data-bs-target="#desarrollo" type="button" role="tab">
-                                        Desarrollo Web
-                                    </button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="responsive-tab" data-bs-toggle="pill" data-bs-target="#responsive" type="button" role="tab">
-                                        Responsive
-                                    </button>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-6 text-md-end">
-                            <h6 class="mb-2">
-                                <i class="bi bi-sort-down text-info me-2"></i>Ordenar por:
-                            </h6>
-                            <div class="dropdown">
-                                <button class="btn btn-outline-primary dropdown-toggle" type="button" id="ordenDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Más recientes
-                                </button>
-                                <ul class="dropdown-menu" aria-labelledby="ordenDropdown">
-                                    <li><a class="dropdown-item" href="#"><i class="bi bi-calendar-event me-2"></i>Más recientes</a></li>
-                                    <li><a class="dropdown-item" href="#"><i class="bi bi-fire me-2"></i>Más populares</a></li>
-                                    <li><a class="dropdown-item" href="#"><i class="bi bi-alphabet me-2"></i>A-Z</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><a class="dropdown-item" href="#"><i class="bi bi-heart me-2"></i>Más leídos</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
 
             <div class="row g-4">
                 <!-- Columna Principal - Artículos -->
                 <div class="col-lg-8">
-                    <!-- Tab Content -->
-                    <div class="tab-content" id="blogTabContent">
-                        <div class="tab-pane fade show active" id="todos-blog" role="tabpanel">
-                            <!-- Artículo 1 -->
-                            <article class="card shadow-sm mb-4 animate-slide-up blog-item" data-category="desarrollo">
+                    <!-- Artículo 1 -->
+                    <article class="card shadow-sm mb-4 animate-slide-up">
                                 <img src="../img/articulo1.jpg" alt="Imagen del artículo sobre primeros pasos en desarrollo web" class="card-img-top">
                                 <div class="card-body p-4">
                                     <div class="d-flex align-items-center mb-3">
@@ -145,8 +95,8 @@
                                 </div>
                             </article>
 
-                            <!-- Artículo 2 -->
-                            <article class="card shadow-sm mb-4 animate-slide-up blog-item" data-category="responsive">
+                    <!-- Artículo 2 -->
+                    <article class="card shadow-sm mb-4 animate-slide-up">
                                 <img src="../img/articulo2.jpg" alt="Imagen del artículo sobre diseño responsive y mejores prácticas" class="card-img-top">
                                 <div class="card-body p-4">
                                     <div class="d-flex align-items-center mb-3">
@@ -156,40 +106,24 @@
                                         </small>
                                     </div>
                                     <h2 class="card-title mb-3">Diseño Responsive: Mejores Prácticas</h2>
-                            <p class="card-text text-justify">
+                                    <p class="card-text text-justify">
                                 En la era actual, donde los usuarios acceden a sitios web desde una variedad de dispositivos, el diseño 
                                 responsive ya no es opcional, es esencial. Aprende cómo crear sitios web que se vean perfectos en todos 
                                 los dispositivos, desde smartphones hasta monitores de escritorio.
-                            </p>
-                            <p class="card-text text-justify">
-                                En este artículo exploramos las mejores prácticas de diseño responsive, incluyendo el enfoque mobile-first, 
-                                el uso de media queries, sistemas de grillas flexibles y técnicas de optimización de imágenes. También 
-                                veremos ejemplos prácticos y herramientas que facilitan el proceso de desarrollo.
-                            </p>
-                            <p class="card-text text-justify">
-                                Descubre cómo estructurar tu CSS para que sea mantenible, cómo usar frameworks como Bootstrap de manera 
-                                eficiente, y cómo probar tu sitio en diferentes dispositivos. El diseño responsive es tanto un arte como 
-                                una ciencia, y dominarlo te convertirá en un desarrollador más completo.
-                            </p>
+                                    </p>
+                                    <p class="card-text text-justify">
+                                        En este artículo exploramos las mejores prácticas de diseño responsive, incluyendo el enfoque mobile-first, 
+                                        el uso de media queries, sistemas de grillas flexibles y técnicas de optimización de imágenes. También 
+                                        veremos ejemplos prácticos y herramientas que facilitan el proceso de desarrollo.
+                                    </p>
+                                    <p class="card-text text-justify">
+                                        Descubre cómo estructurar tu CSS para que sea mantenible, cómo usar frameworks como Bootstrap de manera 
+                                        eficiente, y cómo probar tu sitio en diferentes dispositivos. El diseño responsive es tanto un arte como 
+                                        una ciencia, y dominarlo te convertirá en un desarrollador más completo.
+                                    </p>
                                     <a href="#" class="btn btn-success mt-3">Leer más <i class="bi bi-arrow-right ms-1"></i></a>
-                                </div>
-                            </article>
                         </div>
-
-                        <!-- Tab Desarrollo Web -->
-                        <div class="tab-pane fade" id="desarrollo" role="tabpanel">
-                            <div id="desarrollo-articles">
-                                <!-- Artículos de desarrollo web se mostrarán aquí -->
-                            </div>
-                        </div>
-
-                        <!-- Tab Responsive -->
-                        <div class="tab-pane fade" id="responsive" role="tabpanel">
-                            <div id="responsive-articles">
-                                <!-- Artículos de responsive se mostrarán aquí -->
-                            </div>
-                        </div>
-                    </div>
+                    </article>
 
                     <!-- Pagination -->
                     <nav aria-label="Navegación de páginas" class="mt-4">
