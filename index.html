@@ -52,18 +52,65 @@
     </header>
 
     <!-- ============================================
-        HERO SECTION
+        HERO SECTION CON CAROUSEL
     ============================================= -->
     <main class="mt-5 pt-4">
-        <section class="hero-section py-5 mb-5">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-12 text-center">
-                        <h1 class="display-4 fw-bold mb-4 animate-fade-in">Bienvenido a Mi Blog Personal</h1>
-                        <p class="lead text-muted mb-4">Compartiendo experiencias en desarrollo web y tecnología</p>
-                        <img src="img/imagen-principal.jpg" alt="Imagen principal del blog mostrando espacio de trabajo con tecnología" class="img-fluid rounded shadow-lg imagen-hero">
+        <section class="hero-carousel-section mb-5">
+            <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/imagen-principal.jpg" class="d-block w-100 carousel-hero-img" alt="Espacio de trabajo con tecnología">
+                        <div class="carousel-caption d-none d-md-block carousel-overlay">
+                            <div class="container">
+                                <h1 class="display-3 fw-bold mb-4 animate-fade-in">Bienvenido a Mi Blog Personal</h1>
+                                <p class="lead mb-4 fs-4">Compartiendo experiencias en desarrollo web y tecnología</p>
+                                <a href="pages/proyectos.html" class="btn btn-primary btn-lg me-2">
+                                    <i class="bi bi-folder-fill me-2"></i>Ver Proyectos
+                                </a>
+                                <a href="pages/blog.html" class="btn btn-outline-light btn-lg">
+                                    <i class="bi bi-journal-text me-2"></i>Leer Blog
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/proyectos.jpg" class="d-block w-100 carousel-hero-img" alt="Proyectos de desarrollo web">
+                        <div class="carousel-caption d-none d-md-block carousel-overlay">
+                            <div class="container">
+                                <h2 class="display-4 fw-bold mb-4">Proyectos Innovadores</h2>
+                                <p class="lead mb-4 fs-5">Descubre mis últimos trabajos en desarrollo web y diseño</p>
+                                <a href="pages/proyectos.html" class="btn btn-success btn-lg">
+                                    <i class="bi bi-arrow-right-circle me-2"></i>Explorar Proyectos
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/habilidades.jpg" class="d-block w-100 carousel-hero-img" alt="Habilidades y competencias">
+                        <div class="carousel-caption d-none d-md-block carousel-overlay">
+                            <div class="container">
+                                <h2 class="display-4 fw-bold mb-4">Aprendiendo Constantemente</h2>
+                                <p class="lead mb-4 fs-5">Tecnologías modernas y mejores prácticas en desarrollo</p>
+                                <a href="pages/sobre-mi.html" class="btn btn-info btn-lg">
+                                    <i class="bi bi-person-badge me-2"></i>Conocer Más
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
             </div>
         </section>
 
@@ -95,75 +142,200 @@
                 </div>
 
                 <!-- ============================================
-                    SECCIÓN: PROYECTOS Y HABILIDADES
+                    SECCIÓN: TRES CARDS PRINCIPALES
                 ============================================= -->
                 <div class="row g-4 mb-5">
                     <!-- Tarjeta de Proyectos -->
-                    <div class="col-lg-6">
+                    <div class="col-lg-4 col-md-6">
                         <article class="card h-100 shadow-sm animate-slide-up">
                             <div class="card-body p-4">
-                                <img src="img/proyectos.jpg" alt="Imagen de proyectos realizados en desarrollo web" class="img-fluid rounded mb-3">
-                                <h3 class="card-title mb-3">
-                                    <i class="bi bi-folder-fill text-primary me-2"></i>Mis Proyectos
+                                <div class="text-center mb-3">
+                                    <i class="bi bi-folder-fill text-primary" style="font-size: 3rem;"></i>
+                                </div>
+                                <h3 class="card-title text-center mb-3">
+                                    Mis Proyectos
                                 </h3>
+                                <p class="text-center text-muted mb-4">Descubre los proyectos en los que he trabajado</p>
                                 <ol class="list-group list-group-numbered">
                                     <li class="list-group-item d-flex justify-content-between align-items-start">
                                         <div class="ms-2 me-auto">
                                             <div class="fw-bold">Sitio Web Corporativo</div>
-                                            <small>Desarrollo completo con HTML, CSS y JavaScript</small>
+                                            <small class="text-muted">HTML, CSS y JavaScript</small>
                                         </div>
                                     </li>
                                     <li class="list-group-item d-flex justify-content-between align-items-start">
                                         <div class="ms-2 me-auto">
                                             <div class="fw-bold">Aplicación Web Interactiva</div>
-                                            <small>Proyecto full-stack con base de datos</small>
+                                            <small class="text-muted">Full-stack con base de datos</small>
                                         </div>
                                     </li>
                                     <li class="list-group-item d-flex justify-content-between align-items-start">
                                         <div class="ms-2 me-auto">
                                             <div class="fw-bold">E-commerce Responsive</div>
-                                            <small>Tienda online con diseño mobile-first</small>
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item d-flex justify-content-between align-items-start">
-                                        <div class="ms-2 me-auto">
-                                            <div class="fw-bold">Portfolio Digital</div>
-                                            <small>Showcase de trabajos y habilidades</small>
+                                            <small class="text-muted">Diseño mobile-first</small>
                                         </div>
                                     </li>
                                 </ol>
+                                <div class="mt-3 text-center">
+                                    <a href="pages/proyectos.html" class="btn btn-primary btn-sm">
+                                        Ver Todos <i class="bi bi-arrow-right ms-1"></i>
+                                    </a>
+                                </div>
                             </div>
                         </article>
                     </div>
                     
                     <!-- Tarjeta de Habilidades -->
-                    <div class="col-lg-6">
+                    <div class="col-lg-4 col-md-6">
                         <article class="card h-100 shadow-sm animate-slide-up">
                             <div class="card-body p-4">
-                                <img src="img/habilidades.jpg" alt="Imagen de habilidades y competencias técnicas" class="img-fluid rounded mb-3">
-                                <h3 class="card-title mb-3">
-                                    <i class="bi bi-tools text-success me-2"></i>Mis Habilidades
+                                <div class="text-center mb-3">
+                                    <i class="bi bi-tools text-success" style="font-size: 3rem;"></i>
+                                </div>
+                                <h3 class="card-title text-center mb-3">
+                                    Mis Habilidades
                                 </h3>
+                                <p class="text-center text-muted mb-4">Tecnologías y competencias que domino</p>
                                 <ul class="list-group">
                                     <li class="list-group-item d-flex align-items-center">
                                         <i class="bi bi-check-circle-fill text-success me-2"></i>
-                                        <span><strong>HTML5 y CSS3</strong> - Estructuración y estilizado avanzado</span>
+                                        <span><strong>HTML5 y CSS3</strong></span>
                                     </li>
                                     <li class="list-group-item d-flex align-items-center">
                                         <i class="bi bi-check-circle-fill text-success me-2"></i>
-                                        <span><strong>Diseño Web Responsive</strong> - Mobile-first y frameworks</span>
+                                        <span><strong>Bootstrap 5</strong></span>
                                     </li>
                                     <li class="list-group-item d-flex align-items-center">
                                         <i class="bi bi-check-circle-fill text-success me-2"></i>
-                                        <span><strong>Comunicación Efectiva</strong> - Trabajo colaborativo</span>
+                                        <span><strong>JavaScript</strong></span>
                                     </li>
                                     <li class="list-group-item d-flex align-items-center">
                                         <i class="bi bi-check-circle-fill text-success me-2"></i>
-                                        <span><strong>Trabajo en Equipo</strong> - Metodologías ágiles</span>
+                                        <span><strong>Diseño Responsive</strong></span>
                                     </li>
                                 </ul>
+                                <div class="mt-3 text-center">
+                                    <a href="pages/sobre-mi.html" class="btn btn-success btn-sm">
+                                        Más Información <i class="bi bi-arrow-right ms-1"></i>
+                                    </a>
+                                </div>
                             </div>
                         </article>
+                    </div>
+
+                    <!-- Tarjeta de Blog -->
+                    <div class="col-lg-4 col-md-6">
+                        <article class="card h-100 shadow-sm animate-slide-up">
+                            <div class="card-body p-4">
+                                <div class="text-center mb-3">
+                                    <i class="bi bi-journal-text text-info" style="font-size: 3rem;"></i>
+                                </div>
+                                <h3 class="card-title text-center mb-3">
+                                    Mi Blog
+                                </h3>
+                                <p class="text-center text-muted mb-4">Artículos y tutoriales sobre desarrollo web</p>
+                                <ul class="list-group">
+                                    <li class="list-group-item d-flex align-items-center">
+                                        <i class="bi bi-bookmark-fill text-info me-2"></i>
+                                        <span>Tutoriales prácticos</span>
+                                    </li>
+                                    <li class="list-group-item d-flex align-items-center">
+                                        <i class="bi bi-bookmark-fill text-info me-2"></i>
+                                        <span>Mejores prácticas</span>
+                                    </li>
+                                    <li class="list-group-item d-flex align-items-center">
+                                        <i class="bi bi-bookmark-fill text-info me-2"></i>
+                                        <span>Tips y trucos</span>
+                                    </li>
+                                    <li class="list-group-item d-flex align-items-center">
+                                        <i class="bi bi-bookmark-fill text-info me-2"></i>
+                                        <span>Recursos útiles</span>
+                                    </li>
+                                </ul>
+                                <div class="mt-3 text-center">
+                                    <a href="pages/blog.html" class="btn btn-info btn-sm">
+                                        Leer Artículos <i class="bi bi-arrow-right ms-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- ============================================
+                    SECCIÓN: ACORDEÓN CON INFORMACIÓN ADICIONAL
+                ============================================= -->
+                <div class="row mb-5">
+                    <div class="col-lg-10 mx-auto">
+                        <div class="card shadow-sm animate-slide-up">
+                            <div class="card-body p-4">
+                                <h2 class="card-title text-center mb-4">
+                                    <i class="bi bi-info-circle-fill text-primary me-2"></i>Información Adicional
+                                </h2>
+                                <div class="accordion" id="infoAccordion">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingOne">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                <i class="bi bi-code-square me-2"></i>¿Qué tecnologías uso?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#infoAccordion">
+                                            <div class="accordion-body">
+                                                <p>Utilizo principalmente tecnologías del frontend moderno. Mi stack incluye:</p>
+                                                <ul>
+                                                    <li><strong>HTML5 y CSS3</strong> para la estructura y estilos</li>
+                                                    <li><strong>Bootstrap 5</strong> como framework CSS principal</li>
+                                                    <li><strong>JavaScript</strong> para interactividad</li>
+                                                    <li><strong>Git y GitHub</strong> para control de versiones</li>
+                                                    <li>Conocimientos básicos de <strong>React</strong> y <strong>Vue.js</strong></li>
+                                                </ul>
+                                                <p class="mb-0">Siempre estoy aprendiendo nuevas tecnologías y mejorando mis habilidades.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingTwo">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                <i class="bi bi-lightbulb me-2"></i>Mi proceso de trabajo
+                                            </button>
+                                        </h2>
+                                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#infoAccordion">
+                                            <div class="accordion-body">
+                                                <p>Sigo un proceso estructurado para cada proyecto:</p>
+                                                <ol>
+                                                    <li><strong>Análisis y Planificación:</strong> Entiendo los requerimientos y objetivos del proyecto</li>
+                                                    <li><strong>Diseño:</strong> Creo wireframes y mockups antes de comenzar a codificar</li>
+                                                    <li><strong>Desarrollo:</strong> Implemento el código usando las mejores prácticas</li>
+                                                    <li><strong>Testing:</strong> Pruebo en diferentes navegadores y dispositivos</li>
+                                                    <li><strong>Optimización:</strong> Mejoro el rendimiento y la accesibilidad</li>
+                                                    <li><strong>Deploy:</strong> Publico el proyecto y realizo mantenimiento continuo</li>
+                                                </ol>
+                                                <p class="mb-0">Me enfoco en crear código limpio, mantenible y escalable.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingThree">
+                                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                <i class="bi bi-heart me-2"></i>¿Por qué desarrollo web?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#infoAccordion">
+                                            <div class="accordion-body">
+                                                <p>El desarrollo web combina perfectamente mi pasión por la creatividad y la lógica. Me encanta:</p>
+                                                <ul>
+                                                    <li><strong>Resolver problemas:</strong> Cada proyecto presenta desafíos únicos que me motivan a aprender</li>
+                                                    <li><strong>Crear experiencias:</strong> Disfruto diseñando interfaces que sean tanto funcionales como atractivas</li>
+                                                    <li><strong>Compartir conocimiento:</strong> Creo en el poder de la comunidad y el aprendizaje colaborativo</li>
+                                                    <li><strong>Evolución constante:</strong> La tecnología siempre está cambiando, lo que mantiene el trabajo interesante</li>
+                                                </ul>
+                                                <p class="mb-0">Cada línea de código es una oportunidad de crear algo nuevo y útil para otros.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

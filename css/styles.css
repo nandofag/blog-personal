@@ -149,8 +149,68 @@ body {
 }
 
 /* ============================================
-   HERO SECTION
+   HERO SECTION CON CAROUSEL
    ============================================ */
+.hero-carousel-section {
+    margin-bottom: var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+}
+
+.carousel-hero-img {
+    height: 500px;
+    object-fit: cover;
+    filter: brightness(0.7);
+}
+
+.carousel-overlay {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 100%);
+    padding: 3rem 0;
+    border-radius: var(--border-radius-md);
+}
+
+.carousel-overlay h1,
+.carousel-overlay h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    color: var(--text-light);
+}
+
+.carousel-overlay p {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    transition: all var(--transition-fast);
+}
+
+.carousel-indicators .active {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    width: 14px;
+    height: 14px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 15px;
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: rgba(74, 144, 226, 0.8);
+}
+
 .hero-section {
     background: linear-gradient(135deg, rgba(74, 144, 226, 0.1) 0%, rgba(17, 162, 184, 0.1) 100%);
     border-radius: var(--border-radius-lg);
@@ -564,9 +624,65 @@ footer a:hover {
 }
 
 /* ============================================
+   ACORDEÓN PERSONALIZADO
+   ============================================ */
+.accordion-button {
+    font-weight: 600;
+    color: var(--text-primary);
+    background-color: var(--bg-secondary);
+    border: none;
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: var(--text-light);
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 0.2rem rgba(74, 144, 226, 0.25);
+}
+
+.accordion-button::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    transition: transform var(--transition-normal);
+}
+
+.accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+    transform: rotate(180deg);
+}
+
+.accordion-item {
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    margin-bottom: 0.5rem;
+    border-radius: var(--border-radius-sm);
+    overflow: hidden;
+}
+
+.accordion-body {
+    background-color: var(--bg-primary);
+    padding: var(--spacing-md);
+}
+
+/* ============================================
    RESPONSIVE DESIGN - Mobile First
    ============================================ */
 @media (max-width: 992px) {
+    .carousel-hero-img {
+        height: 400px;
+    }
+    
+    .carousel-overlay {
+        padding: 2rem 0;
+    }
+    
+    .carousel-overlay h1,
+    .carousel-overlay h2 {
+        font-size: 2rem;
+    }
     :root {
         --spacing-xl: 2rem;
         --spacing-lg: 1.5rem;
@@ -593,6 +709,28 @@ footer a:hover {
     
     .display-4 {
         font-size: 2rem;
+    }
+    
+    .carousel-hero-img {
+        height: 300px;
+    }
+    
+    .carousel-overlay {
+        padding: 1.5rem 0;
+    }
+    
+    .carousel-overlay h1,
+    .carousel-overlay h2 {
+        font-size: 1.75rem;
+    }
+    
+    .carousel-overlay p {
+        font-size: 1rem;
+    }
+    
+    .carousel-overlay .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
     }
     
     .card:hover {
@@ -622,6 +760,26 @@ footer a:hover {
     .btn {
         padding: 0.5rem 1rem;
         font-size: 0.9rem;
+    }
+    
+    .carousel-hero-img {
+        height: 250px;
+    }
+    
+    .carousel-overlay h1,
+    .carousel-overlay h2 {
+        font-size: 1.5rem;
+    }
+    
+    .carousel-overlay p {
+        font-size: 0.9rem;
+    }
+    
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 40px;
+        height: 40px;
+        padding: 10px;
     }
     
     /* Desactivar algunas animaciones en móviles pequeños para mejor rendimiento */
