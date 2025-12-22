@@ -56,14 +56,6 @@
     ============================================= -->
     <main class="mt-5 pt-4">
         <div class="container">
-            <!-- Breadcrumbs -->
-            <nav aria-label="breadcrumb" class="mb-4">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="../index.html">Inicio</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Contacto</li>
-                </ol>
-            </nav>
-
             <!-- Título Principal -->
             <div class="text-center mb-4 animate-fade-in">
                 <h1 class="display-4 fw-bold mb-3">Contacto</h1>
@@ -399,81 +391,13 @@
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     
-    <!-- Scripts para formulario de contacto -->
+    <!-- Scripts para formulario de contacto (solo tooltips de Bootstrap) -->
     <script>
-        // Inicializar tooltips
+        // Inicializar tooltips de Bootstrap
         document.addEventListener('DOMContentLoaded', function() {
             var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
             var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
                 return new bootstrap.Tooltip(tooltipTriggerEl);
-            });
-
-            // Contador de caracteres
-            const mensajeTextarea = document.getElementById('mensaje');
-            const charCount = document.getElementById('charCount');
-            
-            mensajeTextarea.addEventListener('input', function() {
-                const length = this.value.length;
-                charCount.textContent = length;
-                
-                if (length > 500) {
-                    charCount.classList.add('text-danger');
-                    this.setCustomValidity('El mensaje no puede exceder 500 caracteres');
-                } else {
-                    charCount.classList.remove('text-danger');
-                    this.setCustomValidity('');
-                }
-            });
-
-            // Validación del formulario
-            const form = document.getElementById('contactForm');
-            const alertSuccess = document.getElementById('alertSuccess');
-            const alertError = document.getElementById('alertError');
-            const progressBar = document.getElementById('progressBar');
-            const submitBtn = document.getElementById('submitBtn');
-
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Validar formulario
-                if (!form.checkValidity()) {
-                    e.stopPropagation();
-                    alertError.classList.remove('d-none');
-                    alertError.classList.add('show');
-                    form.classList.add('was-validated');
-                    return;
-                }
-
-                // Ocultar alerts anteriores
-                alertError.classList.add('d-none');
-                alertSuccess.classList.add('d-none');
-
-                // Mostrar progress bar
-                progressBar.classList.remove('d-none');
-                submitBtn.disabled = true;
-
-                // Simular envío
-                let progress = 0;
-                const interval = setInterval(() => {
-                    progress += 10;
-                    progressBar.querySelector('.progress-bar').style.width = progress + '%';
-                    
-                    if (progress >= 100) {
-                        clearInterval(interval);
-                        setTimeout(() => {
-                            progressBar.classList.add('d-none');
-                            alertSuccess.classList.remove('d-none');
-                            alertSuccess.classList.add('show');
-                            form.reset();
-                            form.classList.remove('was-validated');
-                            charCount.textContent = '0';
-                            submitBtn.disabled = false;
-                            
-                            // Scroll al alert
-                            alertSuccess.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                        }, 500);
-                    }
-                }, 200);
             });
         });
     </script>

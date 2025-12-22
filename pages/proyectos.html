@@ -56,14 +56,6 @@
     ============================================= -->
     <main class="mt-5 pt-4">
         <div class="container">
-            <!-- Breadcrumbs -->
-            <nav aria-label="breadcrumb" class="mb-4">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="../index.html">Inicio</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Proyectos</li>
-                </ol>
-            </nav>
-
             <!-- Título Principal -->
             <div class="text-center mb-4 animate-fade-in">
                 <h1 class="display-4 fw-bold mb-3">Mis Proyectos</h1>
@@ -512,33 +504,5 @@
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    
-    <!-- Script para filtrado de proyectos -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const tabs = document.querySelectorAll('#projectTabs button[data-bs-toggle="pill"]');
-            const projectItems = document.querySelectorAll('.project-item');
-            
-            tabs.forEach(tab => {
-                tab.addEventListener('shown.bs.tab', function(event) {
-                    const targetId = event.target.getAttribute('data-bs-target');
-                    const category = targetId.replace('#', '');
-                    
-                    projectItems.forEach(item => {
-                        if (category === 'todos') {
-                            item.style.display = 'block';
-                        } else {
-                            const itemCategory = item.getAttribute('data-category');
-                            if (itemCategory === category) {
-                                item.style.display = 'block';
-                            } else {
-                                item.style.display = 'none';
-                            }
-                        }
-                    });
-                });
-            });
-        });
-    </script>
 </body>
 </html>
