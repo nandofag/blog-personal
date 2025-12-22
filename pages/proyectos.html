@@ -55,179 +55,161 @@
         CONTENIDO PRINCIPAL
     ============================================= -->
     <main class="mt-5 pt-4">
+        <!-- Hero Section -->
+        <section class="hero-proyectos mb-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-12">
+                        <div class="hero-content text-center text-white p-5 rounded">
+                            <h1 class="display-3 fw-bold mb-3 animate-fade-in">Mis Proyectos</h1>
+                            <p class="lead mb-4 fs-4">Explora algunos de los proyectos en los que he trabajado</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <div class="container">
-            <!-- Título Principal -->
-            <div class="text-center mb-5 animate-fade-in">
-                <h1 class="display-4 fw-bold mb-3">Mis Proyectos</h1>
-                <p class="lead text-muted">Explora algunos de los proyectos en los que he trabajado</p>
+            <!-- Texto Introductorio -->
+            <div class="row mb-5">
+                <div class="col-lg-10 mx-auto">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4">
+                            <p class="text-justify mb-3">
+                                En mi trayectoria como desarrollador web, he trabajado en diversos tipos de proyectos que abarcan desde 
+                                sitios web corporativos hasta aplicaciones web interactivas y plataformas de e-commerce. Cada proyecto 
+                                representa un desafío único y una oportunidad de aplicar las mejores prácticas en desarrollo web.
+                            </p>
+                            <p class="text-justify mb-3">
+                                Utilizo tecnologías modernas como <strong>HTML5</strong>, <strong>CSS3</strong>, <strong>JavaScript</strong>, 
+                                <strong>Bootstrap 5</strong> y <strong>APIs REST</strong> para crear soluciones web que sean tanto funcionales 
+                                como visualmente atractivas. Mi enfoque se centra en el diseño responsive, la optimización de rendimiento 
+                                y la experiencia de usuario.
+                            </p>
+                            <p class="text-justify mb-0">
+                                A continuación, puedes explorar algunos de los proyectos más destacados en los que he participado, cada uno 
+                                con sus propias características y tecnologías específicas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- Proyecto 1 -->
             <article class="card shadow-lg mb-5 animate-slide-up">
-                        <div class="row g-0">
-                            <div class="col-md-5">
-                                <img src="../img/proyecto1.jpg" alt="Captura del proyecto de sitio web corporativo" class="img-fluid rounded-start h-100" style="object-fit: cover;">
+                <div class="row g-0">
+                    <div class="col-md-5">
+                        <img src="../img/proyecto1.jpg" alt="Captura del proyecto de sitio web corporativo" class="img-fluid proyecto-imagen rounded-start h-100">
+                    </div>
+                    <div class="col-md-7">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <h2 class="card-title mb-0">
+                                    <i class="bi bi-globe text-primary me-2"></i>Sitio Web Corporativo
+                                </h2>
+                                <span class="badge bg-success">Completado</span>
                             </div>
-                            <div class="col-md-7">
-                                <div class="card-body p-4">
-                                    <div class="d-flex justify-content-between align-items-start mb-3">
-                                        <h2 class="card-title mb-0">
-                                            <i class="bi bi-globe text-primary me-2"></i>Sitio Web Corporativo
-                                        </h2>
-                                        <span class="badge bg-success">Completado</span>
-                                    </div>
-                                    <p class="card-text text-justify">
-                                        Desarrollo completo de un sitio web corporativo para una empresa de servicios profesionales. 
-                                        El proyecto incluye diseño responsive, optimización para diferentes dispositivos y una interfaz 
-                                        moderna que refleja la identidad de la marca.
-                                    </p>
-                                    <p class="card-text text-justify">
-                                        Implementé un sistema de navegación intuitivo y secciones dinámicas que mejoran la experiencia 
-                                        del usuario. El sitio está completamente optimizado para velocidad y rendimiento.
-                                    </p>
-                                    <div class="mt-4">
-                                        <h6 class="fw-bold mb-2">Tecnologías utilizadas:</h6>
-                                        <ul class="list-inline mb-3">
-                                            <li class="list-inline-item">
-                                                <span class="badge bg-primary">HTML5</span>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <span class="badge bg-info">CSS3</span>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <span class="badge bg-success">JavaScript</span>
-                                            </li>
-                                            <li class="list-inline-item">
-                                                <span class="badge bg-warning text-dark">Bootstrap</span>
-                                            </li>
-                                        </ul>
-                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalProyecto1">
-                                            <i class="bi bi-eye me-2"></i>Ver Detalles
-                                        </button>
-                                    </div>
+                            <p class="card-text text-justify mb-4">
+                                Desarrollo completo de un sitio web corporativo para una empresa de servicios profesionales. 
+                                El proyecto incluye diseño responsive, optimización para diferentes dispositivos y una interfaz 
+                                moderna que refleja la identidad de la marca. Implementé un sistema de navegación intuitivo y 
+                                secciones dinámicas que mejoran la experiencia del usuario.
+                            </p>
+                            <div class="mb-4">
+                                <h6 class="fw-bold mb-2">Tecnologías utilizadas:</h6>
+                                <div class="d-flex flex-wrap gap-2 mb-3">
+                                    <span class="badge bg-primary">HTML5</span>
+                                    <span class="badge bg-info">CSS3</span>
+                                    <span class="badge bg-success">JavaScript</span>
+                                    <span class="badge bg-warning text-dark">Bootstrap</span>
                                 </div>
                             </div>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalProyecto1">
+                                <i class="bi bi-eye me-2"></i>Ver Detalles
+                            </button>
                         </div>
-                    </article>
+                    </div>
+                </div>
+            </article>
 
             <!-- Proyecto 2 -->
             <article class="card shadow-lg mb-5 animate-slide-up">
-                        <div class="row g-0">
-                            <div class="col-md-7">
-                                <div class="card-body p-4">
-                                    <div class="d-flex justify-content-between align-items-start mb-3">
-                                        <h2 class="card-title mb-0">
-                                            <i class="bi bi-app-indicator text-success me-2"></i>Aplicación Web Interactiva
-                                        </h2>
-                                        <span class="badge bg-warning text-dark">En Desarrollo</span>
-                                    </div>
-                                    <p class="card-text text-justify">
-                                        Creación de una aplicación web interactiva con funcionalidades avanzadas y una interfaz intuitiva. 
-                                        Este proyecto demuestra habilidades en desarrollo full-stack y gestión de estado de aplicaciones.
-                                    </p>
-                                    <p class="card-text text-justify">
-                                        La aplicación incluye autenticación de usuarios, panel de administración y características 
-                                        interactivas que mejoran la participación del usuario. Todo desarrollado con las mejores prácticas 
-                                        de desarrollo web moderno.
-                                    </p>
-                                    <div class="mt-4">
-                                        <h6 class="fw-bold mb-2">Fases del proyecto:</h6>
-                                        <ol class="list-group list-group-numbered mb-3">
-                                            <li class="list-group-item d-flex justify-content-between align-items-start">
-                                                <div class="ms-2 me-auto">
-                                                    <div class="fw-bold">Fase 1: Diseño y prototipado</div>
-                                                    <small>Wireframes y mockups en Figma</small>
-                                                </div>
-                                            </li>
-                                            <li class="list-group-item d-flex justify-content-between align-items-start">
-                                                <div class="ms-2 me-auto">
-                                                    <div class="fw-bold">Fase 2: Desarrollo frontend</div>
-                                                    <small>Implementación de la interfaz de usuario</small>
-                                                </div>
-                                            </li>
-                                            <li class="list-group-item d-flex justify-content-between align-items-start">
-                                                <div class="ms-2 me-auto">
-                                                    <div class="fw-bold">Fase 3: Testing y optimización</div>
-                                                    <small>Pruebas de funcionalidad y rendimiento</small>
-                                                </div>
-                                            </li>
-                                            <li class="list-group-item d-flex justify-content-between align-items-start">
-                                                <div class="ms-2 me-auto">
-                                                    <div class="fw-bold">Fase 4: Lanzamiento</div>
-                                                    <small>Deploy y puesta en producción</small>
-                                                </div>
-                                            </li>
-                                        </ol>
-                                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalProyecto2">
-                                            <i class="bi bi-eye me-2"></i>Ver Detalles
-                                        </button>
-                                    </div>
+                <div class="row g-0">
+                    <div class="col-md-7">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <h2 class="card-title mb-0">
+                                    <i class="bi bi-app-indicator text-success me-2"></i>Aplicación Web Interactiva
+                                </h2>
+                                <span class="badge bg-warning text-dark">En Desarrollo</span>
+                            </div>
+                            <p class="card-text text-justify mb-4">
+                                Creación de una aplicación web interactiva con funcionalidades avanzadas y una interfaz intuitiva. 
+                                Este proyecto demuestra habilidades en desarrollo full-stack y gestión de estado de aplicaciones. 
+                                La aplicación incluye autenticación de usuarios, panel de administración y características 
+                                interactivas que mejoran la participación del usuario.
+                            </p>
+                            <div class="mb-4">
+                                <h6 class="fw-bold mb-2">Tecnologías utilizadas:</h6>
+                                <div class="d-flex flex-wrap gap-2 mb-3">
+                                    <span class="badge bg-primary">HTML5</span>
+                                    <span class="badge bg-info">CSS3</span>
+                                    <span class="badge bg-success">JavaScript</span>
+                                    <span class="badge bg-warning text-dark">Bootstrap</span>
+                                    <span class="badge bg-danger">React</span>
                                 </div>
                             </div>
-                            <div class="col-md-5">
-                                <img src="../img/proyecto2.jpg" alt="Captura de la aplicación web interactiva" class="img-fluid rounded-end h-100" style="object-fit: cover;">
-                            </div>
+                            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalProyecto2">
+                                <i class="bi bi-eye me-2"></i>Ver Detalles
+                            </button>
                         </div>
-                    </article>
+                    </div>
+                    <div class="col-md-5">
+                        <img src="../img/proyecto2.jpg" alt="Captura de la aplicación web interactiva" class="img-fluid proyecto-imagen rounded-end h-100">
+                    </div>
+                </div>
+            </article>
 
             <!-- Proyecto 3 -->
             <article class="card shadow-lg mb-5 animate-slide-up">
-                        <div class="row g-0">
-                            <div class="col-md-5">
-                                <img src="../img/proyecto3.jpg" alt="Captura del portfolio personal" class="img-fluid rounded-start h-100" style="object-fit: cover;">
+                <div class="row g-0">
+                    <div class="col-md-5">
+                        <img src="../img/proyecto3.jpg" alt="Captura del portfolio personal" class="img-fluid proyecto-imagen rounded-start h-100">
+                    </div>
+                    <div class="col-md-7">
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <h2 class="card-title mb-0">
+                                    <i class="bi bi-briefcase text-info me-2"></i>Portfolio Personal
+                                </h2>
+                                <span class="badge bg-success">Completado</span>
                             </div>
-                            <div class="col-md-7">
-                                <div class="card-body p-4">
-                                    <div class="d-flex justify-content-between align-items-start mb-3">
-                                        <h2 class="card-title mb-0">
-                                            <i class="bi bi-briefcase text-info me-2"></i>Portfolio Personal
-                                        </h2>
-                                        <span class="badge bg-success">Completado</span>
-                                    </div>
-                                    <p class="card-text text-justify">
-                                        Diseño y desarrollo de un portfolio personal elegante que muestra mis mejores trabajos y habilidades. 
-                                        El sitio está optimizado para SEO y cuenta con animaciones sutiles que mejoran la experiencia visual.
-                                    </p>
-                                    <p class="card-text text-justify">
-                                        Este proyecto incluye una galería de proyectos, sección de habilidades, testimonios y un formulario 
-                                        de contacto funcional. El diseño es completamente responsive y se adapta perfectamente a todos los 
-                                        dispositivos.
-                                    </p>
-                                    <div class="mt-4">
-                                        <h6 class="fw-bold mb-2">Características destacadas:</h6>
-                                        <ul class="list-group mb-3">
-                                            <li class="list-group-item d-flex align-items-center">
-                                                <i class="bi bi-check-circle-fill text-success me-2"></i>
-                                                <span>Diseño responsive y mobile-first</span>
-                                            </li>
-                                            <li class="list-group-item d-flex align-items-center">
-                                                <i class="bi bi-check-circle-fill text-success me-2"></i>
-                                                <span>Optimización de imágenes y carga rápida</span>
-                                            </li>
-                                            <li class="list-group-item d-flex align-items-center">
-                                                <i class="bi bi-check-circle-fill text-success me-2"></i>
-                                                <span>Animaciones CSS avanzadas</span>
-                                            </li>
-                                            <li class="list-group-item d-flex align-items-center">
-                                                <i class="bi bi-check-circle-fill text-success me-2"></i>
-                                                <span>Formulario de contacto con validación</span>
-                                            </li>
-                                        </ul>
-                                        <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalProyecto3">
-                                            <i class="bi bi-eye me-2"></i>Ver Detalles
-                                        </button>
-                                    </div>
+                            <p class="card-text text-justify mb-4">
+                                Diseño y desarrollo de un portfolio personal elegante que muestra mis mejores trabajos y habilidades. 
+                                El sitio está optimizado para SEO y cuenta con animaciones sutiles que mejoran la experiencia visual. 
+                                Este proyecto incluye una galería de proyectos, sección de habilidades, testimonios y un formulario 
+                                de contacto funcional.
+                            </p>
+                            <div class="mb-4">
+                                <h6 class="fw-bold mb-2">Tecnologías utilizadas:</h6>
+                                <div class="d-flex flex-wrap gap-2 mb-3">
+                                    <span class="badge bg-primary">HTML5</span>
+                                    <span class="badge bg-info">CSS3</span>
+                                    <span class="badge bg-success">JavaScript</span>
+                                    <span class="badge bg-warning text-dark">Bootstrap</span>
                                 </div>
                             </div>
+                            <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modalProyecto3">
+                                <i class="bi bi-eye me-2"></i>Ver Detalles
+                            </button>
                         </div>
-                    </article>
+                    </div>
+                </div>
+            </article>
 
             <!-- Proyecto 4 -->
             <article class="card shadow-lg mb-5 animate-slide-up">
                 <div class="row g-0">
-                    <div class="col-md-5">
-                        <img src="../img/proyectos.jpg" alt="Captura del proyecto de tienda online" class="img-fluid rounded-start h-100" style="object-fit: cover;">
-                    </div>
                     <div class="col-md-7">
                         <div class="card-body p-4">
                             <div class="d-flex justify-content-between align-items-start mb-3">
@@ -236,39 +218,29 @@
                                 </h2>
                                 <span class="badge bg-success">Completado</span>
                             </div>
-                            <p class="card-text text-justify">
+                            <p class="card-text text-justify mb-4">
                                 Desarrollo de una plataforma de e-commerce completa con carrito de compras, sistema de pagos integrado 
                                 y panel de administración. El proyecto incluye catálogo de productos, gestión de inventario y 
-                                seguimiento de pedidos.
+                                seguimiento de pedidos. Implementé funcionalidades de búsqueda avanzada, filtros por categorías y 
+                                valoraciones de productos.
                             </p>
-                            <p class="card-text text-justify">
-                                Implementé funcionalidades de búsqueda avanzada, filtros por categorías y valoraciones de productos. 
-                                El diseño es completamente responsive y optimizado para conversión de ventas.
-                            </p>
-                            <div class="mt-4">
+                            <div class="mb-4">
                                 <h6 class="fw-bold mb-2">Tecnologías utilizadas:</h6>
-                                <ul class="list-inline mb-3">
-                                    <li class="list-inline-item">
-                                        <span class="badge bg-primary">HTML5</span>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <span class="badge bg-info">CSS3</span>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <span class="badge bg-success">JavaScript</span>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <span class="badge bg-warning text-dark">Bootstrap</span>
-                                    </li>
-                                    <li class="list-inline-item">
-                                        <span class="badge bg-danger">API REST</span>
-                                    </li>
-                                </ul>
-                                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalProyecto4">
-                                    <i class="bi bi-eye me-2"></i>Ver Detalles
-                                </button>
+                                <div class="d-flex flex-wrap gap-2 mb-3">
+                                    <span class="badge bg-primary">HTML5</span>
+                                    <span class="badge bg-info">CSS3</span>
+                                    <span class="badge bg-success">JavaScript</span>
+                                    <span class="badge bg-warning text-dark">Bootstrap</span>
+                                    <span class="badge bg-danger">API REST</span>
+                                </div>
                             </div>
+                            <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalProyecto4">
+                                <i class="bi bi-eye me-2"></i>Ver Detalles
+                            </button>
                         </div>
+                    </div>
+                    <div class="col-md-5">
+                        <img src="../img/proyectos.jpg" alt="Captura del proyecto de tienda online" class="img-fluid proyecto-imagen rounded-end h-100">
                     </div>
                 </div>
             </article>
@@ -276,6 +248,9 @@
             <!-- Proyecto 5 -->
             <article class="card shadow-lg mb-5 animate-slide-up">
                 <div class="row g-0">
+                    <div class="col-md-5">
+                        <img src="../img/habilidades.jpg" alt="Captura del sistema de gestión de eventos" class="img-fluid proyecto-imagen rounded-start h-100">
+                    </div>
                     <div class="col-md-7">
                         <div class="card-body p-4">
                             <div class="d-flex justify-content-between align-items-start mb-3">
@@ -284,42 +259,26 @@
                                 </h2>
                                 <span class="badge bg-info">Completado</span>
                             </div>
-                            <p class="card-text text-justify">
+                            <p class="card-text text-justify mb-4">
                                 Plataforma web para la gestión y organización de eventos corporativos y sociales. El sistema permite 
-                                crear eventos, gestionar invitaciones, control de asistencia y generación de reportes.
+                                crear eventos, gestionar invitaciones, control de asistencia y generación de reportes. Desarrollé un 
+                                dashboard intuitivo para organizadores con estadísticas en tiempo real, integración con sistemas de 
+                                notificaciones por email y generación de códigos QR para acceso a eventos.
                             </p>
-                            <p class="card-text text-justify">
-                                Desarrollé un dashboard intuitivo para organizadores con estadísticas en tiempo real, integración con 
-                                sistemas de notificaciones por email y generación de códigos QR para acceso a eventos.
-                            </p>
-                            <div class="mt-4">
-                                <h6 class="fw-bold mb-2">Características principales:</h6>
-                                <ul class="list-group mb-3">
-                                    <li class="list-group-item d-flex align-items-center">
-                                        <i class="bi bi-check-circle-fill text-primary me-2"></i>
-                                        <span>Gestión de eventos y calendario interactivo</span>
-                                    </li>
-                                    <li class="list-group-item d-flex align-items-center">
-                                        <i class="bi bi-check-circle-fill text-primary me-2"></i>
-                                        <span>Sistema de invitaciones personalizadas</span>
-                                    </li>
-                                    <li class="list-group-item d-flex align-items-center">
-                                        <i class="bi bi-check-circle-fill text-primary me-2"></i>
-                                        <span>Control de asistencia con códigos QR</span>
-                                    </li>
-                                    <li class="list-group-item d-flex align-items-center">
-                                        <i class="bi bi-check-circle-fill text-primary me-2"></i>
-                                        <span>Dashboard con estadísticas y reportes</span>
-                                    </li>
-                                </ul>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalProyecto5">
-                                    <i class="bi bi-eye me-2"></i>Ver Detalles
-                                </button>
+                            <div class="mb-4">
+                                <h6 class="fw-bold mb-2">Tecnologías utilizadas:</h6>
+                                <div class="d-flex flex-wrap gap-2 mb-3">
+                                    <span class="badge bg-primary">HTML5</span>
+                                    <span class="badge bg-info">CSS3</span>
+                                    <span class="badge bg-success">JavaScript</span>
+                                    <span class="badge bg-warning text-dark">Bootstrap</span>
+                                    <span class="badge bg-danger">API REST</span>
+                                </div>
                             </div>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalProyecto5">
+                                <i class="bi bi-eye me-2"></i>Ver Detalles
+                            </button>
                         </div>
-                    </div>
-                    <div class="col-md-5">
-                        <img src="../img/habilidades.jpg" alt="Captura del sistema de gestión de eventos" class="img-fluid rounded-end h-100" style="object-fit: cover;">
                     </div>
                 </div>
             </article>
@@ -327,9 +286,6 @@
             <!-- Proyecto 6 -->
             <article class="card shadow-lg mb-5 animate-slide-up">
                 <div class="row g-0">
-                    <div class="col-md-5">
-                        <img src="../img/imagen-principal.jpg" alt="Captura de la aplicación de gestión de tareas" class="img-fluid rounded-start h-100" style="object-fit: cover;">
-                    </div>
                     <div class="col-md-7">
                         <div class="card-body p-4">
                             <div class="d-flex justify-content-between align-items-start mb-3">
@@ -338,39 +294,29 @@
                                 </h2>
                                 <span class="badge bg-warning text-dark">En Desarrollo</span>
                             </div>
-                            <p class="card-text text-justify">
+                            <p class="card-text text-justify mb-4">
                                 Aplicación web para la gestión de tareas personales y de equipo con funcionalidades avanzadas de 
-                                organización. Permite crear proyectos, asignar tareas, establecer prioridades y seguimiento de progreso.
-                            </p>
-                            <p class="card-text text-justify">
+                                organización. Permite crear proyectos, asignar tareas, establecer prioridades y seguimiento de progreso. 
                                 La aplicación incluye sistema de notificaciones, colaboración en tiempo real, comentarios en tareas 
-                                y visualización de proyectos en formato Kanban. Diseñada para mejorar la productividad personal y grupal.
+                                y visualización de proyectos en formato Kanban.
                             </p>
-                            <div class="mt-4">
-                                <h6 class="fw-bold mb-2">Funcionalidades clave:</h6>
-                                <ul class="list-group mb-3">
-                                    <li class="list-group-item d-flex align-items-center">
-                                        <i class="bi bi-check-circle-fill text-success me-2"></i>
-                                        <span>Gestión de proyectos y tareas múltiples</span>
-                                    </li>
-                                    <li class="list-group-item d-flex align-items-center">
-                                        <i class="bi bi-check-circle-fill text-success me-2"></i>
-                                        <span>Vista Kanban para organización visual</span>
-                                    </li>
-                                    <li class="list-group-item d-flex align-items-center">
-                                        <i class="bi bi-check-circle-fill text-success me-2"></i>
-                                        <span>Colaboración en tiempo real</span>
-                                    </li>
-                                    <li class="list-group-item d-flex align-items-center">
-                                        <i class="bi bi-check-circle-fill text-success me-2"></i>
-                                        <span>Sistema de etiquetas y prioridades</span>
-                                    </li>
-                                </ul>
-                                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalProyecto6">
-                                    <i class="bi bi-eye me-2"></i>Ver Detalles
-                                </button>
+                            <div class="mb-4">
+                                <h6 class="fw-bold mb-2">Tecnologías utilizadas:</h6>
+                                <div class="d-flex flex-wrap gap-2 mb-3">
+                                    <span class="badge bg-primary">HTML5</span>
+                                    <span class="badge bg-info">CSS3</span>
+                                    <span class="badge bg-success">JavaScript</span>
+                                    <span class="badge bg-warning text-dark">Bootstrap</span>
+                                    <span class="badge bg-danger">Vue.js</span>
+                                </div>
                             </div>
+                            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalProyecto6">
+                                <i class="bi bi-eye me-2"></i>Ver Detalles
+                            </button>
                         </div>
+                    </div>
+                    <div class="col-md-5">
+                        <img src="../img/imagen-principal.jpg" alt="Captura de la aplicación de gestión de tareas" class="img-fluid proyecto-imagen rounded-end h-100">
                     </div>
                 </div>
             </article>
