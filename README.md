@@ -42,7 +42,7 @@ blog-personal/
 
 1. Clona el repositorio:
 ```bash
-git clone <url-del-repositorio>
+git clone https://github.com/nandofag/blog-personal.git
 ```
 
 2. Abre `index.html` en tu navegador web preferido.
@@ -66,6 +66,30 @@ No se requiere instalación adicional, todas las dependencias se cargan via CDN.
 - Scrollbar personalizada
 - Estilos responsive con media queries
 
+## 📐 Uso de Flexbox y CSS Grid
+
+Este proyecto implementa tanto **Flexbox** como **CSS Grid** para crear layouts modernos y responsive:
+
+### 🎯 CSS Grid
+- **Sección "Proyectos Destacados"** (`index.html`):
+  - Clase `.proyectos-destacados-grid` utiliza `display: grid` con `grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))`
+  - Permite un layout responsive que se adapta automáticamente al espacio disponible
+  - Ubicación: Página principal (`index.html`), sección de proyectos destacados
+
+### 🔄 Flexbox
+- **Sección "Últimas Entradas del Blog"** (`index.html`):
+  - Clase `.entradas-blog-flexbox` utiliza `display: flex` con `flex-wrap: wrap`
+  - Las tarjetas de blog (`.entrada-blog-card`) usan `flex: 1 1 calc(33.333% - 2rem)` para distribución flexible
+  - Ubicación: Página principal (`index.html`), sección de últimas entradas del blog
+
+- **Tarjetas de Proyectos**:
+  - `.proyecto-destacado-card` y `.proyecto-destacado-content` usan flexbox con `flex-direction: column`
+  - `.proyecto-destacado-tech` utiliza flexbox con `flex-wrap: wrap` para las tecnologías
+
+- **Otros elementos**:
+  - `.entrada-blog-content` y `.entrada-blog-meta` para alineación y distribución de contenido
+  - `.hero-proyectos` para centrado vertical del contenido hero
+
 ## 📱 Compatibilidad
 
 - Chrome (últimas versiones)
@@ -83,5 +107,6 @@ Este proyecto es parte de un curso académico.
 
 ## 🔗 Enlaces
 
-- [GitHub Pages](https://tu-usuario.github.io/blog-personal/) (cuando esté publicado)
+- 🌐 [Sitio en vivo](https://nandofag.github.io/blog-personal/)
+- 📦 [Repositorio en GitHub](https://github.com/nandofag/blog-personal)
 
