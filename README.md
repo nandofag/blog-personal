@@ -24,7 +24,7 @@ Sitio web personal que incluye un blog, portfolio de proyectos, información per
 ## 📁 Estructura del Proyecto
 
 ```
-entrega-1/
+blog-personal/
 ├── css/
 │   └── styles.css          # Estilos personalizados avanzados
 ├── img/                    # Imágenes del proyecto
@@ -83,5 +83,5 @@ Este proyecto es parte de un curso académico.
 
 ## 🔗 Enlaces
 
-- [GitHub Pages](https://tu-usuario.github.io/entrega-1/) (cuando esté publicado)
+- [GitHub Pages](https://tu-usuario.github.io/blog-personal/) (cuando esté publicado)
 
