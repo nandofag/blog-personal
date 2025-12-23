@@ -1074,6 +1074,172 @@ footer a:hover {
 }
 
 /* ============================================
+   PROYECTOS DESTACADOS - CSS GRID
+   ============================================ */
+.proyectos-destacados-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.proyecto-destacado-card {
+    background: var(--bg-primary);
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+}
+
+.proyecto-destacado-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-xl);
+}
+
+.proyecto-destacado-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.proyecto-destacado-card:hover .proyecto-destacado-img {
+    transform: scale(1.1);
+}
+
+.proyecto-destacado-content {
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.proyecto-destacado-title {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: var(--spacing-sm) 0;
+}
+
+.proyecto-destacado-text {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-sm);
+    flex-grow: 1;
+}
+
+.proyecto-destacado-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* ============================================
+   ÚLTIMAS ENTRADAS DEL BLOG - FLEXBOX
+   ============================================ */
+.entradas-blog-flexbox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.entrada-blog-card {
+    flex: 1 1 calc(33.333% - 2rem);
+    min-width: 280px;
+    background: var(--bg-primary);
+    border-radius: var(--border-radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+}
+
+.entrada-blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.entrada-blog-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.entrada-blog-card:hover .entrada-blog-img {
+    transform: scale(1.05);
+}
+
+.entrada-blog-content {
+    padding: var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.entrada-blog-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-sm);
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.entrada-blog-title {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.entrada-blog-text {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-sm);
+    flex-grow: 1;
+    font-size: 0.95rem;
+}
+
+/* Responsive para Grid y Flexbox */
+@media (max-width: 992px) {
+    .proyectos-destacados-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    .entradas-blog-flexbox {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .entrada-blog-card {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .proyectos-destacados-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .entradas-blog-flexbox {
+        gap: 1.5rem;
+    }
+}
+
+/* ============================================
    RESPONSIVE DESIGN - Mobile First
    ============================================ */
 @media (max-width: 992px) {
