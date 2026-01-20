@@ -1,9 +1,26 @@
 // ============================================
-// LAYOUT - FOOTER PROPIO DEL SITIO
+// LAYOUT - FOOTER
 // ============================================
-// NOTA: Estilos propios para el footer
+// Estilos para el footer del sitio
 
 @use '../abstracts' as *;
+
+// ============================================
+// FOOTER CON BG-DARK (Bootstrap)
+// ============================================
+
+footer.bg-dark {
+    // Títulos del footer - color blanco para buen contraste
+    h5 {
+        color: $text-light !important;
+        font-weight: 700;
+    }
+    
+    // Textos del footer
+    p {
+        color: rgba(255, 255, 255, 0.85);
+    }
+}
 
 // ============================================
 // FOOTER PROPIO DEL SITIO

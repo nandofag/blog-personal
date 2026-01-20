@@ -1,0 +1,322 @@
+// ============================================
+// SOBRESCRITURA DE VARIABLES CSS DE BOOTSTRAP
+// ============================================
+// Aplicamos nuestra paleta de colores personalizada
+// sobre las variables CSS de Bootstrap
+
+@use '../abstracts' as *;
+
+// ============================================
+// VARIABLES CSS ROOT - Sobrescribir Bootstrap
+// ============================================
+
+:root {
+    // Colores primarios de Bootstrap -> Nuestra paleta
+    --bs-primary: #{$site-primary};
+    --bs-primary-rgb: 94, 96, 206;
+    
+    --bs-secondary: #{$site-secondary};
+    --bs-secondary-rgb: 100, 116, 139;
+    
+    --bs-success: #{$site-success};
+    --bs-success-rgb: 16, 185, 129;
+    
+    --bs-info: #{$site-info};
+    --bs-info-rgb: 14, 165, 233;
+    
+    --bs-warning: #{$site-warning};
+    --bs-warning-rgb: 245, 158, 11;
+    
+    --bs-danger: #{$site-error};
+    --bs-danger-rgb: 239, 68, 68;
+    
+    --bs-light: #{$bg-light};
+    --bs-dark: #{$bg-dark};
+}
+
+// ============================================
+// BOTONES - Sobrescribir estilos de Bootstrap
+// ============================================
+
+.btn-primary {
+    --bs-btn-bg: #{$site-primary};
+    --bs-btn-border-color: #{$site-primary};
+    --bs-btn-hover-bg: #{$site-primary-dark};
+    --bs-btn-hover-border-color: #{$site-primary-dark};
+    --bs-btn-active-bg: #{$site-primary-dark};
+    --bs-btn-active-border-color: #{$site-primary-dark};
+    --bs-btn-disabled-bg: #{$site-primary};
+    --bs-btn-disabled-border-color: #{$site-primary};
+}
+
+.btn-secondary {
+    --bs-btn-bg: #{$site-secondary};
+    --bs-btn-border-color: #{$site-secondary};
+    --bs-btn-hover-bg: #{darken($site-secondary, 10%)};
+    --bs-btn-hover-border-color: #{darken($site-secondary, 10%)};
+    --bs-btn-active-bg: #{darken($site-secondary, 15%)};
+    --bs-btn-active-border-color: #{darken($site-secondary, 15%)};
+}
+
+.btn-success {
+    --bs-btn-bg: #{$site-success};
+    --bs-btn-border-color: #{$site-success};
+    --bs-btn-hover-bg: #{darken($site-success, 10%)};
+    --bs-btn-hover-border-color: #{darken($site-success, 10%)};
+    --bs-btn-active-bg: #{darken($site-success, 15%)};
+    --bs-btn-active-border-color: #{darken($site-success, 15%)};
+}
+
+.btn-info {
+    --bs-btn-bg: #{$site-info};
+    --bs-btn-border-color: #{$site-info};
+    --bs-btn-hover-bg: #{darken($site-info, 10%)};
+    --bs-btn-hover-border-color: #{darken($site-info, 10%)};
+    --bs-btn-active-bg: #{darken($site-info, 15%)};
+    --bs-btn-active-border-color: #{darken($site-info, 15%)};
+}
+
+.btn-warning {
+    --bs-btn-bg: #{$site-warning};
+    --bs-btn-border-color: #{$site-warning};
+    --bs-btn-color: #{$text-primary};
+    --bs-btn-hover-bg: #{darken($site-warning, 10%)};
+    --bs-btn-hover-border-color: #{darken($site-warning, 10%)};
+    --bs-btn-hover-color: #{$text-primary};
+    --bs-btn-active-bg: #{darken($site-warning, 15%)};
+    --bs-btn-active-border-color: #{darken($site-warning, 15%)};
+}
+
+.btn-danger {
+    --bs-btn-bg: #{$site-error};
+    --bs-btn-border-color: #{$site-error};
+    --bs-btn-hover-bg: #{darken($site-error, 10%)};
+    --bs-btn-hover-border-color: #{darken($site-error, 10%)};
+    --bs-btn-active-bg: #{darken($site-error, 15%)};
+    --bs-btn-active-border-color: #{darken($site-error, 15%)};
+}
+
+// Botones outline
+.btn-outline-primary {
+    --bs-btn-color: #{$site-primary};
+    --bs-btn-border-color: #{$site-primary};
+    --bs-btn-hover-bg: #{$site-primary};
+    --bs-btn-hover-border-color: #{$site-primary};
+    --bs-btn-active-bg: #{$site-primary};
+    --bs-btn-active-border-color: #{$site-primary};
+}
+
+.btn-outline-success {
+    --bs-btn-color: #{$site-success};
+    --bs-btn-border-color: #{$site-success};
+    --bs-btn-hover-bg: #{$site-success};
+    --bs-btn-hover-border-color: #{$site-success};
+    --bs-btn-active-bg: #{$site-success};
+    --bs-btn-active-border-color: #{$site-success};
+}
+
+.btn-outline-info {
+    --bs-btn-color: #{$site-info};
+    --bs-btn-border-color: #{$site-info};
+    --bs-btn-hover-bg: #{$site-info};
+    --bs-btn-hover-border-color: #{$site-info};
+    --bs-btn-active-bg: #{$site-info};
+    --bs-btn-active-border-color: #{$site-info};
+}
+
+.btn-outline-warning {
+    --bs-btn-color: #{$site-warning};
+    --bs-btn-border-color: #{$site-warning};
+    --bs-btn-hover-bg: #{$site-warning};
+    --bs-btn-hover-border-color: #{$site-warning};
+    --bs-btn-active-bg: #{$site-warning};
+    --bs-btn-active-border-color: #{$site-warning};
+}
+
+.btn-outline-danger {
+    --bs-btn-color: #{$site-error};
+    --bs-btn-border-color: #{$site-error};
+    --bs-btn-hover-bg: #{$site-error};
+    --bs-btn-hover-border-color: #{$site-error};
+    --bs-btn-active-bg: #{$site-error};
+    --bs-btn-active-border-color: #{$site-error};
+}
+
+// ============================================
+// BADGES - Sobrescribir estilos de Bootstrap
+// ============================================
+
+.badge.bg-primary {
+    background-color: $site-primary !important;
+}
+
+.badge.bg-secondary {
+    background-color: $site-secondary !important;
+}
+
+.badge.bg-success {
+    background-color: $site-success !important;
+}
+
+.badge.bg-info {
+    background-color: $site-info !important;
+}
+
+.badge.bg-warning {
+    background-color: $site-warning !important;
+    color: $text-primary !important;
+}
+
+.badge.bg-danger {
+    background-color: $site-error !important;
+}
+
+// ============================================
+// BACKGROUNDS - Sobrescribir colores de fondo
+// ============================================
+
+.bg-primary {
+    background-color: $site-primary !important;
+}
+
+.bg-secondary {
+    background-color: $site-secondary !important;
+}
+
+.bg-success {
+    background-color: $site-success !important;
+}
+
+.bg-info {
+    background-color: $site-info !important;
+}
+
+.bg-warning {
+    background-color: $site-warning !important;
+}
+
+.bg-danger {
+    background-color: $site-error !important;
+}
+
+// ============================================
+// TEXTOS - Sobrescribir colores de texto
+// ============================================
+
+.text-primary {
+    color: $site-primary !important;
+}
+
+.text-secondary {
+    color: $site-secondary !important;
+}
+
+.text-success {
+    color: $site-success !important;
+}
+
+.text-info {
+    color: $site-info !important;
+}
+
+.text-warning {
+    color: $site-warning !important;
+}
+
+.text-danger {
+    color: $site-error !important;
+}
+
+// ============================================
+// ALERTAS - Sobrescribir estilos de Bootstrap
+// ============================================
+
+.alert-primary {
+    --bs-alert-bg: #{rgba($site-primary, 0.1)};
+    --bs-alert-border-color: #{rgba($site-primary, 0.2)};
+    --bs-alert-color: #{darken($site-primary, 20%)};
+}
+
+.alert-success {
+    --bs-alert-bg: #{rgba($site-success, 0.1)};
+    --bs-alert-border-color: #{rgba($site-success, 0.2)};
+    --bs-alert-color: #{darken($site-success, 20%)};
+}
+
+.alert-info {
+    --bs-alert-bg: #{rgba($site-info, 0.1)};
+    --bs-alert-border-color: #{rgba($site-info, 0.2)};
+    --bs-alert-color: #{darken($site-info, 20%)};
+}
+
+.alert-warning {
+    --bs-alert-bg: #{rgba($site-warning, 0.1)};
+    --bs-alert-border-color: #{rgba($site-warning, 0.2)};
+    --bs-alert-color: #{darken($site-warning, 30%)};
+}
+
+.alert-danger {
+    --bs-alert-bg: #{rgba($site-error, 0.1)};
+    --bs-alert-border-color: #{rgba($site-error, 0.2)};
+    --bs-alert-color: #{darken($site-error, 15%)};
+}
+
+// ============================================
+// PROGRESS BARS - Sobrescribir Bootstrap
+// ============================================
+
+.progress-bar {
+    background-color: $site-primary;
+}
+
+.progress-bar.bg-success {
+    background-color: $site-success !important;
+}
+
+.progress-bar.bg-info {
+    background-color: $site-info !important;
+}
+
+.progress-bar.bg-warning {
+    background-color: $site-warning !important;
+}
+
+.progress-bar.bg-danger {
+    background-color: $site-error !important;
+}
+
+// ============================================
+// LINKS - Color del enlace primario
+// ============================================
+
+.link-primary {
+    color: $site-primary !important;
+    
+    &:hover {
+        color: $site-primary-dark !important;
+    }
+}
+
+// ============================================
+// BORDERS - Sobrescribir colores de borde
+// ============================================
+
+.border-primary {
+    border-color: $site-primary !important;
+}
+
+.border-success {
+    border-color: $site-success !important;
+}
+
+.border-info {
+    border-color: $site-info !important;
+}
+
+.border-warning {
+    border-color: $site-warning !important;
+}
+
+.border-danger {
+    border-color: $site-error !important;
+}
