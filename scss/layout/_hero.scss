@@ -1,23 +1,24 @@
 // ============================================
-// LAYOUT - HERO SECTIONS PROPIAS
+// LAYOUT - HERO SECTIONS
 // ============================================
-// NOTA: Estilos propios para secciones hero
+// Estilos para secciones hero y carousel
 
 @use '../abstracts' as *;
 
 // ============================================
-// HERO CAROUSEL (Home)
+// HERO CAROUSEL (Home) - Clases usadas en HTML
 // ============================================
 
-.site-hero-carousel {
+// Sección del hero carousel
+.hero-carousel-section {
     margin-bottom: $spacing-xl;
     border-radius: $border-radius-lg;
     overflow: hidden;
     box-shadow: $shadow-xl;
 }
 
-// Imagen del carousel
-.site-carousel-img {
+// Imagen del carousel (clase usada en index.html)
+.carousel-hero-img {
     height: $carousel-height-desktop;
     object-fit: cover;
     filter: brightness(0.7);
@@ -35,8 +36,8 @@
     }
 }
 
-// Overlay del carousel
-.site-carousel-overlay {
+// Overlay del carousel (clase usada en index.html)
+.carousel-overlay {
     @include gradient-bg(rgba($bg-dark, 0.6), rgba($bg-dark, 0.4));
     padding: 3rem 0;
     border-radius: $border-radius-md;
