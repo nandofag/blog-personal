@@ -1,48 +1,65 @@
 // ============================================
-// COMPONENTES - TABS Y PILLS
+// COMPONENTES - TABS PROPIOS DEL SITIO
 // ============================================
+// NOTA: No modificamos .nav-pills de Bootstrap
+// Creamos clases propias .site-tabs-*
 
 @use '../abstracts' as *;
 
-// Nav pills personalizados
-.nav-pills {
-    .nav-link {
-        border-radius: $border-radius-md;
+// ============================================
+// TABS PROPIOS DEL SITIO
+// ============================================
+
+.site-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-xs;
+    margin-bottom: $spacing-md;
+    padding: 0;
+    list-style: none;
+    
+    &-item {
+        flex: 0 0 auto;
+    }
+    
+    &-link {
+        display: block;
         padding: 0.75rem 1.5rem;
+        border-radius: $border-radius-md;
         font-weight: 600;
-        transition: all $transition-normal;
+        text-decoration: none;
+        transition: background-color $transition-fast, color $transition-fast;
         border: 2px solid transparent;
+        cursor: pointer;
         
         // Estado inactivo
-        &:not(.active) {
-            background-color: $bg-secondary;
-            color: $text-secondary;
-            
-            &:hover {
-                background-color: rgba($color-primary, 0.1);
-                color: $color-primary;
-                transform: translateY(-2px);
-            }
+        background-color: $bg-secondary;
+        color: $text-secondary;
+        
+        &:hover:not(.active) {
+            background-color: rgba($site-primary, 0.1);
+            color: $site-primary;
         }
         
         // Estado activo
         &.active {
-            @include gradient-bg($color-primary, $color-primary-dark);
+            background-color: $site-primary;
             color: $text-light;
-            box-shadow: $shadow-md;
-            border-color: $color-primary;
+            border-color: $site-primary;
         }
     }
 }
 
 // Tab content
-.tab-content {
+.site-tab-content {
     padding: $spacing-md 0;
 }
 
-// Tab pane animación
-.tab-pane {
-    &.fade {
-        transition: opacity $transition-normal;
+// Tab pane
+.site-tab-pane {
+    display: none;
+    
+    &.active {
+        display: block;
     }
 }

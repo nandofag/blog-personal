@@ -1,6 +1,7 @@
 // ============================================
 // MIXINS SASS - Funciones reutilizables
 // ============================================
+// NOTA: Estos mixins crean CLASES PROPIAS, no modifican Bootstrap
 
 @use 'variables' as *;
 
@@ -59,89 +60,51 @@
 }
 
 // ============================================
-// BOTONES
+// BOTONES PROPIOS (NO modifican .btn de Bootstrap)
 // ============================================
 
-@mixin button-base {
+@mixin site-button-base {
     border-radius: $border-radius-sm;
     font-weight: 600;
     padding: 0.625rem 1.5rem;
-    transition: all $transition-fast;
-    position: relative;
-    overflow: hidden;
+    transition: background-color $transition-fast, box-shadow $transition-fast;
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
     text-align: center;
+    border: none;
 }
 
-@mixin button-variant($bg-color, $hover-color: null) {
-    $hover: if($hover-color, $hover-color, darken($bg-color, 10%));
+@mixin site-button-variant($bg-color, $hover-color: null) {
+    $hover: if($hover-color, $hover-color, darken($bg-color, 8%));
     
-    background: linear-gradient(135deg, $bg-color 0%, $hover 100%);
-    border: none;
+    background-color: $bg-color;
     color: $text-light;
     box-shadow: $shadow-sm;
     
     &:hover {
-        background: linear-gradient(135deg, $hover 0%, $bg-color 100%);
-        transform: translateY(-2px);
+        background-color: $hover;
         box-shadow: $shadow-md;
         color: $text-light;
     }
 }
 
-@mixin button-ripple-effect {
-    &::before {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 0;
-        height: 0;
-        border-radius: $border-radius-circle;
-        background: rgba(255, 255, 255, 0.3);
-        transform: translate(-50%, -50%);
-        transition: width 0.6s, height 0.6s;
-    }
-    
-    &:hover::before {
-        width: 300px;
-        height: 300px;
-    }
-}
-
 // ============================================
-// TARJETAS
+// TARJETAS PROPIAS (NO modifican .card de Bootstrap)
 // ============================================
 
-@mixin card-base {
+@mixin site-card-base {
     border: none;
     border-radius: $border-radius-md;
     overflow: hidden;
-    transition: all $transition-normal;
+    transition: box-shadow $transition-normal;
     background: $bg-primary;
 }
 
-@mixin card-hover-effect($translate-y: -5px) {
+// Hover moderado - solo sombra, sin transformación excesiva
+@mixin site-card-hover {
     &:hover {
-        transform: translateY($translate-y);
         box-shadow: $shadow-lg;
-    }
-}
-
-@mixin card-image-zoom {
-    .card-img-top,
-    img {
-        transition: transform $transition-slow;
-        object-fit: cover;
-    }
-    
-    &:hover {
-        .card-img-top,
-        img {
-            transform: scale(1.05);
-        }
     }
 }
 
@@ -197,19 +160,20 @@
 }
 
 // ============================================
-// EFECTOS DE HOVER
+// EFECTOS DE HOVER (MODERADOS)
 // ============================================
 
-@mixin hover-lift($distance: -5px) {
-    transition: transform $transition-normal, box-shadow $transition-normal;
+// Hover simple - solo cambio de sombra
+@mixin hover-shadow {
+    transition: box-shadow $transition-normal;
     
     &:hover {
-        transform: translateY($distance);
         box-shadow: $shadow-lg;
     }
 }
 
-@mixin hover-underline($color: $color-primary, $height: 2px) {
+// Hover con underline para links
+@mixin hover-underline($color: $site-primary, $height: 2px) {
     position: relative;
     
     &::after {
@@ -220,7 +184,7 @@
         width: 0;
         height: $height;
         background: $color;
-        transition: all $transition-normal;
+        transition: width $transition-normal;
         transform: translateX(-50%);
     }
     
@@ -230,32 +194,31 @@
 }
 
 // ============================================
-// FORMULARIOS
+// FORMULARIOS PROPIOS
 // ============================================
 
-@mixin form-input-base {
-    border: 2px solid #e0e0e0;
+@mixin site-input-base {
+    border: 2px solid #e2e8f0;
     border-radius: $border-radius-sm;
     padding: 0.75rem 1rem;
-    transition: all $transition-fast;
+    transition: border-color $transition-fast, box-shadow $transition-fast;
     font-family: $font-primary;
     
     &:focus {
-        border-color: $color-primary;
-        box-shadow: 0 0 0 0.2rem rgba($color-primary, 0.25);
-        transform: translateY(-2px);
+        border-color: $site-primary;
+        box-shadow: 0 0 0 0.2rem rgba($site-primary, 0.25);
         outline: none;
     }
 }
 
-@mixin form-label-style {
+@mixin site-label-style {
     font-weight: 600;
     color: $text-primary;
     margin-bottom: 0.5rem;
 }
 
 // ============================================
-// ANIMACIONES
+// ANIMACIONES (MODERADAS)
 // ============================================
 
 @mixin animation($name, $duration: 1s, $timing: ease, $delay: 0s, $iteration: 1, $direction: normal, $fill-mode: forwards) {
@@ -307,7 +270,7 @@
 // SCROLLBAR PERSONALIZADO
 // ============================================
 
-@mixin custom-scrollbar($width: 8px, $track-color: $bg-secondary, $thumb-color: $color-primary) {
+@mixin custom-scrollbar($width: 8px, $track-color: $bg-secondary, $thumb-color: $site-primary) {
     &::-webkit-scrollbar {
         width: $width;
     }

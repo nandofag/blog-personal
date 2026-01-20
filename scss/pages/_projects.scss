@@ -5,16 +5,11 @@
 @use '../abstracts' as *;
 
 // Imágenes de proyectos uniformes
-.proyecto-imagen {
+.site-proyecto-imagen {
     width: 100%;
     height: 100%;
     min-height: 350px;
     object-fit: cover;
-    transition: transform $transition-slow;
-    
-    &:hover {
-        transform: scale(1.05);
-    }
     
     @include respond-below(md) {
         min-height: 250px;
@@ -22,29 +17,31 @@
 }
 
 // Cards de proyecto en página de proyectos
-.proyecto-card {
+.site-proyecto-card {
     margin-bottom: $spacing-xl;
     overflow: hidden;
+    background: $bg-primary;
+    border-radius: $border-radius-md;
+    box-shadow: $shadow-md;
+    transition: box-shadow $transition-normal;
+    
+    &:hover {
+        box-shadow: $shadow-lg;
+    }
     
     .row {
         align-items: stretch;
     }
     
-    &:hover {
-        .proyecto-imagen {
-            transform: scale(1.05);
-        }
-    }
-    
     // Contenido del proyecto
-    .proyecto-content {
+    .site-proyecto-content {
         @include flex-column;
         justify-content: center;
         padding: $spacing-lg;
     }
     
     // Header del proyecto (título + badge)
-    .proyecto-header {
+    .site-proyecto-header {
         @include flex-between;
         flex-wrap: wrap;
         gap: $spacing-sm;
@@ -52,7 +49,7 @@
     }
     
     // Tecnologías del proyecto
-    .proyecto-tech {
+    .site-proyecto-tech {
         display: flex;
         flex-wrap: wrap;
         gap: $spacing-xs;
@@ -61,7 +58,7 @@
 }
 
 // Texto introductorio de proyectos
-.proyectos-intro {
+.site-proyectos-intro {
     margin-bottom: $spacing-xl;
     
     p {
@@ -70,24 +67,24 @@
     }
 }
 
-// Filtros de proyectos (si se implementan)
-.proyectos-filter {
-    margin-bottom: $spacing-lg;
-    @include flex-center;
-    flex-wrap: wrap;
-    gap: $spacing-sm;
+// Icono del proyecto
+.site-proyecto-icon {
+    color: $site-primary;
+    margin-right: $spacing-xs;
     
-    .filter-btn {
-        @include button-base;
-        background-color: $bg-secondary;
-        color: $text-secondary;
-        border: 2px solid transparent;
-        
-        &.active,
-        &:hover {
-            background-color: $color-primary;
-            color: $text-light;
-            border-color: $color-primary;
-        }
+    &-accent {
+        color: $site-accent;
+    }
+    
+    &-highlight {
+        color: $site-highlight;
+    }
+    
+    &-info {
+        color: $site-info;
+    }
+    
+    &-error {
+        color: $site-error;
     }
 }

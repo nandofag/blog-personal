@@ -1,93 +1,90 @@
 // ============================================
-// LAYOUT - FOOTER
+// LAYOUT - FOOTER PROPIO DEL SITIO
 // ============================================
+// NOTA: Estilos propios para el footer
 
 @use '../abstracts' as *;
 
-// Footer principal
-footer {
-    @include gradient-bg($bg-dark, #343a40);
+// ============================================
+// FOOTER PROPIO DEL SITIO
+// ============================================
+
+.site-footer {
+    @include gradient-bg($bg-dark, #334155);
     margin-top: auto;
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
-    
-    // Links del footer
-    a {
-        transition: all $transition-fast;
-        position: relative;
-        
-        // Efecto underline en hover
-        &::before {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: $color-primary;
-            transition: width $transition-normal;
-        }
-        
-        &:hover {
-            color: $color-primary-light !important;
-            transform: translateX(5px);
-            
-            &::before {
-                width: 100%;
-            }
-        }
-    }
+    padding: $spacing-xl 0 $spacing-md;
     
     // Título del footer
-    h5 {
+    &-title {
         color: $text-light;
+        font-family: $font-heading;
+        font-weight: 700;
         margin-bottom: $spacing-md;
     }
     
+    // Texto del footer
+    &-text {
+        color: rgba(255, 255, 255, 0.7);
+    }
+    
+    // Links del footer
+    &-link {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        transition: color $transition-fast;
+        display: inline-block;
+        
+        &:hover {
+            color: $site-primary-light;
+        }
+    }
+    
     // Lista de enlaces
-    .list-unstyled {
+    &-nav {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        
         li {
             margin-bottom: $spacing-xs;
         }
     }
     
     // Redes sociales
-    .redes-sociales {
+    &-social {
         display: flex;
         flex-wrap: wrap;
         gap: $spacing-xs;
         
-        .btn {
-            transition: all $transition-fast;
+        a {
+            color: $text-light;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: $border-radius-sm;
+            transition: background-color $transition-fast, border-color $transition-fast;
+            font-size: $font-size-sm;
             
             &:hover {
-                transform: translateY(-3px);
+                background-color: $site-primary;
+                border-color: $site-primary;
             }
         }
     }
     
     // Separador
-    hr {
-        border-color: rgba(255, 255, 255, 0.1);
+    &-divider {
+        border: none;
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.1);
+        margin: $spacing-lg 0;
     }
     
     // Copyright
-    .text-center p {
+    &-copyright {
+        text-align: center;
         color: $text-muted;
-    }
-}
-
-// Footer nav
-.footer-nav {
-    ul {
-        margin: 0;
-        padding: 0;
-        
-        li {
-            margin-bottom: $spacing-xs;
-            
-            a {
-                display: inline-block;
-            }
-        }
+        font-size: $font-size-sm;
     }
 }

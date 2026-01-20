@@ -3,15 +3,15 @@
 // Blog Personal - Preentrega 3 Coderhouse
 // ============================================
 // 
-// Este archivo importa todos los parciales SCSS
-// organizados según la arquitectura 7-1
+// IMPORTANTE: Este proyecto usa CLASES PROPIAS
+// No se modifican las clases de Bootstrap
+// Todas las clases personalizadas usan el prefijo "site-"
 //
-// Estructura:
-// 1. Abstracts - Variables, mixins, funciones
-// 2. Base - Reset, tipografía, estilos base
-// 3. Components - Componentes reutilizables
-// 4. Layout - Estructura del sitio
-// 5. Pages - Estilos específicos por página
+// Paleta de colores PROPIA (no Bootstrap):
+// - Primary: #5e60ce (violeta)
+// - Accent: #06d6a0 (verde menta)
+// - Highlight: #f72585 (rosa/magenta)
+// - Warm: #ff9f1c (naranja)
 //
 // ============================================
 
@@ -32,7 +32,7 @@
 
 // ============================================
 // 3. COMPONENTS
-// Componentes reutilizables de la UI
+// Componentes propios del sitio (NO Bootstrap)
 // ============================================
 @use 'components/buttons';
 @use 'components/cards';
@@ -69,51 +69,62 @@
 
 // ============================================
 // CLASES UTILITARIAS GENERADAS DINÁMICAMENTE
+// Usando @each para iterar sobre mapas
 // ============================================
 
 // Generación de clases de color de texto con @each
-@each $name, $color in $theme-colors {
-    .text-custom-#{$name} {
+@each $name, $color in $site-colors {
+    .site-text-#{$name} {
         color: $color;
     }
 }
 
 // Generación de clases de fondo con @each
-@each $name, $color in $theme-colors {
-    .bg-custom-#{$name} {
+@each $name, $color in $site-colors {
+    .site-bg-#{$name} {
         background-color: $color;
     }
 }
 
 // Generación de clases de espaciado con @each
 @each $name, $value in $spacings {
-    .mt-custom-#{$name} {
+    .site-mt-#{$name} {
         margin-top: $value;
     }
     
-    .mb-custom-#{$name} {
+    .site-mb-#{$name} {
         margin-bottom: $value;
     }
     
-    .pt-custom-#{$name} {
+    .site-pt-#{$name} {
         padding-top: $value;
     }
     
-    .pb-custom-#{$name} {
+    .site-pb-#{$name} {
         padding-bottom: $value;
+    }
+    
+    .site-py-#{$name} {
+        padding-top: $value;
+        padding-bottom: $value;
+    }
+    
+    .site-px-#{$name} {
+        padding-left: $value;
+        padding-right: $value;
     }
 }
 
 // Generación de clases de border-radius con @each
 @each $name, $value in $border-radii {
-    .rounded-custom-#{$name} {
+    .site-rounded-#{$name} {
         border-radius: $value;
     }
 }
 
 // Generación de clases de sombra con @each
 @each $name, $value in $shadows {
-    .shadow-custom-#{$name} {
+    .site-shadow-#{$name} {
         box-shadow: $value;
     }
 }
@@ -125,11 +136,6 @@
 
 // Ajustes para tablets
 @include respond-below(lg) {
-    :root {
-        // Reducir espaciados en tablets
-        --spacing-xl: 2rem;
-    }
-    
     body {
         font-size: 0.95rem;
     }
@@ -137,19 +143,8 @@
 
 // Ajustes para móviles
 @include respond-below(md) {
-    :root {
-        // Reducir espaciados en móviles
-        --spacing-xl: 1.5rem;
-    }
-    
     body {
         font-size: 0.9rem;
-    }
-    
-    // Reducir animaciones en móviles para mejor rendimiento
-    .animate-slide-up,
-    .animate-fade-in {
-        animation-duration: 0.5s;
     }
 }
 

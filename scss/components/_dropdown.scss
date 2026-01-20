@@ -1,34 +1,58 @@
 // ============================================
-// COMPONENTES - DROPDOWN
+// COMPONENTES - DROPDOWN PROPIO DEL SITIO
 // ============================================
+// NOTA: No modificamos .dropdown de Bootstrap
+// Creamos clases propias .site-dropdown-*
 
 @use '../abstracts' as *;
 
-// Dropdown menu
-.dropdown {
+// ============================================
+// DROPDOWN PROPIO DEL SITIO
+// ============================================
+
+.site-dropdown {
+    position: relative;
+    display: inline-block;
+    
     &-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        display: none;
+        min-width: 200px;
+        padding: $spacing-xs 0;
+        background-color: $bg-primary;
         border: none;
-        box-shadow: $shadow-lg;
         border-radius: $border-radius-sm;
-        padding: 0.5rem 0;
+        box-shadow: $shadow-lg;
+        
+        &.show {
+            display: block;
+        }
     }
     
     &-item {
-        padding: 0.5rem 1rem;
-        transition: all $transition-fast;
+        display: block;
+        padding: 0.5rem $spacing-md;
+        color: $text-primary;
+        text-decoration: none;
+        transition: background-color $transition-fast, color $transition-fast;
         
         &:hover {
             background-color: $bg-secondary;
-            color: $color-primary;
-            transform: translateX(5px);
+            color: $site-primary;
         }
         
         i {
             width: 20px;
+            margin-right: $spacing-xs;
         }
     }
     
     &-divider {
-        border-top: 1px solid $bg-secondary;
+        height: 1px;
+        margin: $spacing-xs 0;
+        background-color: $bg-secondary;
     }
 }

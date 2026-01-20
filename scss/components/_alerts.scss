@@ -1,52 +1,73 @@
 // ============================================
-// COMPONENTES - ALERTAS
+// COMPONENTES - ALERTAS PROPIAS DEL SITIO
 // ============================================
+// NOTA: No modificamos .alert de Bootstrap
+// Creamos clases propias .site-alert-*
 
 @use '../abstracts' as *;
 
-// Alertas base
-.alert {
+// ============================================
+// ALERTAS PROPIAS DEL SITIO
+// ============================================
+
+.site-alert {
     border: none;
     border-radius: $border-radius-md;
     border-left: 4px solid;
     box-shadow: $shadow-sm;
+    padding: $spacing-sm $spacing-md;
+    margin-bottom: $spacing-md;
     
-    // Variantes de alertas usando nesting
     &-info {
-        background-color: rgba($color-info, 0.1);
-        border-left-color: $color-info;
-        color: #0c5460;
+        background-color: rgba($site-info, 0.1);
+        border-left-color: $site-info;
+        color: darken($site-info, 25%);
     }
     
     &-success {
-        background-color: rgba($color-success, 0.1);
-        border-left-color: $color-success;
-        color: #155724;
-    }
-    
-    &-danger {
-        background-color: rgba($color-danger, 0.1);
-        border-left-color: $color-danger;
-        color: #721c24;
+        background-color: rgba($site-success, 0.1);
+        border-left-color: $site-success;
+        color: darken($site-success, 20%);
     }
     
     &-warning {
-        background-color: rgba($color-warning, 0.1);
-        border-left-color: $color-warning;
-        color: #856404;
+        background-color: rgba($site-warning, 0.1);
+        border-left-color: $site-warning;
+        color: darken($site-warning, 25%);
     }
     
-    // Botón de cerrar
+    &-error {
+        background-color: rgba($site-error, 0.1);
+        border-left-color: $site-error;
+        color: darken($site-error, 15%);
+    }
+    
+    // Dismissible
     &-dismissible {
-        .btn-close {
-            padding: 0.75rem 1rem;
+        position: relative;
+        padding-right: 3rem;
+    }
+    
+    &-close {
+        position: absolute;
+        top: 50%;
+        right: $spacing-sm;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        font-size: 1.25rem;
+        cursor: pointer;
+        opacity: 0.5;
+        
+        &:hover {
+            opacity: 1;
         }
     }
 }
 
 // Generación dinámica de alertas con @each
-@each $name, $color in $theme-colors {
-    .alert-custom-#{$name} {
+@each $name, $color in ('info': $site-info, 'success': $site-success, 'warning': $site-warning, 'error': $site-error) {
+    .site-alert-#{$name} {
         background-color: rgba($color, 0.1);
         border-left-color: $color;
     }

@@ -1,31 +1,84 @@
 // ============================================
-// COMPONENTES - BADGES
+// COMPONENTES - BADGES PROPIOS DEL SITIO
 // ============================================
+// NOTA: No modificamos .badge de Bootstrap
+// Creamos clases propias .site-badge-*
 
 @use '../abstracts' as *;
 
-// Estilos base de badges
-.badge {
-    padding: 0.5rem 0.75rem;
+// ============================================
+// BADGES PROPIOS DEL SITIO
+// ============================================
+
+.site-badge {
+    display: inline-block;
+    padding: 0.4rem 0.75rem;
     font-weight: 600;
+    font-size: $font-size-sm;
     border-radius: $border-radius-sm;
-    transition: transform $transition-fast;
     
-    &:hover {
-        transform: scale(1.1);
+    // Variantes de color
+    &-primary {
+        background-color: $site-primary;
+        color: $text-light;
+    }
+    
+    &-secondary {
+        background-color: $site-secondary;
+        color: $text-light;
+    }
+    
+    &-accent {
+        background-color: $site-accent;
+        color: $text-primary;
+    }
+    
+    &-highlight {
+        background-color: $site-highlight;
+        color: $text-light;
+    }
+    
+    &-warm {
+        background-color: $site-warm;
+        color: $text-primary;
+    }
+    
+    &-success {
+        background-color: $site-success;
+        color: $text-light;
+    }
+    
+    &-info {
+        background-color: $site-info;
+        color: $text-light;
+    }
+    
+    &-warning {
+        background-color: $site-warning;
+        color: $text-primary;
+    }
+    
+    &-error {
+        background-color: $site-error;
+        color: $text-light;
     }
 }
 
 // Generación dinámica de badges usando @each
-@each $name, $color in $theme-colors {
-    .badge-custom-#{$name} {
+@each $name, $color in $site-colors {
+    .site-badge-#{$name} {
         background-color: $color;
-        color: if($name == 'warning', $text-primary, $text-light);
+        
+        @if $name == 'warm' or $name == 'warning' or $name == 'accent' {
+            color: $text-primary;
+        } @else {
+            color: $text-light;
+        }
     }
 }
 
 // Badge con icono
-.badge-icon {
+.site-badge-icon {
     display: inline-flex;
     align-items: center;
     gap: $spacing-xs;

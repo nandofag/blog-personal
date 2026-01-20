@@ -1,102 +1,90 @@
 // ============================================
-// COMPONENTES - FORMULARIOS
+// COMPONENTES - FORMULARIOS PROPIOS DEL SITIO
 // ============================================
+// NOTA: No modificamos .form-control de Bootstrap
+// Creamos clases propias .site-input-*
 
 @use '../abstracts' as *;
 
-// Form control (inputs, textareas)
-.form-control {
-    @include form-input-base;
+// ============================================
+// INPUTS PROPIOS DEL SITIO
+// ============================================
+
+.site-input {
+    @include site-input-base;
+    width: 100%;
     
     // Estados de validación
-    &:valid {
-        border-color: $color-success;
+    &.is-valid {
+        border-color: $site-success;
     }
     
-    &:invalid:not(:placeholder-shown) {
-        border-color: $color-danger;
+    &.is-invalid {
+        border-color: $site-error;
     }
     
-    &:focus:invalid {
-        border-color: $color-danger;
-        box-shadow: 0 0 0 0.2rem rgba($color-danger, 0.25);
+    &:focus.is-invalid {
+        border-color: $site-error;
+        box-shadow: 0 0 0 0.2rem rgba($site-error, 0.25);
     }
 }
 
-// Form label
-.form-label {
-    @include form-label-style;
+// Label propio
+.site-label {
+    @include site-label-style;
+    display: block;
 }
 
-// Form check inputs (radio y checkbox)
-.form-check-input {
-    &:checked {
-        background-color: $color-primary;
-        border-color: $color-primary;
-    }
-    
-    &:focus {
-        border-color: $color-primary;
-        box-shadow: 0 0 0 0.2rem rgba($color-primary, 0.25);
-    }
-}
-
-// Fieldset
-fieldset {
-    border: 2px solid #e0e0e0;
+// Fieldset propio
+.site-fieldset {
+    border: 2px solid #e2e8f0;
     border-radius: $border-radius-sm;
     padding: $spacing-md;
     transition: border-color $transition-fast;
     
     &:focus-within {
-        border-color: $color-primary;
+        border-color: $site-primary;
     }
 }
 
-// Legend
-legend {
+// Legend propio
+.site-legend {
     font-weight: 700;
     color: $text-primary;
     padding: 0 $spacing-sm;
     font-size: 1.1rem;
 }
 
-// Validación de formularios (Bootstrap)
-.was-validated {
-    .form-control {
-        &:invalid {
-            border-color: $color-danger;
-        }
-        
-        &:valid {
-            border-color: $color-success;
-        }
-    }
+// Textarea propio
+.site-textarea {
+    @include site-input-base;
+    width: 100%;
+    min-height: 120px;
+    resize: vertical;
 }
 
 // Form text helper
-.form-text {
+.site-form-text {
     font-size: $font-size-sm;
     color: $text-secondary;
+    margin-top: 0.25rem;
     
-    .text-danger {
-        color: $color-danger !important;
+    &.is-error {
+        color: $site-error;
         font-weight: 600;
     }
 }
 
-// Invalid feedback
-.invalid-feedback {
-    color: $color-danger;
+// Mensaje de error
+.site-invalid-feedback {
+    color: $site-error;
     font-size: $font-size-sm;
+    margin-top: 0.25rem;
 }
 
-// Formulario de contacto específico
-.formulario-contacto {
-    .form-control {
-        &:focus {
-            border-color: $color-primary;
-            box-shadow: 0 0 0 0.2rem rgba($color-primary, 0.25);
-        }
+// Formulario de contacto
+.site-form {
+    .form-group {
+        margin-bottom: $spacing-md;
     }
 }

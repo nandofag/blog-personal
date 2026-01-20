@@ -5,52 +5,58 @@
 @use '../abstracts' as *;
 
 // Header del blog
-.blog-header {
+.site-blog-header {
     text-align: center;
     margin-bottom: $spacing-xl;
     
-    .blog-title {
+    .site-blog-title {
         @include heading-style;
         margin-bottom: $spacing-sm;
     }
     
-    .blog-subtitle {
+    .site-blog-subtitle {
         color: $text-muted;
         font-size: $font-size-lg;
     }
 }
 
 // Artículos del blog
-.blog-article {
+.site-blog-article {
     margin-bottom: $spacing-lg;
+    background: $bg-primary;
+    border-radius: $border-radius-md;
+    box-shadow: $shadow-sm;
+    overflow: hidden;
+    transition: box-shadow $transition-normal;
     
-    .article-image {
+    &:hover {
+        box-shadow: $shadow-lg;
+    }
+    
+    .site-article-image {
         width: 100%;
         height: 250px;
         object-fit: cover;
-        transition: transform $transition-slow;
     }
     
-    &:hover {
-        .article-image {
-            transform: scale(1.03);
-        }
+    .site-article-body {
+        padding: $spacing-md;
     }
     
-    .article-meta {
+    .site-article-meta {
         @include flex-between;
         flex-wrap: wrap;
         gap: $spacing-xs;
         margin-bottom: $spacing-sm;
     }
     
-    .article-title {
+    .site-article-title {
         @include heading-style;
         font-size: 1.5rem;
         margin-bottom: $spacing-sm;
     }
     
-    .article-content {
+    .site-article-content {
         text-align: justify;
         line-height: 1.8;
         color: $text-secondary;
@@ -58,85 +64,52 @@
 }
 
 // Sidebar del blog
-.blog-sidebar {
+.site-blog-sidebar {
     position: sticky;
     top: calc($navbar-height + $spacing-md);
     
-    .sidebar-widget {
+    .site-sidebar-widget {
         margin-bottom: $spacing-lg;
+        background: $bg-primary;
+        border-radius: $border-radius-md;
+        box-shadow: $shadow-sm;
+        padding: $spacing-md;
         
-        .widget-title {
+        .site-widget-title {
             @include heading-style;
             font-size: 1.25rem;
             margin-bottom: $spacing-md;
+            
+            i {
+                color: $site-primary;
+                margin-right: $spacing-xs;
+            }
         }
     }
 }
 
 // Video tutorial widget
-.video-widget {
+.site-video-widget {
     .ratio {
         border-radius: $border-radius-md;
         overflow: hidden;
     }
 }
 
-// Categorías widget
-.categories-widget {
-    .list-group-item {
-        @include flex-between;
-        
-        &:hover {
-            background-color: $bg-secondary;
-            
-            .badge {
-                transform: scale(1.1);
-            }
-        }
-    }
-}
-
-// Newsletter widget
-.newsletter-widget {
-    background: linear-gradient(135deg, $color-primary 0%, $color-primary-dark 100%);
-    border-radius: $border-radius-md;
+// Newsletter widget con color propio
+.site-newsletter-widget {
+    background: linear-gradient(135deg, $site-primary 0%, $site-primary-dark 100%) !important;
+    color: $text-light;
     
-    .form-control {
-        border: none;
+    .site-widget-title {
+        color: $text-light;
         
-        &:focus {
-            box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+        i {
+            color: $text-light !important;
         }
     }
     
-    .btn-light {
-        font-weight: 600;
-        
-        &:hover {
-            transform: translateY(-2px);
-        }
-    }
-}
-
-// Paginación del blog
-.blog-pagination {
-    margin-top: $spacing-xl;
-    @include flex-center;
-    
-    .page-link {
-        border-radius: $border-radius-sm;
-        margin: 0 $spacing-xs;
-        transition: all $transition-fast;
-        
-        &:hover {
-            background-color: $color-primary;
-            color: $text-light;
-            transform: translateY(-2px);
-        }
-    }
-    
-    .page-item.active .page-link {
-        background-color: $color-primary;
-        border-color: $color-primary;
+    p {
+        color: rgba(255, 255, 255, 0.9);
     }
 }

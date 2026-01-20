@@ -1,46 +1,48 @@
 // ============================================
-// COMPONENTES - TOOLTIPS
+// COMPONENTES - TOOLTIPS PROPIOS DEL SITIO
 // ============================================
+// NOTA: Estilos complementarios, no modifican Bootstrap
 
 @use '../abstracts' as *;
 
-// Tooltips
-.tooltip {
-    font-size: $font-size-sm;
+// ============================================
+// TOOLTIPS PROPIOS DEL SITIO
+// ============================================
+
+.site-tooltip {
+    position: relative;
     
-    &-inner {
+    &-text {
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
         background-color: $bg-dark;
         color: $text-light;
-        border-radius: $border-radius-sm;
         padding: 0.5rem 0.75rem;
+        border-radius: $border-radius-sm;
+        font-size: $font-size-sm;
+        white-space: nowrap;
+        z-index: 1000;
+        transition: opacity $transition-fast, visibility $transition-fast;
+        margin-bottom: 0.5rem;
+        
+        // Flecha
+        &::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 6px solid transparent;
+            border-top-color: $bg-dark;
+        }
     }
-}
-
-// Flechas de tooltips según posición
-.bs-tooltip-top,
-.bs-tooltip-auto[data-popper-placement^="top"] {
-    .tooltip-arrow::before {
-        border-top-color: $bg-dark;
-    }
-}
-
-.bs-tooltip-bottom,
-.bs-tooltip-auto[data-popper-placement^="bottom"] {
-    .tooltip-arrow::before {
-        border-bottom-color: $bg-dark;
-    }
-}
-
-.bs-tooltip-start,
-.bs-tooltip-auto[data-popper-placement^="left"] {
-    .tooltip-arrow::before {
-        border-left-color: $bg-dark;
-    }
-}
-
-.bs-tooltip-end,
-.bs-tooltip-auto[data-popper-placement^="right"] {
-    .tooltip-arrow::before {
-        border-right-color: $bg-dark;
+    
+    &:hover .site-tooltip-text {
+        visibility: visible;
+        opacity: 1;
     }
 }

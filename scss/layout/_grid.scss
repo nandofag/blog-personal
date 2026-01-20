@@ -1,6 +1,7 @@
 // ============================================
-// LAYOUT - GRID Y FLEXBOX PERSONALIZADO
+// LAYOUT - GRID Y FLEXBOX PROPIOS
 // ============================================
+// NOTA: Clases propias para layouts personalizados
 
 @use '../abstracts' as *;
 
@@ -8,7 +9,7 @@
 // CSS GRID - Proyectos Destacados
 // ============================================
 
-.proyectos-destacados-grid {
+.site-grid-proyectos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
@@ -29,7 +30,7 @@
 // FLEXBOX - Entradas del Blog
 // ============================================
 
-.entradas-blog-flexbox {
+.site-flex-blog {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -49,11 +50,11 @@
 }
 
 // ============================================
-// UTILIDADES DE GRID PERSONALIZADAS
+// UTILIDADES DE GRID PROPIAS
 // ============================================
 
 // Grid de 2 columnas
-.grid-2-cols {
+.site-grid-2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: $spacing-md;
@@ -64,7 +65,7 @@
 }
 
 // Grid de 3 columnas
-.grid-3-cols {
+.site-grid-3 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: $spacing-md;
@@ -79,7 +80,7 @@
 }
 
 // Grid de 4 columnas
-.grid-4-cols {
+.site-grid-4 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: $spacing-md;
@@ -98,28 +99,28 @@
 }
 
 // ============================================
-// UTILIDADES DE FLEXBOX PERSONALIZADAS
+// UTILIDADES DE FLEXBOX PROPIAS
 // ============================================
 
-.flex-center {
+.site-flex-center {
     @include flex-center;
 }
 
-.flex-between {
+.site-flex-between {
     @include flex-between;
 }
 
-.flex-column {
+.site-flex-column {
     @include flex-column;
 }
 
-.flex-column-center {
+.site-flex-column-center {
     @include flex-column-center;
 }
 
-// Generación dinámica de gaps con @each y @for
+// Generación dinámica de gaps con @for
 @for $i from 1 through 5 {
-    .gap-#{$i} {
+    .site-gap-#{$i} {
         gap: $spacing-sm * $i;
     }
 }

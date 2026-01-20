@@ -1,39 +1,53 @@
 // ============================================
-// COMPONENTES - LISTAS
+// COMPONENTES - LISTAS PROPIAS DEL SITIO
 // ============================================
+// NOTA: No modificamos .list-group de Bootstrap
+// Creamos clases propias .site-list-*
 
 @use '../abstracts' as *;
 
-// List group items
-.list-group-item {
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    transition: all $transition-fast;
-    padding: $spacing-sm $spacing-md;
-    
-    &:hover {
-        background-color: $bg-secondary;
-        transform: translateX(5px);
-        border-left: 3px solid $color-primary;
-    }
-    
-    &.active {
-        @include gradient-bg($color-primary, $color-primary-dark);
-        border-color: $color-primary;
-    }
-}
+// ============================================
+// LISTAS PROPIAS DEL SITIO
+// ============================================
 
-// Lista numerada con estilo personalizado
-.list-group-numbered {
-    .list-group-item {
-        &::before {
-            font-weight: 700;
-            color: $color-primary;
+.site-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    &-item {
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        padding: $spacing-sm $spacing-md;
+        background: $bg-primary;
+        transition: background-color $transition-fast, border-color $transition-fast;
+        
+        &:first-child {
+            border-radius: $border-radius-sm $border-radius-sm 0 0;
+        }
+        
+        &:last-child {
+            border-radius: 0 0 $border-radius-sm $border-radius-sm;
+        }
+        
+        &:not(:last-child) {
+            border-bottom: none;
+        }
+        
+        &:hover {
+            background-color: $bg-secondary;
+            border-left: 3px solid $site-primary;
+        }
+        
+        &.active {
+            background-color: $site-primary;
+            color: $text-light;
+            border-color: $site-primary;
         }
     }
 }
 
 // Lista con iconos de check
-.list-check {
+.site-list-check {
     list-style: none;
     padding-left: 0;
     
@@ -46,8 +60,30 @@
             content: '✓';
             position: absolute;
             left: 0;
-            color: $color-success;
+            color: $site-success;
             font-weight: 700;
+        }
+    }
+}
+
+// Lista numerada personalizada
+.site-list-numbered {
+    counter-reset: list-counter;
+    list-style: none;
+    padding-left: 0;
+    
+    li {
+        counter-increment: list-counter;
+        position: relative;
+        padding-left: 2rem;
+        margin-bottom: $spacing-sm;
+        
+        &::before {
+            content: counter(list-counter) ".";
+            position: absolute;
+            left: 0;
+            font-weight: 700;
+            color: $site-primary;
         }
     }
 }

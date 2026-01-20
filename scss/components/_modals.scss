@@ -1,11 +1,17 @@
 // ============================================
-// COMPONENTES - MODALES
+// COMPONENTES - MODALES PROPIOS DEL SITIO
 // ============================================
+// NOTA: No modificamos .modal de Bootstrap
+// Creamos clases propias .site-modal-*
 
 @use '../abstracts' as *;
 
-// Modal content
-.modal {
+// ============================================
+// ESTILOS ADICIONALES PARA MODALES
+// ============================================
+
+// Contenedor de modal con estilos propios
+.site-modal {
     &-content {
         border: none;
         border-radius: $border-radius-md;
@@ -14,28 +20,30 @@
     
     &-header {
         border-bottom: 2px solid $bg-secondary;
-        @include gradient-bg($bg-primary, $bg-secondary);
+        background-color: $bg-light;
+        padding: $spacing-md;
+    }
+    
+    &-title {
+        @include heading-style;
+        margin: 0;
+    }
+    
+    &-body {
+        padding: $spacing-md;
+        
+        img {
+            width: 100%;
+            height: auto;
+            max-height: 350px;
+            object-fit: cover;
+            border-radius: $border-radius-sm;
+        }
     }
     
     &-footer {
         border-top: 2px solid $bg-secondary;
         background-color: $bg-secondary;
-    }
-    
-    &-body {
-        img {
-            width: 100%;
-            height: 350px;
-            object-fit: cover;
-            transition: transform $transition-normal;
-            
-            &:hover {
-                transform: scale(1.02);
-            }
-        }
-    }
-    
-    &-title {
-        @include heading-style;
+        padding: $spacing-md;
     }
 }

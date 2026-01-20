@@ -5,7 +5,7 @@
 @use '../abstracts' as *;
 
 // Contenido principal del home
-.contenido-principal {
+.site-contenido-principal {
     padding: $spacing-xl 0;
     
     @include respond-below(lg) {
@@ -18,7 +18,7 @@
 }
 
 // Texto principal (Mi Historia)
-.texto-principal {
+.site-texto-principal {
     text-align: justify;
     line-height: 1.8;
     margin-bottom: $spacing-sm;
@@ -29,49 +29,32 @@
     }
 }
 
-// Sección de tres cards principales
-.card-section-home {
-    margin-bottom: $spacing-xl;
+// Sección de título con icono
+.site-section-title {
+    @include heading-style;
+    text-align: center;
+    margin-bottom: $spacing-lg;
     
-    .card {
-        height: 100%;
-        
-        &:hover {
-            .card-icon {
-                transform: scale(1.1);
-            }
-        }
-    }
-    
-    .card-icon {
-        font-size: 3rem;
-        transition: transform $transition-normal;
+    i {
+        color: $site-primary;
+        margin-right: $spacing-xs;
     }
 }
 
-// Sección de proyectos destacados
-.proyectos-destacados-section {
-    margin-bottom: $spacing-xl;
+// Iconos de cards en home
+.site-card-icon {
+    font-size: 3rem;
+    color: $site-primary;
     
-    .section-title {
-        @include heading-style;
-        text-align: center;
-        margin-bottom: $spacing-lg;
+    &-accent {
+        color: $site-accent;
     }
-}
-
-// Sección de últimas entradas del blog
-.blog-entries-section {
-    margin-bottom: $spacing-xl;
     
-    .section-title {
-        @include heading-style;
-        text-align: center;
-        margin-bottom: $spacing-lg;
+    &-highlight {
+        color: $site-highlight;
     }
-}
-
-// Sección de información adicional (acordeón)
-.info-section {
-    margin-bottom: $spacing-xl;
+    
+    &-info {
+        color: $site-info;
+    }
 }

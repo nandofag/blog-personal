@@ -1,78 +1,66 @@
 // ============================================
-// LAYOUT - NAVBAR
+// LAYOUT - NAVBAR PROPIO DEL SITIO
 // ============================================
+// NOTA: No modificamos .navbar de Bootstrap
+// Creamos estilos complementarios con prefijo site-
 
 @use '../abstracts' as *;
 
-// Navbar principal
-.navbar {
-    @include gradient-bg($bg-dark, #343a40);
+// ============================================
+// ESTILOS PROPIOS PARA LA NAVEGACIÓN
+// ============================================
+
+// Contenedor del navbar con estilos propios
+.site-navbar {
+    @include gradient-bg($bg-dark, #334155);
     box-shadow: $shadow-md;
-    transition: all $transition-normal;
-    backdrop-filter: blur(10px);
     
-    // Brand/Logo
+    // Brand/Logo propio
     &-brand {
         font-family: $font-heading;
         font-weight: 700;
         font-size: 1.5rem;
-        transition: transform $transition-fast;
+        color: $text-light;
+        text-decoration: none;
         
         &:hover {
-            transform: scale(1.05);
+            color: $site-primary-light;
         }
     }
     
-    // Nav links
-    &-nav {
-        .nav-link {
-            position: relative;
-            padding: 0.5rem 1rem !important;
-            margin: 0 0.25rem;
-            border-radius: $border-radius-sm;
-            transition: all $transition-fast;
-            font-weight: 500;
-            
-            // Efecto underline animado
-            @include hover-underline($color-primary, 2px);
-            
-            &:hover,
-            &.active {
-                &::after {
-                    width: 80%;
-                }
-            }
-            
-            &:hover {
-                background-color: rgba(255, 255, 255, 0.1);
-                transform: translateY(-2px);
-            }
-        }
-    }
-    
-    // Toggler para mobile
-    &-toggler {
-        border: none;
-        padding: 0.25rem 0.5rem;
+    // Nav links propios
+    &-link {
+        position: relative;
+        padding: 0.5rem 1rem;
+        margin: 0 0.25rem;
+        border-radius: $border-radius-sm;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
+        transition: color $transition-fast, background-color $transition-fast;
         
-        &:focus {
-            box-shadow: 0 0 0 0.2rem rgba($color-primary, 0.5);
+        &:hover {
+            color: $text-light;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        &.active {
+            color: $text-light;
+            background-color: rgba($site-primary, 0.3);
         }
     }
 }
 
 // Responsive navbar
 @include respond-below(lg) {
-    .navbar {
+    .site-navbar {
         &-brand {
             font-size: 1.25rem;
         }
         
-        &-nav {
-            .nav-link {
-                padding: 0.75rem 1rem !important;
-                margin: 0.25rem 0;
-            }
+        &-link {
+            padding: 0.75rem 1rem;
+            margin: 0.25rem 0;
         }
     }
 }

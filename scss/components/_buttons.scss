@@ -1,37 +1,42 @@
 // ============================================
-// COMPONENTES - BOTONES
+// COMPONENTES - BOTONES PROPIOS DEL SITIO
 // ============================================
+// NOTA: No modificamos .btn de Bootstrap
+// Creamos clases propias .site-btn-*
 
 @use '../abstracts' as *;
 
-// Estilos base de botones (sobreescritura de Bootstrap)
-.btn {
-    @include button-base;
+// ============================================
+// BOTONES PROPIOS DEL SITIO
+// ============================================
+
+// Botón principal del sitio
+.site-btn {
+    @include site-button-base;
     
-    // Botón primario con efecto ripple
+    // Variante primaria
     &-primary {
-        @include button-variant($color-primary, $color-primary-dark);
-        @include button-ripple-effect;
+        @include site-button-variant($site-primary, $site-primary-dark);
     }
     
-    // Botón success
-    &-success {
-        @include button-variant($color-success);
+    // Variante secundaria
+    &-secondary {
+        @include site-button-variant($site-secondary);
     }
     
-    // Botón info
-    &-info {
-        @include button-variant($color-info);
+    // Variante acento (verde menta)
+    &-accent {
+        @include site-button-variant($site-accent, $site-accent-dark);
     }
     
-    // Botón danger
-    &-danger {
-        @include button-variant($color-danger);
+    // Variante highlight (rosa/magenta)
+    &-highlight {
+        @include site-button-variant($site-highlight);
     }
     
-    // Botón warning
-    &-warning {
-        @include button-variant($color-warning);
+    // Variante warm (naranja)
+    &-warm {
+        @include site-button-variant($site-warm);
         color: $text-primary;
         
         &:hover {
@@ -39,17 +44,21 @@
         }
     }
     
-    // Botón outline light
-    &-outline-light {
+    // Variante outline
+    &-outline {
+        background-color: transparent;
+        border: 2px solid $site-primary;
+        color: $site-primary;
+        
         &:hover {
-            transform: translateY(-2px);
-            box-shadow: $shadow-md;
+            background-color: $site-primary;
+            color: $text-light;
         }
     }
     
-    // Tamaños de botones
+    // Tamaños
     &-lg {
-        padding: 0.75rem 2rem;
+        padding: 0.875rem 2rem;
         font-size: $font-size-lg;
     }
     
@@ -59,30 +68,30 @@
     }
 }
 
-// Generación dinámica de variantes de botón usando @each
-@each $name, $color in $theme-colors {
-    .btn-custom-#{$name} {
-        @include button-variant($color);
-    }
-}
-
-// Responsive adjustments
-@include respond-below(md) {
-    .btn {
-        &-primary:hover {
-            transform: translateY(0);
-        }
+// Generación dinámica de variantes usando @each
+@each $name, $color in $site-colors {
+    .site-btn-#{$name} {
+        @include site-button-variant($color);
         
-        &-lg {
-            padding: 0.5rem 1rem;
-            font-size: $font-size-base;
+        @if $name == 'warm' or $name == 'warning' {
+            color: $text-primary;
+            
+            &:hover {
+                color: $text-primary;
+            }
         }
     }
 }
 
+// Responsive
 @include respond-below(sm) {
-    .btn {
+    .site-btn {
         padding: 0.5rem 1rem;
         font-size: $font-size-sm;
+        
+        &-lg {
+            padding: 0.625rem 1.5rem;
+            font-size: $font-size-base;
+        }
     }
 }

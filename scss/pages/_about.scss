@@ -5,20 +5,15 @@
 @use '../abstracts' as *;
 
 // Hero de la página sobre mí
-.about-hero {
+.site-about-hero {
     text-align: center;
     margin-bottom: $spacing-xl;
     
-    .profile-image {
+    .site-profile-image {
         max-width: 300px;
         height: auto;
         border-radius: $border-radius-circle;
         box-shadow: $shadow-lg;
-        transition: transform $transition-normal;
-        
-        &:hover {
-            transform: scale(1.05);
-        }
         
         @include respond-below(md) {
             max-width: 200px;
@@ -27,7 +22,7 @@
 }
 
 // Sección Mi Historia
-.about-story {
+.site-about-story {
     margin-bottom: $spacing-xl;
     
     p {
@@ -36,51 +31,39 @@
     }
 }
 
-// Sección de trayectoria (tabs)
-.trayectoria-section {
-    .nav-pills {
-        margin-bottom: $spacing-lg;
-    }
-}
-
 // Cards de educación
-.education-card {
+.site-education-card {
     height: 100%;
-    transition: all $transition-normal;
+    background: $bg-primary;
+    border-radius: $border-radius-md;
+    padding: $spacing-md;
+    box-shadow: $shadow-sm;
+    transition: box-shadow $transition-normal;
     
     &:hover {
-        transform: translateY(-5px);
         box-shadow: $shadow-lg;
     }
     
-    .education-icon {
+    .site-education-icon {
         font-size: 2rem;
-        transition: transform $transition-normal;
-    }
-    
-    &:hover .education-icon {
-        transform: scale(1.1);
-    }
-}
-
-// Timeline de experiencia
-.experience-timeline {
-    .timeline-card {
-        transition: all $transition-normal;
+        color: $site-primary;
         
-        &:hover {
-            transform: translateX(5px);
-            box-shadow: $shadow-md;
+        &-accent {
+            color: $site-accent;
+        }
+        
+        &-info {
+            color: $site-info;
         }
     }
 }
 
 // Sección de habilidades
-.skills-section {
-    .skill-item {
+.site-skills-section {
+    .site-skill-item {
         margin-bottom: $spacing-md;
         
-        .skill-label {
+        .site-skill-label {
             @include flex-between;
             margin-bottom: $spacing-xs;
             
@@ -91,7 +74,7 @@
     }
     
     // Tecnologías adicionales
-    .tech-badges {
+    .site-tech-badges {
         display: flex;
         flex-wrap: wrap;
         gap: $spacing-xs;

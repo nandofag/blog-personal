@@ -59,42 +59,40 @@ p {
     line-height: 1.7;
 }
 
-// Texto justificado (clase utilitaria)
-.text-justify {
+// Texto justificado (clase utilitaria propia)
+.site-text-justify {
     text-align: justify;
 }
 
-// Display headings (Bootstrap override con nesting)
-.display-3,
-.display-4,
-.display-5 {
-    font-family: $font-heading;
-    font-weight: 700;
-    
-    @include respond-below(md) {
-        font-size: 2rem;
-    }
-}
-
-// Lead text
-.lead {
+// Lead text propio
+.site-lead {
     font-size: $font-size-lg;
     font-weight: 400;
+    color: $text-secondary;
 }
 
 // Small text
 small,
-.small {
+.site-small {
     font-size: $font-size-sm;
 }
 
 // Strong y bold
 strong,
-.fw-bold {
+.site-fw-bold {
     font-weight: 700;
 }
 
 // Texto truncado
-.text-truncate {
+.site-text-truncate {
     @include text-truncate;
+}
+
+// Colores de texto propios
+.site-text-primary {
+    color: $site-primary;
+}
+
+.site-text-muted {
+    color: $text-muted;
 }

@@ -1,11 +1,15 @@
 // ============================================
-// LAYOUT - TIMELINE
+// LAYOUT - TIMELINE PROPIO
 // ============================================
+// NOTA: Estilos propios para timeline
 
 @use '../abstracts' as *;
 
-// Timeline container
-.timeline {
+// ============================================
+// TIMELINE PROPIO DEL SITIO
+// ============================================
+
+.site-timeline {
     position: relative;
     padding-left: 2rem;
     
@@ -14,13 +18,11 @@
     }
 }
 
-// Timeline item
-.timeline-item {
+.site-timeline-item {
     position: relative;
 }
 
-// Timeline marker
-.timeline-marker {
+.site-timeline-marker {
     position: relative;
     @include flex-column;
     align-items: center;
@@ -31,8 +33,7 @@
     }
 }
 
-// Timeline icon
-.timeline-icon {
+.site-timeline-icon {
     width: 50px;
     height: 50px;
     border-radius: $border-radius-circle;
@@ -41,10 +42,24 @@
     box-shadow: $shadow-md;
     z-index: 2;
     position: relative;
-    transition: transform $transition-normal;
+    color: $text-light;
     
-    .timeline-item:hover & {
-        transform: scale(1.1);
+    // Colores para los iconos
+    &-primary {
+        background-color: $site-primary;
+    }
+    
+    &-accent {
+        background-color: $site-accent;
+        color: $text-primary;
+    }
+    
+    &-highlight {
+        background-color: $site-highlight;
+    }
+    
+    &-info {
+        background-color: $site-info;
     }
     
     @include respond-below(md) {
@@ -54,16 +69,20 @@
     }
 }
 
-// Timeline line
-.timeline-line {
+.site-timeline-line {
     width: 3px;
     flex-grow: 1;
-    @include gradient-bg($color-primary, $color-info, 180deg);
+    @include gradient-bg($site-primary, $site-info, 180deg);
     margin-top: $spacing-xs;
     min-height: 50px;
     border-radius: 2px;
     
-    .timeline-item:last-child & {
+    .site-timeline-item:last-child & {
         display: none;
     }
+}
+
+.site-timeline-content {
+    flex-grow: 1;
+    padding-bottom: $spacing-lg;
 }
