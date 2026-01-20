@@ -1,0 +1,48 @@
+// ============================================
+// COMPONENTES - TABS Y PILLS
+// ============================================
+
+@use '../abstracts' as *;
+
+// Nav pills personalizados
+.nav-pills {
+    .nav-link {
+        border-radius: $border-radius-md;
+        padding: 0.75rem 1.5rem;
+        font-weight: 600;
+        transition: all $transition-normal;
+        border: 2px solid transparent;
+        
+        // Estado inactivo
+        &:not(.active) {
+            background-color: $bg-secondary;
+            color: $text-secondary;
+            
+            &:hover {
+                background-color: rgba($color-primary, 0.1);
+                color: $color-primary;
+                transform: translateY(-2px);
+            }
+        }
+        
+        // Estado activo
+        &.active {
+            @include gradient-bg($color-primary, $color-primary-dark);
+            color: $text-light;
+            box-shadow: $shadow-md;
+            border-color: $color-primary;
+        }
+    }
+}
+
+// Tab content
+.tab-content {
+    padding: $spacing-md 0;
+}
+
+// Tab pane animación
+.tab-pane {
+    &.fade {
+        transition: opacity $transition-normal;
+    }
+}

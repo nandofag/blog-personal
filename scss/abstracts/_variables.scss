@@ -1,0 +1,128 @@
+// ============================================
+// VARIABLES SASS - Paleta de colores y valores
+// ============================================
+
+// Colores principales
+$color-primary: #4a90e2;
+$color-primary-dark: #357abd;
+$color-primary-light: #6ba3e8;
+$color-success: #28a745;
+$color-info: #17a2b8;
+$color-warning: #ffc107;
+$color-danger: #dc3545;
+$color-secondary: #6c757d;
+
+// Colores de fondo
+$bg-primary: #ffffff;
+$bg-secondary: #f8f9fa;
+$bg-dark: #212529;
+$bg-light: #f5f5f5;
+
+// Colores de texto
+$text-primary: #212529;
+$text-secondary: #6c757d;
+$text-light: #ffffff;
+$text-muted: #868e96;
+
+// Mapa de colores para generar clases dinámicas
+$theme-colors: (
+    'primary': $color-primary,
+    'primary-dark': $color-primary-dark,
+    'primary-light': $color-primary-light,
+    'success': $color-success,
+    'info': $color-info,
+    'warning': $color-warning,
+    'danger': $color-danger,
+    'secondary': $color-secondary
+);
+
+// Tipografías
+$font-primary: 'Open Sans', sans-serif;
+$font-heading: 'Roboto', sans-serif;
+
+// Tamaños de fuente
+$font-size-base: 1rem;
+$font-size-sm: 0.875rem;
+$font-size-lg: 1.25rem;
+$font-size-xl: 1.5rem;
+
+// Espaciados
+$spacing-xs: 0.5rem;
+$spacing-sm: 1rem;
+$spacing-md: 1.5rem;
+$spacing-lg: 2rem;
+$spacing-xl: 3rem;
+
+// Mapa de espaciados para generar clases dinámicas
+$spacings: (
+    'xs': $spacing-xs,
+    'sm': $spacing-sm,
+    'md': $spacing-md,
+    'lg': $spacing-lg,
+    'xl': $spacing-xl
+);
+
+// Bordes
+$border-radius-sm: 5px;
+$border-radius-md: 10px;
+$border-radius-lg: 15px;
+$border-radius-circle: 50%;
+
+// Mapa de border-radius
+$border-radii: (
+    'sm': $border-radius-sm,
+    'md': $border-radius-md,
+    'lg': $border-radius-lg,
+    'circle': $border-radius-circle
+);
+
+// Sombras
+$shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.15);
+$shadow-xl: 0 15px 30px rgba(0, 0, 0, 0.2);
+
+// Mapa de sombras
+$shadows: (
+    'sm': $shadow-sm,
+    'md': $shadow-md,
+    'lg': $shadow-lg,
+    'xl': $shadow-xl
+);
+
+// Transiciones
+$transition-fast: 0.2s ease;
+$transition-normal: 0.3s ease;
+$transition-slow: 0.5s ease;
+
+// Breakpoints (sincronizados con Bootstrap)
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px;
+
+// Mapa de breakpoints
+$breakpoints: (
+    'sm': $breakpoint-sm,
+    'md': $breakpoint-md,
+    'lg': $breakpoint-lg,
+    'xl': $breakpoint-xl,
+    'xxl': $breakpoint-xxl
+);
+
+// Alturas específicas
+$navbar-height: 56px;
+$carousel-height-desktop: 500px;
+$carousel-height-tablet: 400px;
+$carousel-height-mobile: 300px;
+$carousel-height-xs: 250px;
+
+// Z-index layers
+$z-index-dropdown: 1000;
+$z-index-sticky: 1020;
+$z-index-fixed: 1030;
+$z-index-modal-backdrop: 1040;
+$z-index-modal: 1050;
+$z-index-popover: 1060;
+$z-index-tooltip: 1070;

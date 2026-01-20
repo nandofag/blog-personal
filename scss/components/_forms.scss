@@ -1,0 +1,102 @@
+// ============================================
+// COMPONENTES - FORMULARIOS
+// ============================================
+
+@use '../abstracts' as *;
+
+// Form control (inputs, textareas)
+.form-control {
+    @include form-input-base;
+    
+    // Estados de validación
+    &:valid {
+        border-color: $color-success;
+    }
+    
+    &:invalid:not(:placeholder-shown) {
+        border-color: $color-danger;
+    }
+    
+    &:focus:invalid {
+        border-color: $color-danger;
+        box-shadow: 0 0 0 0.2rem rgba($color-danger, 0.25);
+    }
+}
+
+// Form label
+.form-label {
+    @include form-label-style;
+}
+
+// Form check inputs (radio y checkbox)
+.form-check-input {
+    &:checked {
+        background-color: $color-primary;
+        border-color: $color-primary;
+    }
+    
+    &:focus {
+        border-color: $color-primary;
+        box-shadow: 0 0 0 0.2rem rgba($color-primary, 0.25);
+    }
+}
+
+// Fieldset
+fieldset {
+    border: 2px solid #e0e0e0;
+    border-radius: $border-radius-sm;
+    padding: $spacing-md;
+    transition: border-color $transition-fast;
+    
+    &:focus-within {
+        border-color: $color-primary;
+    }
+}
+
+// Legend
+legend {
+    font-weight: 700;
+    color: $text-primary;
+    padding: 0 $spacing-sm;
+    font-size: 1.1rem;
+}
+
+// Validación de formularios (Bootstrap)
+.was-validated {
+    .form-control {
+        &:invalid {
+            border-color: $color-danger;
+        }
+        
+        &:valid {
+            border-color: $color-success;
+        }
+    }
+}
+
+// Form text helper
+.form-text {
+    font-size: $font-size-sm;
+    color: $text-secondary;
+    
+    .text-danger {
+        color: $color-danger !important;
+        font-weight: 600;
+    }
+}
+
+// Invalid feedback
+.invalid-feedback {
+    color: $color-danger;
+    font-size: $font-size-sm;
+}
+
+// Formulario de contacto específico
+.formulario-contacto {
+    .form-control {
+        &:focus {
+            border-color: $color-primary;
+            box-shadow: 0 0 0 0.2rem rgba($color-primary, 0.25);
+        }
+    }
+}

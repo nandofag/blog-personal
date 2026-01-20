@@ -1,0 +1,169 @@
+// ============================================
+// COMPONENTES - TARJETAS
+// ============================================
+
+@use '../abstracts' as *;
+
+// Estilos base de cards (sobreescritura de Bootstrap)
+.card {
+    @include card-base;
+    @include card-hover-effect;
+    @include card-image-zoom;
+    
+    // Card body
+    &-body {
+        padding: $spacing-md;
+    }
+    
+    // Card title
+    &-title {
+        @include heading-style;
+        margin-bottom: $spacing-sm;
+    }
+    
+    // Card text
+    &-text {
+        color: $text-secondary;
+        line-height: 1.6;
+    }
+    
+    // Card image top
+    &-img-top {
+        transition: transform $transition-slow;
+        object-fit: cover;
+    }
+}
+
+// Proyecto destacado cards (CSS Grid section)
+.proyecto-destacado {
+    &-card {
+        background: $bg-primary;
+        border-radius: $border-radius-md;
+        overflow: hidden;
+        box-shadow: $shadow-md;
+        transition: all $transition-normal;
+        @include flex-column;
+        
+        &:hover {
+            transform: translateY(-10px);
+            box-shadow: $shadow-xl;
+            
+            .proyecto-destacado-img {
+                transform: scale(1.1);
+            }
+        }
+    }
+    
+    &-img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        transition: transform $transition-slow;
+    }
+    
+    &-content {
+        padding: $spacing-md;
+        @include flex-column;
+        flex-grow: 1;
+    }
+    
+    &-title {
+        font-family: $font-heading;
+        font-size: $font-size-lg;
+        font-weight: 700;
+        color: $text-primary;
+        margin: $spacing-sm 0;
+    }
+    
+    &-text {
+        color: $text-secondary;
+        line-height: 1.6;
+        margin-bottom: $spacing-sm;
+        flex-grow: 1;
+    }
+    
+    &-tech {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $spacing-xs;
+        margin-bottom: $spacing-sm;
+    }
+}
+
+// Entrada blog cards (Flexbox section)
+.entrada-blog {
+    &-card {
+        flex: 1 1 calc(33.333% - 2rem);
+        min-width: 280px;
+        background: $bg-primary;
+        border-radius: $border-radius-md;
+        overflow: hidden;
+        box-shadow: $shadow-md;
+        transition: all $transition-normal;
+        @include flex-column;
+        
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: $shadow-lg;
+            
+            .entrada-blog-img {
+                transform: scale(1.05);
+            }
+        }
+    }
+    
+    &-img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        transition: transform $transition-slow;
+    }
+    
+    &-content {
+        padding: $spacing-md;
+        @include flex-column;
+        flex-grow: 1;
+    }
+    
+    &-meta {
+        @include flex-between;
+        margin-bottom: $spacing-sm;
+        flex-wrap: wrap;
+        gap: $spacing-xs;
+    }
+    
+    &-title {
+        font-family: $font-heading;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: $text-primary;
+        margin-bottom: $spacing-sm;
+    }
+    
+    &-text {
+        color: $text-secondary;
+        line-height: 1.6;
+        margin-bottom: $spacing-sm;
+        flex-grow: 1;
+        font-size: 0.95rem;
+    }
+}
+
+// Responsive para cards
+@include respond-below(lg) {
+    .card-body {
+        padding: $spacing-sm;
+    }
+    
+    .entrada-blog-card {
+        flex: 1 1 100%;
+    }
+}
+
+@include respond-below(md) {
+    .card {
+        &:hover {
+            transform: translateY(-3px);
+        }
+    }
+}

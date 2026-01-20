@@ -1,0 +1,46 @@
+// ============================================
+// COMPONENTES - TOOLTIPS
+// ============================================
+
+@use '../abstracts' as *;
+
+// Tooltips
+.tooltip {
+    font-size: $font-size-sm;
+    
+    &-inner {
+        background-color: $bg-dark;
+        color: $text-light;
+        border-radius: $border-radius-sm;
+        padding: 0.5rem 0.75rem;
+    }
+}
+
+// Flechas de tooltips según posición
+.bs-tooltip-top,
+.bs-tooltip-auto[data-popper-placement^="top"] {
+    .tooltip-arrow::before {
+        border-top-color: $bg-dark;
+    }
+}
+
+.bs-tooltip-bottom,
+.bs-tooltip-auto[data-popper-placement^="bottom"] {
+    .tooltip-arrow::before {
+        border-bottom-color: $bg-dark;
+    }
+}
+
+.bs-tooltip-start,
+.bs-tooltip-auto[data-popper-placement^="left"] {
+    .tooltip-arrow::before {
+        border-left-color: $bg-dark;
+    }
+}
+
+.bs-tooltip-end,
+.bs-tooltip-auto[data-popper-placement^="right"] {
+    .tooltip-arrow::before {
+        border-right-color: $bg-dark;
+    }
+}

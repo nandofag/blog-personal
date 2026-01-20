@@ -29,7 +29,7 @@ Desktop.ini
 *.backup
 *~
 
-# Node modules (si se agregan dependencias en el futuro)
+# Node modules
 node_modules/
 package-lock.json
 yarn.lock
@@ -37,8 +37,12 @@ yarn.lock
 # Archivos de compilación
 dist/
 build/
-*.min.css
-*.min.js
+
+# SASS
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
 
 # Variables de entorno
 .env

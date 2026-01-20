@@ -1,0 +1,53 @@
+// ============================================
+// COMPONENTES - LISTAS
+// ============================================
+
+@use '../abstracts' as *;
+
+// List group items
+.list-group-item {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    transition: all $transition-fast;
+    padding: $spacing-sm $spacing-md;
+    
+    &:hover {
+        background-color: $bg-secondary;
+        transform: translateX(5px);
+        border-left: 3px solid $color-primary;
+    }
+    
+    &.active {
+        @include gradient-bg($color-primary, $color-primary-dark);
+        border-color: $color-primary;
+    }
+}
+
+// Lista numerada con estilo personalizado
+.list-group-numbered {
+    .list-group-item {
+        &::before {
+            font-weight: 700;
+            color: $color-primary;
+        }
+    }
+}
+
+// Lista con iconos de check
+.list-check {
+    list-style: none;
+    padding-left: 0;
+    
+    li {
+        position: relative;
+        padding-left: $spacing-md;
+        margin-bottom: $spacing-xs;
+        
+        &::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: $color-success;
+            font-weight: 700;
+        }
+    }
+}

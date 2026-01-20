@@ -1,32 +1,74 @@
-# Blog Personal - Entrega 2 Desarrollo Web
+# Blog Personal - Preentrega 3 Desarrollo Web
 
-Proyecto de blog personal desarrollado como segunda entrega del curso de Desarrollo Web de Coderhouse.
+Proyecto de blog personal desarrollado como tercera entrega del curso de Desarrollo Web de Coderhouse.
 
-## 📋 Descripción
+## Descripción
 
-Sitio web personal que incluye un blog, portfolio de proyectos, información personal y formulario de contacto. Desarrollado con HTML5, CSS3 avanzado y Bootstrap 5.
+Sitio web personal que incluye un blog, portfolio de proyectos, información personal y formulario de contacto. Desarrollado con HTML5, CSS3 avanzado, Bootstrap 5 y **SASS/SCSS**.
 
-## ✨ Características
+## Características
 
 - **Diseño Responsive**: Optimizado para todos los dispositivos (mobile-first)
 - **Bootstrap 5**: Framework CSS para componentes y sistema de grillas
-- **CSS Avanzado**: Variables CSS, animaciones, transiciones y efectos modernos
+- **SASS/SCSS**: Preprocesador CSS con arquitectura modular
+- **CSS Avanzado**: Variables, animaciones, transiciones y efectos modernos
 - **Accesibilidad**: Cumple con estándares de accesibilidad web
 - **SEO Optimizado**: Meta tags y estructura semántica
 
-## 🛠️ Tecnologías Utilizadas
+## Tecnologías Utilizadas
 
 - HTML5
-- CSS3 (Variables CSS, Animaciones, Flexbox, Grid)
+- CSS3 (Flexbox, Grid, Animaciones)
+- **SASS/SCSS** (Variables, Mixins, Nesting, @extend, @each, @for)
 - Bootstrap 5.3.2
 - Bootstrap Icons
+- Node.js (para compilación de SASS)
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 blog-personal/
 ├── css/
-│   └── styles.css          # Estilos personalizados avanzados
+│   └── styles.css          # CSS compilado desde SCSS
+├── scss/                   # Archivos fuente SASS
+│   ├── abstracts/
+│   │   ├── _variables.scss # Variables SASS
+│   │   ├── _mixins.scss    # Mixins reutilizables
+│   │   ├── _functions.scss # Funciones SASS
+│   │   └── _index.scss
+│   ├── base/
+│   │   ├── _reset.scss     # Reset y estilos base
+│   │   ├── _typography.scss# Tipografía
+│   │   └── _index.scss
+│   ├── components/
+│   │   ├── _buttons.scss   # Estilos de botones
+│   │   ├── _cards.scss     # Estilos de tarjetas
+│   │   ├── _forms.scss     # Estilos de formularios
+│   │   ├── _badges.scss    # Estilos de badges
+│   │   ├── _lists.scss     # Estilos de listas
+│   │   ├── _accordion.scss # Estilos de acordeón
+│   │   ├── _modals.scss    # Estilos de modales
+│   │   ├── _alerts.scss    # Estilos de alertas
+│   │   ├── _progress.scss  # Barras de progreso
+│   │   ├── _tabs.scss      # Tabs y pills
+│   │   ├── _tooltips.scss  # Tooltips
+│   │   ├── _dropdown.scss  # Dropdowns
+│   │   └── _index.scss
+│   ├── layout/
+│   │   ├── _navbar.scss    # Navegación
+│   │   ├── _footer.scss    # Footer
+│   │   ├── _hero.scss      # Secciones hero
+│   │   ├── _grid.scss      # Grid y flexbox custom
+│   │   ├── _timeline.scss  # Timeline visual
+│   │   └── _index.scss
+│   ├── pages/
+│   │   ├── _home.scss      # Estilos del home
+│   │   ├── _about.scss     # Estilos sobre mí
+│   │   ├── _projects.scss  # Estilos proyectos
+│   │   ├── _blog.scss      # Estilos del blog
+│   │   ├── _contact.scss   # Estilos contacto
+│   │   └── _index.scss
+│   └── main.scss           # Archivo principal
 ├── img/                    # Imágenes del proyecto
 ├── pages/
 │   ├── blog.html          # Página del blog
@@ -34,79 +76,129 @@ blog-personal/
 │   ├── proyectos.html     # Portfolio de proyectos
 │   └── sobre-mi.html      # Información personal
 ├── index.html             # Página principal
+├── package.json           # Configuración npm y scripts
 ├── .gitignore            # Archivos excluidos de Git
 └── README.md             # Este archivo
 ```
 
-## 🚀 Instalación y Uso
+## Instalación y Uso
+
+### Requisitos previos
+- Node.js instalado en tu sistema
+
+### Instalación
 
 1. Clona el repositorio:
 ```bash
 git clone https://github.com/nandofag/blog-personal.git
+cd blog-personal
 ```
 
-2. Abre `index.html` en tu navegador web preferido.
+2. Instala las dependencias:
+```bash
+npm install
+```
 
-No se requiere instalación adicional, todas las dependencias se cargan via CDN.
+### Comandos disponibles
 
-## 📄 Páginas del Sitio
+```bash
+# Compilar SASS una vez
+npm run sass
 
-- **Home**: Página principal con presentación y resumen
-- **Sobre Mí**: Información personal, educación y experiencia
+# Compilar SASS en modo watch (desarrollo)
+npm run sass:watch
+
+# Compilar SASS comprimido (producción)
+npm run build
+```
+
+### Ver el sitio
+
+Abre `index.html` en tu navegador web preferido. No se requiere servidor local, todas las dependencias externas se cargan vía CDN.
+
+## Páginas del Sitio
+
+- **Home**: Página principal con presentación, proyectos destacados y últimas entradas del blog
+- **Sobre Mí**: Información personal, educación, experiencia y habilidades
 - **Proyectos**: Portfolio con proyectos realizados
 - **Blog**: Artículos y tutoriales sobre desarrollo web
 - **Contacto**: Formulario de contacto e información
 
-## 🎨 Características CSS Avanzadas
+## Características SASS Implementadas
 
-- Variables CSS para colores, espaciados y sombras
-- Animaciones CSS (fadeIn, slideUp, pulse)
-- Efectos hover y transiciones suaves
-- Gradientes y efectos visuales modernos
-- Scrollbar personalizada
-- Estilos responsive con media queries
+### Variables (`_variables.scss`)
+- Colores del tema (primarios, secundarios, estados)
+- Tipografías
+- Espaciados
+- Border-radius
+- Sombras
+- Transiciones
+- Breakpoints
+- Mapas de valores para generación dinámica
 
-## 📐 Uso de Flexbox y CSS Grid
+### Mixins (`_mixins.scss`)
+- `respond-to($breakpoint)` - Media queries mobile-first
+- `respond-below($breakpoint)` - Media queries desktop-first
+- `flex-center`, `flex-between`, `flex-column` - Utilidades flexbox
+- `button-base`, `button-variant` - Estilos de botones
+- `card-base`, `card-hover-effect` - Estilos de tarjetas
+- `gradient-bg` - Gradientes
+- `hover-underline`, `hover-lift` - Efectos hover
+- `form-input-base` - Estilos de formularios
+- Y muchos más...
 
-Este proyecto implementa tanto **Flexbox** como **CSS Grid** para crear layouts modernos y responsive:
+### Funciones (`_functions.scss`)
+- `get-color($name)` - Obtener color del mapa
+- `shade($color, $percentage)` - Oscurecer color
+- `tint($color, $percentage)` - Aclarar color
+- `get-spacing($size)` - Obtener espaciado
+- `px-to-rem($px)` - Conversión de unidades
+- `grid-width($columns)` - Calcular ancho de columna
 
-### 🎯 CSS Grid
+### Operadores y bucles
+- `@each` para generar clases dinámicas de colores, espaciados, sombras
+- `@for` para generar clases de gaps
+- Operaciones matemáticas con `sass:math`
+- Manipulación de colores con `sass:color`
+
+### Nesting
+Todo el código SCSS utiliza nesting para:
+- Organizar selectores relacionados
+- Usar `&` para modificadores y pseudo-elementos
+- Crear estructura jerárquica clara
+
+### @extend
+Uso de `@extend` implícito a través de mixins que comparten estilos base.
+
+## Uso de Flexbox y CSS Grid
+
+### CSS Grid
 - **Sección "Proyectos Destacados"** (`index.html`):
-  - Clase `.proyectos-destacados-grid` utiliza `display: grid` con `grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))`
-  - Permite un layout responsive que se adapta automáticamente al espacio disponible
-  - Ubicación: Página principal (`index.html`), sección de proyectos destacados
+  - Clase `.proyectos-destacados-grid` usa `display: grid` con `grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))`
+  - Layout responsive que se adapta automáticamente
 
-### 🔄 Flexbox
+### Flexbox
 - **Sección "Últimas Entradas del Blog"** (`index.html`):
-  - Clase `.entradas-blog-flexbox` utiliza `display: flex` con `flex-wrap: wrap`
-  - Las tarjetas de blog (`.entrada-blog-card`) usan `flex: 1 1 calc(33.333% - 2rem)` para distribución flexible
-  - Ubicación: Página principal (`index.html`), sección de últimas entradas del blog
+  - Clase `.entradas-blog-flexbox` usa `display: flex` con `flex-wrap: wrap`
+  - Las tarjetas usan `flex: 1 1 calc(33.333% - 2rem)`
+- **Múltiples componentes**: cards, navbar, footer, timeline
 
-- **Tarjetas de Proyectos**:
-  - `.proyecto-destacado-card` y `.proyecto-destacado-content` usan flexbox con `flex-direction: column`
-  - `.proyecto-destacado-tech` utiliza flexbox con `flex-wrap: wrap` para las tecnologías
-
-- **Otros elementos**:
-  - `.entrada-blog-content` y `.entrada-blog-meta` para alineación y distribución de contenido
-  - `.hero-proyectos` para centrado vertical del contenido hero
-
-## 📱 Compatibilidad
+## Compatibilidad
 
 - Chrome (últimas versiones)
 - Firefox (últimas versiones)
 - Safari (últimas versiones)
 - Edge (últimas versiones)
 
-## 👤 Autor
+## Autor
 
 Fernando Fagundez
 
-## 📝 Licencia
+## Licencia
 
 Este proyecto es parte de un curso académico.
 
-## 🔗 Enlaces
+## Enlaces
 
-- 🌐 [Sitio en vivo](https://nandofag.github.io/blog-personal/)
-- 📦 [Repositorio en GitHub](https://github.com/nandofag/blog-personal)
-
+- [Sitio en vivo](https://nandofag.github.io/blog-personal/)
+- [Repositorio en GitHub](https://github.com/nandofag/blog-personal)

@@ -1,0 +1,88 @@
+// ============================================
+// COMPONENTES - BOTONES
+// ============================================
+
+@use '../abstracts' as *;
+
+// Estilos base de botones (sobreescritura de Bootstrap)
+.btn {
+    @include button-base;
+    
+    // Botón primario con efecto ripple
+    &-primary {
+        @include button-variant($color-primary, $color-primary-dark);
+        @include button-ripple-effect;
+    }
+    
+    // Botón success
+    &-success {
+        @include button-variant($color-success);
+    }
+    
+    // Botón info
+    &-info {
+        @include button-variant($color-info);
+    }
+    
+    // Botón danger
+    &-danger {
+        @include button-variant($color-danger);
+    }
+    
+    // Botón warning
+    &-warning {
+        @include button-variant($color-warning);
+        color: $text-primary;
+        
+        &:hover {
+            color: $text-primary;
+        }
+    }
+    
+    // Botón outline light
+    &-outline-light {
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: $shadow-md;
+        }
+    }
+    
+    // Tamaños de botones
+    &-lg {
+        padding: 0.75rem 2rem;
+        font-size: $font-size-lg;
+    }
+    
+    &-sm {
+        padding: 0.375rem 1rem;
+        font-size: $font-size-sm;
+    }
+}
+
+// Generación dinámica de variantes de botón usando @each
+@each $name, $color in $theme-colors {
+    .btn-custom-#{$name} {
+        @include button-variant($color);
+    }
+}
+
+// Responsive adjustments
+@include respond-below(md) {
+    .btn {
+        &-primary:hover {
+            transform: translateY(0);
+        }
+        
+        &-lg {
+            padding: 0.5rem 1rem;
+            font-size: $font-size-base;
+        }
+    }
+}
+
+@include respond-below(sm) {
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: $font-size-sm;
+    }
+}

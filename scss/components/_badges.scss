@@ -1,0 +1,36 @@
+// ============================================
+// COMPONENTES - BADGES
+// ============================================
+
+@use '../abstracts' as *;
+
+// Estilos base de badges
+.badge {
+    padding: 0.5rem 0.75rem;
+    font-weight: 600;
+    border-radius: $border-radius-sm;
+    transition: transform $transition-fast;
+    
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+// Generación dinámica de badges usando @each
+@each $name, $color in $theme-colors {
+    .badge-custom-#{$name} {
+        background-color: $color;
+        color: if($name == 'warning', $text-primary, $text-light);
+    }
+}
+
+// Badge con icono
+.badge-icon {
+    display: inline-flex;
+    align-items: center;
+    gap: $spacing-xs;
+    
+    i {
+        font-size: 0.875em;
+    }
+}

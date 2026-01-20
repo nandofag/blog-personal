@@ -1,0 +1,53 @@
+// ============================================
+// COMPONENTES - ALERTAS
+// ============================================
+
+@use '../abstracts' as *;
+
+// Alertas base
+.alert {
+    border: none;
+    border-radius: $border-radius-md;
+    border-left: 4px solid;
+    box-shadow: $shadow-sm;
+    
+    // Variantes de alertas usando nesting
+    &-info {
+        background-color: rgba($color-info, 0.1);
+        border-left-color: $color-info;
+        color: #0c5460;
+    }
+    
+    &-success {
+        background-color: rgba($color-success, 0.1);
+        border-left-color: $color-success;
+        color: #155724;
+    }
+    
+    &-danger {
+        background-color: rgba($color-danger, 0.1);
+        border-left-color: $color-danger;
+        color: #721c24;
+    }
+    
+    &-warning {
+        background-color: rgba($color-warning, 0.1);
+        border-left-color: $color-warning;
+        color: #856404;
+    }
+    
+    // Botón de cerrar
+    &-dismissible {
+        .btn-close {
+            padding: 0.75rem 1rem;
+        }
+    }
+}
+
+// Generación dinámica de alertas con @each
+@each $name, $color in $theme-colors {
+    .alert-custom-#{$name} {
+        background-color: rgba($color, 0.1);
+        border-left-color: $color;
+    }
+}

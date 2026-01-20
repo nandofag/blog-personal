@@ -1,0 +1,77 @@
+// ============================================
+// PAGES - HOME
+// ============================================
+
+@use '../abstracts' as *;
+
+// Contenido principal del home
+.contenido-principal {
+    padding: $spacing-xl 0;
+    
+    @include respond-below(lg) {
+        padding: $spacing-lg 0;
+    }
+    
+    @include respond-below(md) {
+        padding: $spacing-md 0;
+    }
+}
+
+// Texto principal (Mi Historia)
+.texto-principal {
+    text-align: justify;
+    line-height: 1.8;
+    margin-bottom: $spacing-sm;
+    color: $text-secondary;
+    
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+// Sección de tres cards principales
+.card-section-home {
+    margin-bottom: $spacing-xl;
+    
+    .card {
+        height: 100%;
+        
+        &:hover {
+            .card-icon {
+                transform: scale(1.1);
+            }
+        }
+    }
+    
+    .card-icon {
+        font-size: 3rem;
+        transition: transform $transition-normal;
+    }
+}
+
+// Sección de proyectos destacados
+.proyectos-destacados-section {
+    margin-bottom: $spacing-xl;
+    
+    .section-title {
+        @include heading-style;
+        text-align: center;
+        margin-bottom: $spacing-lg;
+    }
+}
+
+// Sección de últimas entradas del blog
+.blog-entries-section {
+    margin-bottom: $spacing-xl;
+    
+    .section-title {
+        @include heading-style;
+        text-align: center;
+        margin-bottom: $spacing-lg;
+    }
+}
+
+// Sección de información adicional (acordeón)
+.info-section {
+    margin-bottom: $spacing-xl;
+}

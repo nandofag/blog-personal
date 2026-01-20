@@ -1,0 +1,24 @@
+{
+  "name": "blog-personal",
+  "version": "1.0.0",
+  "description": "Blog personal desarrollado para el curso de Desarrollo Web de Coderhouse",
+  "main": "index.html",
+  "scripts": {
+    "sass": "sass scss/main.scss css/styles.css",
+    "sass:watch": "sass --watch scss/main.scss css/styles.css",
+    "sass:compressed": "sass scss/main.scss css/styles.css --style=compressed",
+    "build": "sass scss/main.scss css/styles.css --style=compressed"
+  },
+  "keywords": [
+    "blog",
+    "desarrollo-web",
+    "coderhouse",
+    "sass",
+    "bootstrap"
+  ],
+  "author": "Fernando Fagundez",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.69.5"
+  }
+}

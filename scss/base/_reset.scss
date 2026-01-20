@@ -1,0 +1,65 @@
+// ============================================
+// RESET Y ESTILOS BASE
+// ============================================
+
+@use '../abstracts' as *;
+
+// Reset básico
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+// Comportamiento de scroll suave
+html {
+    scroll-behavior: smooth;
+}
+
+// Estilos base del body
+body {
+    font-family: $font-primary;
+    background: linear-gradient(135deg, $bg-light 0%, #e9ecef 100%);
+    color: $text-primary;
+    line-height: 1.7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+// Selección de texto personalizada
+::selection {
+    background-color: $color-primary;
+    color: $text-light;
+}
+
+::-moz-selection {
+    background-color: $color-primary;
+    color: $text-light;
+}
+
+// Links base
+a {
+    color: $color-primary;
+    text-decoration: none;
+    transition: color $transition-fast;
+    
+    &:hover {
+        color: $color-primary-dark;
+    }
+}
+
+// Imágenes responsive por defecto
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+// Listas sin estilo por defecto cuando tienen clase específica
+ul,
+ol {
+    &.list-unstyled {
+        list-style: none;
+        padding-left: 0;
+    }
+}

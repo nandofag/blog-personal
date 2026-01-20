@@ -1,0 +1,161 @@
+// ============================================
+// MAIN.SCSS - Archivo principal de estilos
+// Blog Personal - Preentrega 3 Coderhouse
+// ============================================
+// 
+// Este archivo importa todos los parciales SCSS
+// organizados según la arquitectura 7-1
+//
+// Estructura:
+// 1. Abstracts - Variables, mixins, funciones
+// 2. Base - Reset, tipografía, estilos base
+// 3. Components - Componentes reutilizables
+// 4. Layout - Estructura del sitio
+// 5. Pages - Estilos específicos por página
+//
+// ============================================
+
+// ============================================
+// 1. ABSTRACTS
+// Variables, funciones y mixins
+// ============================================
+@use 'abstracts/variables' as *;
+@use 'abstracts/functions' as *;
+@use 'abstracts/mixins' as *;
+
+// ============================================
+// 2. BASE
+// Reset, tipografía y estilos fundamentales
+// ============================================
+@use 'base/reset';
+@use 'base/typography';
+
+// ============================================
+// 3. COMPONENTS
+// Componentes reutilizables de la UI
+// ============================================
+@use 'components/buttons';
+@use 'components/cards';
+@use 'components/forms';
+@use 'components/badges';
+@use 'components/lists';
+@use 'components/accordion';
+@use 'components/modals';
+@use 'components/alerts';
+@use 'components/progress';
+@use 'components/tabs';
+@use 'components/tooltips';
+@use 'components/dropdown';
+
+// ============================================
+// 4. LAYOUT
+// Estructura principal del sitio
+// ============================================
+@use 'layout/navbar';
+@use 'layout/footer';
+@use 'layout/hero';
+@use 'layout/grid';
+@use 'layout/timeline';
+
+// ============================================
+// 5. PAGES
+// Estilos específicos de cada página
+// ============================================
+@use 'pages/home';
+@use 'pages/about';
+@use 'pages/projects';
+@use 'pages/blog';
+@use 'pages/contact';
+
+// ============================================
+// CLASES UTILITARIAS GENERADAS DINÁMICAMENTE
+// ============================================
+
+// Generación de clases de color de texto con @each
+@each $name, $color in $theme-colors {
+    .text-custom-#{$name} {
+        color: $color;
+    }
+}
+
+// Generación de clases de fondo con @each
+@each $name, $color in $theme-colors {
+    .bg-custom-#{$name} {
+        background-color: $color;
+    }
+}
+
+// Generación de clases de espaciado con @each
+@each $name, $value in $spacings {
+    .mt-custom-#{$name} {
+        margin-top: $value;
+    }
+    
+    .mb-custom-#{$name} {
+        margin-bottom: $value;
+    }
+    
+    .pt-custom-#{$name} {
+        padding-top: $value;
+    }
+    
+    .pb-custom-#{$name} {
+        padding-bottom: $value;
+    }
+}
+
+// Generación de clases de border-radius con @each
+@each $name, $value in $border-radii {
+    .rounded-custom-#{$name} {
+        border-radius: $value;
+    }
+}
+
+// Generación de clases de sombra con @each
+@each $name, $value in $shadows {
+    .shadow-custom-#{$name} {
+        box-shadow: $value;
+    }
+}
+
+// ============================================
+// RESPONSIVE GENERAL
+// Media queries globales
+// ============================================
+
+// Ajustes para tablets
+@include respond-below(lg) {
+    :root {
+        // Reducir espaciados en tablets
+        --spacing-xl: 2rem;
+    }
+    
+    body {
+        font-size: 0.95rem;
+    }
+}
+
+// Ajustes para móviles
+@include respond-below(md) {
+    :root {
+        // Reducir espaciados en móviles
+        --spacing-xl: 1.5rem;
+    }
+    
+    body {
+        font-size: 0.9rem;
+    }
+    
+    // Reducir animaciones en móviles para mejor rendimiento
+    .animate-slide-up,
+    .animate-fade-in {
+        animation-duration: 0.5s;
+    }
+}
+
+// Ajustes para móviles pequeños
+@include respond-below(sm) {
+    body {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,99 @@
+// ============================================
+// PAGES - SOBRE MÍ
+// ============================================
+
+@use '../abstracts' as *;
+
+// Hero de la página sobre mí
+.about-hero {
+    text-align: center;
+    margin-bottom: $spacing-xl;
+    
+    .profile-image {
+        max-width: 300px;
+        height: auto;
+        border-radius: $border-radius-circle;
+        box-shadow: $shadow-lg;
+        transition: transform $transition-normal;
+        
+        &:hover {
+            transform: scale(1.05);
+        }
+        
+        @include respond-below(md) {
+            max-width: 200px;
+        }
+    }
+}
+
+// Sección Mi Historia
+.about-story {
+    margin-bottom: $spacing-xl;
+    
+    p {
+        text-align: justify;
+        line-height: 1.8;
+    }
+}
+
+// Sección de trayectoria (tabs)
+.trayectoria-section {
+    .nav-pills {
+        margin-bottom: $spacing-lg;
+    }
+}
+
+// Cards de educación
+.education-card {
+    height: 100%;
+    transition: all $transition-normal;
+    
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: $shadow-lg;
+    }
+    
+    .education-icon {
+        font-size: 2rem;
+        transition: transform $transition-normal;
+    }
+    
+    &:hover .education-icon {
+        transform: scale(1.1);
+    }
+}
+
+// Timeline de experiencia
+.experience-timeline {
+    .timeline-card {
+        transition: all $transition-normal;
+        
+        &:hover {
+            transform: translateX(5px);
+            box-shadow: $shadow-md;
+        }
+    }
+}
+
+// Sección de habilidades
+.skills-section {
+    .skill-item {
+        margin-bottom: $spacing-md;
+        
+        .skill-label {
+            @include flex-between;
+            margin-bottom: $spacing-xs;
+            
+            span {
+                font-weight: 600;
+            }
+        }
+    }
+    
+    // Tecnologías adicionales
+    .tech-badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $spacing-xs;
+    }
+}

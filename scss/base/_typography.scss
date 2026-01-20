@@ -1,0 +1,100 @@
+// ============================================
+// TIPOGRAFÍA
+// ============================================
+
+@use '../abstracts' as *;
+
+// Importación de fuentes de Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-heading;
+    font-weight: 700;
+    color: $text-primary;
+    margin-bottom: $spacing-sm;
+}
+
+// Tamaños de headings
+h1 {
+    font-size: 2.5rem;
+    
+    @include respond-below(md) {
+        font-size: 2rem;
+    }
+}
+
+h2 {
+    font-size: 2rem;
+    
+    @include respond-below(md) {
+        font-size: 1.75rem;
+    }
+}
+
+h3 {
+    font-size: 1.75rem;
+    
+    @include respond-below(md) {
+        font-size: 1.5rem;
+    }
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+// Párrafos
+p {
+    margin-bottom: $spacing-sm;
+    line-height: 1.7;
+}
+
+// Texto justificado (clase utilitaria)
+.text-justify {
+    text-align: justify;
+}
+
+// Display headings (Bootstrap override con nesting)
+.display-3,
+.display-4,
+.display-5 {
+    font-family: $font-heading;
+    font-weight: 700;
+    
+    @include respond-below(md) {
+        font-size: 2rem;
+    }
+}
+
+// Lead text
+.lead {
+    font-size: $font-size-lg;
+    font-weight: 400;
+}
+
+// Small text
+small,
+.small {
+    font-size: $font-size-sm;
+}
+
+// Strong y bold
+strong,
+.fw-bold {
+    font-weight: 700;
+}
+
+// Texto truncado
+.text-truncate {
+    @include text-truncate;
+}

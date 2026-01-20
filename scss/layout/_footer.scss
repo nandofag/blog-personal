@@ -1,0 +1,93 @@
+// ============================================
+// LAYOUT - FOOTER
+// ============================================
+
+@use '../abstracts' as *;
+
+// Footer principal
+footer {
+    @include gradient-bg($bg-dark, #343a40);
+    margin-top: auto;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    
+    // Links del footer
+    a {
+        transition: all $transition-fast;
+        position: relative;
+        
+        // Efecto underline en hover
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: $color-primary;
+            transition: width $transition-normal;
+        }
+        
+        &:hover {
+            color: $color-primary-light !important;
+            transform: translateX(5px);
+            
+            &::before {
+                width: 100%;
+            }
+        }
+    }
+    
+    // Título del footer
+    h5 {
+        color: $text-light;
+        margin-bottom: $spacing-md;
+    }
+    
+    // Lista de enlaces
+    .list-unstyled {
+        li {
+            margin-bottom: $spacing-xs;
+        }
+    }
+    
+    // Redes sociales
+    .redes-sociales {
+        display: flex;
+        flex-wrap: wrap;
+        gap: $spacing-xs;
+        
+        .btn {
+            transition: all $transition-fast;
+            
+            &:hover {
+                transform: translateY(-3px);
+            }
+        }
+    }
+    
+    // Separador
+    hr {
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    // Copyright
+    .text-center p {
+        color: $text-muted;
+    }
+}
+
+// Footer nav
+.footer-nav {
+    ul {
+        margin: 0;
+        padding: 0;
+        
+        li {
+            margin-bottom: $spacing-xs;
+            
+            a {
+                display: inline-block;
+            }
+        }
+    }
+}

@@ -1,0 +1,152 @@
+// ============================================
+// LAYOUT - HERO SECTIONS
+// ============================================
+
+@use '../abstracts' as *;
+
+// Hero Carousel Section (Home)
+.hero-carousel-section {
+    margin-bottom: $spacing-xl;
+    border-radius: $border-radius-lg;
+    overflow: hidden;
+    box-shadow: $shadow-xl;
+}
+
+// Carousel hero image
+.carousel-hero-img {
+    height: $carousel-height-desktop;
+    object-fit: cover;
+    filter: brightness(0.7);
+    
+    @include respond-below(lg) {
+        height: $carousel-height-tablet;
+    }
+    
+    @include respond-below(md) {
+        height: $carousel-height-mobile;
+    }
+    
+    @include respond-below(sm) {
+        height: $carousel-height-xs;
+    }
+}
+
+// Carousel overlay con gradiente
+.carousel-overlay {
+    @include gradient-bg(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+    padding: 3rem 0;
+    border-radius: $border-radius-md;
+    
+    // Títulos con sombra de texto
+    h1, h2 {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        color: $text-light;
+    }
+    
+    // Párrafos
+    p {
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        color: rgba(255, 255, 255, 0.95);
+    }
+    
+    // Responsive
+    @include respond-below(lg) {
+        padding: 2rem 0;
+        
+        h1, h2 {
+            font-size: 2rem;
+        }
+    }
+    
+    @include respond-below(md) {
+        padding: 1.5rem 0;
+        
+        h1, h2 {
+            font-size: 1.75rem;
+        }
+        
+        p {
+            font-size: 1rem;
+        }
+        
+        .btn {
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+        }
+    }
+    
+    @include respond-below(sm) {
+        h1, h2 {
+            font-size: 1.5rem;
+        }
+        
+        p {
+            font-size: 0.9rem;
+        }
+    }
+}
+
+// Carousel indicators
+.carousel-indicators {
+    [data-bs-target] {
+        width: 12px;
+        height: 12px;
+        border-radius: $border-radius-circle;
+        background-color: rgba(255, 255, 255, 0.5);
+        border: 2px solid rgba(255, 255, 255, 0.8);
+        transition: all $transition-fast;
+    }
+    
+    .active {
+        background-color: $color-primary;
+        border-color: $color-primary;
+        width: 14px;
+        height: 14px;
+    }
+}
+
+// Carousel controls
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: $border-radius-circle;
+    width: 50px;
+    height: 50px;
+    padding: 15px;
+    
+    &:hover {
+        background-color: rgba($color-primary, 0.8);
+    }
+    
+    @include respond-below(sm) {
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+    }
+}
+
+// Hero Proyectos (página proyectos)
+.hero-proyectos {
+    position: relative;
+    background-image: 
+        linear-gradient(135deg, rgba($color-primary, 0.8) 0%, rgba($color-info, 0.8) 100%),
+        url('../img/proyectos.jpg');
+    @include cover-background;
+    background-attachment: fixed;
+    min-height: 400px;
+    @include flex-center;
+    border-radius: $border-radius-lg;
+    margin-bottom: $spacing-xl;
+    overflow: hidden;
+    
+    .hero-content {
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(5px);
+        border-radius: $border-radius-md;
+    }
+    
+    @include respond-below(md) {
+        min-height: 300px;
+        background-attachment: scroll;
+    }
+}

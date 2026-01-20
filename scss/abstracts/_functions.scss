@@ -1,0 +1,120 @@
+// ============================================
+// FUNCIONES SASS
+// ============================================
+
+@use 'sass:math';
+@use 'sass:color';
+@use 'variables' as *;
+
+// ============================================
+// FUNCIONES DE COLOR
+// ============================================
+
+// Función para obtener un color del mapa de colores
+@function get-color($color-name) {
+    @if map-has-key($theme-colors, $color-name) {
+        @return map-get($theme-colors, $color-name);
+    } @else {
+        @warn "Color '#{$color-name}' no encontrado en $theme-colors.";
+        @return null;
+    }
+}
+
+// Función para oscurecer un color
+@function shade($color, $percentage) {
+    @return color.mix(black, $color, $percentage);
+}
+
+// Función para aclarar un color
+@function tint($color, $percentage) {
+    @return color.mix(white, $color, $percentage);
+}
+
+// ============================================
+// FUNCIONES DE ESPACIADO
+// ============================================
+
+// Función para obtener un espaciado del mapa
+@function get-spacing($size) {
+    @if map-has-key($spacings, $size) {
+        @return map-get($spacings, $size);
+    } @else {
+        @warn "Spacing '#{$size}' no encontrado en $spacings.";
+        @return null;
+    }
+}
+
+// Función para calcular espaciado basado en múltiplos
+@function spacing($multiplier) {
+    @return $spacing-sm * $multiplier;
+}
+
+// ============================================
+// FUNCIONES DE TIPOGRAFÍA
+// ============================================
+
+// Conversión de px a rem
+@function px-to-rem($px, $base: 16) {
+    @return math.div($px, $base) * 1rem;
+}
+
+// Conversión de rem a px
+@function rem-to-px($rem, $base: 16) {
+    @return math.div($rem, 1rem) * $base * 1px;
+}
+
+// ============================================
+// FUNCIONES DE SOMBRA
+// ============================================
+
+// Función para obtener una sombra del mapa
+@function get-shadow($size) {
+    @if map-has-key($shadows, $size) {
+        @return map-get($shadows, $size);
+    } @else {
+        @warn "Shadow '#{$size}' no encontrada en $shadows.";
+        @return null;
+    }
+}
+
+// ============================================
+// FUNCIONES DE BORDER-RADIUS
+// ============================================
+
+// Función para obtener un border-radius del mapa
+@function get-radius($size) {
+    @if map-has-key($border-radii, $size) {
+        @return map-get($border-radii, $size);
+    } @else {
+        @warn "Border-radius '#{$size}' no encontrado en $border-radii.";
+        @return null;
+    }
+}
+
+// ============================================
+// FUNCIONES DE BREAKPOINT
+// ============================================
+
+// Función para obtener un breakpoint del mapa
+@function get-breakpoint($name) {
+    @if map-has-key($breakpoints, $name) {
+        @return map-get($breakpoints, $name);
+    } @else {
+        @warn "Breakpoint '#{$name}' no encontrado en $breakpoints.";
+        @return null;
+    }
+}
+
+// ============================================
+// FUNCIONES MATEMÁTICAS
+// ============================================
+
+// Función para calcular porcentaje
+@function percentage-of($part, $whole) {
+    @return math.percentage(math.div($part, $whole));
+}
+
+// Función para calcular el ancho de columna en una grilla
+@function grid-width($columns, $total-columns: 12) {
+    @return math.percentage(math.div($columns, $total-columns));
+}
