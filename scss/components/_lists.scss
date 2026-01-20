@@ -1,10 +1,24 @@
 // ============================================
-// COMPONENTES - LISTAS PROPIAS DEL SITIO
+// COMPONENTES - LISTAS
 // ============================================
-// NOTA: No modificamos .list-group de Bootstrap
-// Creamos clases propias .site-list-*
+// Estilos para listas del sitio
 
 @use '../abstracts' as *;
+
+// ============================================
+// EFECTO HOVER EN LIST-GROUP-ITEM (Bootstrap)
+// ============================================
+
+.list-group-item {
+    transition: transform $transition-fast, background-color $transition-fast, border-left-color $transition-fast;
+    border-left: 3px solid transparent;
+    
+    &:hover {
+        transform: translateX(5px);
+        background-color: rgba($site-primary, 0.05);
+        border-left-color: $site-primary;
+    }
+}
 
 // ============================================
 // LISTAS PROPIAS DEL SITIO
